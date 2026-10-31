@@ -130,3 +130,11 @@ A GitHub source upload is not a deployed Python application. The team will add t
 - Venue priorities do not silently displace teaching. Use an explicit checked repair and independent approval for academic changes. Counter-offers reserve nothing.
 - Google Fonts are optional external resources with system fallbacks. Signed-in pages use no photographs; unused historical reference photographs are excluded from the repository.
 - The public demo URL and walkthrough recording remain to be supplied by the team. Localhost is not accessible to judges.
+
+
+## Contributors
+
+- **Shinjan** ([shinjan-2006](https://github.com/shinjan-2006)) — project owner and product direction.
+- **OpenAI Codex** — AI-assisted implementation, debugging, tests, UI refinement and documentation. Contributions were directed and reviewed through the project chat; see [AI_USAGE.md](AI_USAGE.md) for the disclosure.
+
+This is an explicit contributor acknowledgement. GitHub's automatic Contributors graph is computed from commit authorship, not this section.
