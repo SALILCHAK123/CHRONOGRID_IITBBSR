@@ -1,0 +1,103 @@
+{
+  "desktop": [
+    {
+      "backgroundImages": 0,
+      "images": 0,
+      "page": "home",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "backgroundImages": 0,
+      "images": 0,
+      "page": "timetable",
+      "title": "Teaching timetable",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "backgroundImages": 0,
+      "images": 0,
+      "page": "spectra",
+      "title": "Spectra & venue bookings",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "backgroundImages": 0,
+      "images": 0,
+      "page": "exams",
+      "title": "Midsem examinations",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "backgroundImages": 0,
+      "images": 0,
+      "page": "reschedule",
+      "title": "Schedule changes",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "backgroundImages": 0,
+      "images": 0,
+      "page": "approvals",
+      "title": "Requests & approvals",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "backgroundImages": 0,
+      "images": 0,
+      "page": "utilisation",
+      "title": "Rooms & resources",
+      "viewport": 1280,
+      "width": 1274
+    }
+  ],
+  "mobile": [
+    {
+      "images": 0,
+      "page": "home",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "images": 0,
+      "page": "timetable",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "images": 0,
+      "page": "spectra",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "images": 0,
+      "page": "exams",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "images": 0,
+      "page": "reschedule",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "images": 0,
+      "page": "approvals",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "images": 0,
+      "page": "utilisation",
+      "viewport": 390,
+      "width": 385
+    }
+  ]
+}

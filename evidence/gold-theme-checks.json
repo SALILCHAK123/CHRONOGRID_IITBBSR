@@ -1,0 +1,82 @@
+{
+  "roles": [
+    {
+      "colour": "rgb(160, 122, 53)",
+      "heading": "Lead the week.Make room for learning.",
+      "images": 0,
+      "path": "/login/admin",
+      "viewport": 390,
+      "width": 375
+    },
+    {
+      "colour": "rgb(160, 122, 53)",
+      "heading": "Every decision.A clear second view.",
+      "images": 0,
+      "path": "/login/deputy-admin",
+      "viewport": 390,
+      "width": 375
+    },
+    {
+      "colour": "rgb(160, 122, 53)",
+      "heading": "Connect your department.Give learning space.",
+      "images": 0,
+      "path": "/login/department-coordinator",
+      "viewport": 390,
+      "width": 375
+    },
+    {
+      "colour": "rgb(160, 122, 53)",
+      "heading": "Your teaching.A week in focus.",
+      "images": 0,
+      "path": "/login/faculty",
+      "viewport": 390,
+      "width": 375
+    },
+    {
+      "colour": "rgb(160, 122, 53)",
+      "heading": "Your next idea.A place to happen.",
+      "images": 0,
+      "path": "/login/club-representative",
+      "viewport": 390,
+      "width": 375
+    }
+  ],
+  "workflows": [
+    {
+      "images": 0,
+      "page": "timetable",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "images": 0,
+      "page": "spectra",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "images": 0,
+      "page": "exams",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "images": 0,
+      "page": "reschedule",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "images": 0,
+      "page": "approvals",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "images": 0,
+      "page": "utilisation",
+      "viewport": 390,
+      "width": 385
+    }
+  ]
+}

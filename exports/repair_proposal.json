@@ -1,0 +1,540 @@
+{
+  "id": "P-1f138086",
+  "status": "pending",
+  "requester": "admin",
+  "revision": 2,
+  "diff": [
+    {
+      "id": "S005",
+      "before": {
+        "id": "S005",
+        "day": 1,
+        "start_period": 2,
+        "room": "LAB-2"
+      },
+      "after": {
+        "id": "S005",
+        "day": 4,
+        "start_period": 2,
+        "room": "LAB-2"
+      }
+    },
+    {
+      "id": "S016",
+      "before": {
+        "id": "S016",
+        "day": 0,
+        "start_period": 2,
+        "room": "LAB-3"
+      },
+      "after": {
+        "id": "S016",
+        "day": 4,
+        "start_period": 6,
+        "room": "LAB-3"
+      }
+    },
+    {
+      "id": "S033",
+      "before": {
+        "id": "S033",
+        "day": 1,
+        "start_period": 6,
+        "room": "CR-112"
+      },
+      "after": {
+        "id": "S033",
+        "day": 4,
+        "start_period": 6,
+        "room": "CR-102"
+      }
+    },
+    {
+      "id": "S127",
+      "before": {
+        "id": "S127",
+        "day": 4,
+        "start_period": 6,
+        "room": "CR-111"
+      },
+      "after": {
+        "id": "S127",
+        "day": 3,
+        "start_period": 6,
+        "room": "CR-103"
+      }
+    },
+    {
+      "id": "S190",
+      "before": null,
+      "after": {
+        "id": "S190",
+        "day": 3,
+        "start_period": 4,
+        "room": "CR-107"
+      }
+    }
+  ],
+  "exam_diff": [],
+  "exam_moved": 0,
+  "moved": 4,
+  "added": 1,
+  "minimum_moves_proven": true,
+  "exam_minimum_moves_proven": true,
+  "solver_status": "OPTIMAL",
+  "solver": {
+    "sessions": {
+      "status": "OPTIMAL",
+      "moves": 4,
+      "minimum_moves_proven": true,
+      "move_status": "OPTIMAL",
+      "move_bound": 4.0,
+      "time_budget_per_stage_seconds": 15,
+      "objective": 3.0,
+      "best_bound": 3.0
+    },
+    "exams": {
+      "status": "OPTIMAL",
+      "moves": 0,
+      "minimum_moves_proven": true,
+      "move_status": "OPTIMAL",
+      "move_bound": 0.0,
+      "time_budget_per_stage_seconds": 5,
+      "objective": 0.0,
+      "best_bound": 0.0
+    }
+  },
+  "before_report": {
+    "valid": true,
+    "hard_violations": 0,
+    "errors": [],
+    "soft_penalty": 0,
+    "soft_breakdown": {
+      "faculty_avoid": 0,
+      "group_gaps": 0,
+      "group_overload": 0,
+      "repeated_lecture": 0,
+      "underused_room": 0,
+      "p9": 0
+    },
+    "soft_weights": {
+      "faculty_avoid": 1,
+      "group_gaps": 1,
+      "group_overload": 1,
+      "repeated_lecture": 1,
+      "underused_room": 1,
+      "p9": 1
+    },
+    "scoring": "provisional unit weights; official validator unavailable",
+    "room_utilisation": 24.6,
+    "utilisation": {
+      "week": 7,
+      "periods": "P1-P9",
+      "denominator": "Available room-hours of teaching-compatible room types, excluding maintenance and closures",
+      "available_hours": 988,
+      "used_hours": 243,
+      "percent": 24.6,
+      "rooms": [
+        {
+          "id": "CR-101",
+          "available_hours": 43,
+          "used_hours": 12,
+          "percent": 27.91
+        },
+        {
+          "id": "CR-102",
+          "available_hours": 45,
+          "used_hours": 27,
+          "percent": 60.0
+        },
+        {
+          "id": "CR-103",
+          "available_hours": 45,
+          "used_hours": 9,
+          "percent": 20.0
+        },
+        {
+          "id": "CR-104",
+          "available_hours": 45,
+          "used_hours": 7,
+          "percent": 15.56
+        },
+        {
+          "id": "CR-105",
+          "available_hours": 45,
+          "used_hours": 3,
+          "percent": 6.67
+        },
+        {
+          "id": "CR-106",
+          "available_hours": 45,
+          "used_hours": 4,
+          "percent": 8.89
+        },
+        {
+          "id": "CR-107",
+          "available_hours": 45,
+          "used_hours": 8,
+          "percent": 17.78
+        },
+        {
+          "id": "CR-108",
+          "available_hours": 45,
+          "used_hours": 11,
+          "percent": 24.44
+        },
+        {
+          "id": "CR-109",
+          "available_hours": 45,
+          "used_hours": 16,
+          "percent": 35.56
+        },
+        {
+          "id": "CR-110",
+          "available_hours": 45,
+          "used_hours": 18,
+          "percent": 40.0
+        },
+        {
+          "id": "CR-111",
+          "available_hours": 45,
+          "used_hours": 18,
+          "percent": 40.0
+        },
+        {
+          "id": "CR-112",
+          "available_hours": 45,
+          "used_hours": 29,
+          "percent": 64.44
+        },
+        {
+          "id": "LH-1",
+          "available_hours": 45,
+          "used_hours": 0,
+          "percent": 0.0
+        },
+        {
+          "id": "LH-2",
+          "available_hours": 45,
+          "used_hours": 0,
+          "percent": 0.0
+        },
+        {
+          "id": "LH-3",
+          "available_hours": 45,
+          "used_hours": 0,
+          "percent": 0.0
+        },
+        {
+          "id": "LAB-1",
+          "available_hours": 45,
+          "used_hours": 12,
+          "percent": 26.67
+        },
+        {
+          "id": "LAB-2",
+          "available_hours": 45,
+          "used_hours": 9,
+          "percent": 20.0
+        },
+        {
+          "id": "LAB-3",
+          "available_hours": 45,
+          "used_hours": 9,
+          "percent": 20.0
+        },
+        {
+          "id": "LAB-4",
+          "available_hours": 45,
+          "used_hours": 6,
+          "percent": 13.33
+        },
+        {
+          "id": "LAB-5",
+          "available_hours": 45,
+          "used_hours": 24,
+          "percent": 53.33
+        },
+        {
+          "id": "LAB-6",
+          "available_hours": 45,
+          "used_hours": 12,
+          "percent": 26.67
+        },
+        {
+          "id": "LAB-7",
+          "available_hours": 45,
+          "used_hours": 9,
+          "percent": 20.0
+        },
+        {
+          "id": "AUD",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "SH-1",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "SH-2",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "OAT",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "SH-3",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        }
+      ]
+    }
+  },
+  "after_report": {
+    "valid": true,
+    "hard_violations": 0,
+    "errors": [],
+    "soft_penalty": 3,
+    "soft_breakdown": {
+      "faculty_avoid": 0,
+      "group_gaps": 3,
+      "group_overload": 0,
+      "repeated_lecture": 0,
+      "underused_room": 0,
+      "p9": 0
+    },
+    "soft_weights": {
+      "faculty_avoid": 1,
+      "group_gaps": 1,
+      "group_overload": 1,
+      "repeated_lecture": 1,
+      "underused_room": 1,
+      "p9": 1
+    },
+    "scoring": "provisional unit weights; official validator unavailable",
+    "room_utilisation": 24.92,
+    "utilisation": {
+      "week": 7,
+      "periods": "P1-P9",
+      "denominator": "Available room-hours of teaching-compatible room types, excluding maintenance and closures",
+      "available_hours": 979,
+      "used_hours": 244,
+      "percent": 24.92,
+      "rooms": [
+        {
+          "id": "CR-101",
+          "available_hours": 43,
+          "used_hours": 12,
+          "percent": 27.91
+        },
+        {
+          "id": "CR-102",
+          "available_hours": 45,
+          "used_hours": 28,
+          "percent": 62.22
+        },
+        {
+          "id": "CR-103",
+          "available_hours": 45,
+          "used_hours": 10,
+          "percent": 22.22
+        },
+        {
+          "id": "CR-104",
+          "available_hours": 45,
+          "used_hours": 7,
+          "percent": 15.56
+        },
+        {
+          "id": "CR-105",
+          "available_hours": 45,
+          "used_hours": 3,
+          "percent": 6.67
+        },
+        {
+          "id": "CR-106",
+          "available_hours": 45,
+          "used_hours": 4,
+          "percent": 8.89
+        },
+        {
+          "id": "CR-107",
+          "available_hours": 45,
+          "used_hours": 9,
+          "percent": 20.0
+        },
+        {
+          "id": "CR-108",
+          "available_hours": 45,
+          "used_hours": 11,
+          "percent": 24.44
+        },
+        {
+          "id": "CR-109",
+          "available_hours": 45,
+          "used_hours": 16,
+          "percent": 35.56
+        },
+        {
+          "id": "CR-110",
+          "available_hours": 45,
+          "used_hours": 18,
+          "percent": 40.0
+        },
+        {
+          "id": "CR-111",
+          "available_hours": 45,
+          "used_hours": 17,
+          "percent": 37.78
+        },
+        {
+          "id": "CR-112",
+          "available_hours": 45,
+          "used_hours": 28,
+          "percent": 62.22
+        },
+        {
+          "id": "LH-1",
+          "available_hours": 45,
+          "used_hours": 0,
+          "percent": 0.0
+        },
+        {
+          "id": "LH-2",
+          "available_hours": 45,
+          "used_hours": 0,
+          "percent": 0.0
+        },
+        {
+          "id": "LH-3",
+          "available_hours": 45,
+          "used_hours": 0,
+          "percent": 0.0
+        },
+        {
+          "id": "LAB-1",
+          "available_hours": 45,
+          "used_hours": 12,
+          "percent": 26.67
+        },
+        {
+          "id": "LAB-2",
+          "available_hours": 45,
+          "used_hours": 9,
+          "percent": 20.0
+        },
+        {
+          "id": "LAB-3",
+          "available_hours": 36,
+          "used_hours": 9,
+          "percent": 25.0
+        },
+        {
+          "id": "LAB-4",
+          "available_hours": 45,
+          "used_hours": 6,
+          "percent": 13.33
+        },
+        {
+          "id": "LAB-5",
+          "available_hours": 45,
+          "used_hours": 24,
+          "percent": 53.33
+        },
+        {
+          "id": "LAB-6",
+          "available_hours": 45,
+          "used_hours": 12,
+          "percent": 26.67
+        },
+        {
+          "id": "LAB-7",
+          "available_hours": 45,
+          "used_hours": 9,
+          "percent": 20.0
+        },
+        {
+          "id": "AUD",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "SH-1",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "SH-2",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "OAT",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "SH-3",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        }
+      ]
+    }
+  },
+  "change": {
+    "room_closures": [
+      {
+        "week": 7,
+        "day": 0,
+        "start_period": 1,
+        "duration": 9,
+        "room": "LAB-3"
+      }
+    ],
+    "faculty_leave": [
+      {
+        "week": 7,
+        "day": 1,
+        "start_period": 1,
+        "duration": 9,
+        "faculty": "F01"
+      }
+    ],
+    "added_sessions": [
+      {
+        "id": "S190",
+        "course": "C013",
+        "faculty": [
+          "F01"
+        ],
+        "groups": [
+          "Y2-CSE"
+        ],
+        "size": 70,
+        "duration": 1,
+        "kind": "tutorial",
+        "room_type": "classroom",
+        "accessible": false,
+        "department": "CSE",
+        "basket": null,
+        "fixed": null
+      }
+    ],
+    "moves": []
+  }
+}

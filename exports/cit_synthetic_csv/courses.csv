@@ -1,0 +1,63 @@
+﻿id,name,department
+C001,Engineering Mathematics,COMMON
+C002,Computational Thinking,COMMON
+C003,Engineering Physics,COMMON
+C004,Engineering Chemistry,COMMON
+C005,Technical Communication,COMMON
+C006,Engineering Drawing,COMMON
+C007,Environmental Studies,COMMON
+C008,Materials Science,COMMON
+C009,Statistics,COMMON
+C010,Applied Mathematics,COMMON
+C011,Physics Practicum,COMMON
+C012,Chemistry Practicum,COMMON
+C013,Programming,CSE
+C014,Data Structures,CSE
+C015,Algorithms,CSE
+C016,Computer Architecture,CSE
+C017,Operating Systems,CSE
+C018,Databases,CSE
+C019,Computer Networks,CSE
+C020,Software Engineering,CSE
+C021,Machine Learning,CSE
+C022,Computer Practicum,CSE
+C023,Electronic Circuits,ECE
+C024,Digital Electronics,ECE
+C025,Signals and Systems,ECE
+C026,Communication Systems,ECE
+C027,Microprocessors,ECE
+C028,VLSI Design,ECE
+C029,Electromagnetics,ECE
+C030,Embedded Systems,ECE
+C031,Instrumentation,ECE
+C032,Electronics Practicum,ECE
+C033,Circuit Theory,EE
+C034,Electrical Machines,EE
+C035,Power Systems,EE
+C036,Control Systems,EE
+C037,Power Electronics,EE
+C038,Electrical Measurements,EE
+C039,Network Theory,EE
+C040,Energy Systems,EE
+C041,Digital Control,EE
+C042,Electrical Practicum,EE
+C043,Engineering Mechanics,ME
+C044,Thermodynamics,ME
+C045,Fluid Mechanics,ME
+C046,Machine Design,ME
+C047,Manufacturing,ME
+C048,Heat Transfer,ME
+C049,Dynamics,ME
+C050,CAD,ME
+C051,Industrial Engineering,ME
+C052,Mechanical Practicum,ME
+C053,Structural Analysis,CE
+C054,Surveying,CE
+C055,Geotechnical Engineering,CE
+C056,Concrete Technology,CE
+C057,Transportation,CE
+C058,Hydrology,CE
+C059,Construction Management,CE
+C060,Environmental Engineering,CE
+C061,Strength of Materials,CE
+C062,Civil Practicum,CE

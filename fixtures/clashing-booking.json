@@ -1,0 +1,13 @@
+{
+  "title": "Conflict demonstration \u2014 must not be accepted",
+  "week": 7,
+  "room": "LAB-3",
+  "day": 3,
+  "start_period": 6,
+  "duration": 1,
+  "size": 10,
+  "category": "club",
+  "groups": [
+    "Y1-A"
+  ]
+}

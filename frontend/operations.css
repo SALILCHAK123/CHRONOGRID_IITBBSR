@@ -1,0 +1,176 @@
+/* Operational page refinement. Shared role tokens keep every role in its sign-in palette. */
+#application:not(.university-home){font-size:13px;line-height:1.6;font-family:'DM Sans',Arial,sans-serif}
+#application:not(.university-home) .campus-page-banner{max-width:1480px;padding:34px 32px 30px;gap:70px;grid-template-columns:minmax(0,1fr) 240px}
+#application:not(.university-home) .campus-page-copy h1{font-family:Manrope,Arial,sans-serif;font-weight:700;font-size:38px;line-height:1.2;letter-spacing:-1.5px;margin:16px 0}
+#application:not(.university-home) .campus-page-copy p{font-size:13px;line-height:1.8;max-width:730px;color:var(--role-muted)}
+#application:not(.university-home) .campus-page-copy .campus-eyebrow{font-size:10px;letter-spacing:1.2px}
+#application:not(.university-home) .campus-back{font-size:11px;margin-bottom:18px}
+#application:not(.university-home) .campus-page-facts{font-size:11px;gap:22px}
+#application:not(.university-home) .campus-page-facts strong{font-weight:600}
+#application:not(.university-home) .campus-page-index{border:1px solid var(--role-line);border-left:3px solid var(--role-accent);padding:23px 25px;min-height:145px;border-radius:0 12px 12px 0;background:var(--role-card)}
+#application:not(.university-home) .campus-page-index strong{font-size:22px;letter-spacing:-.6px;line-height:1.4;margin:14px 0}
+#application:not(.university-home) .campus-page-index>span,#application:not(.university-home) .campus-page-index small{font-size:9px;letter-spacing:1px}
+#application:not(.university-home)>header{box-shadow:none;border-top:1px solid var(--role-line);border-bottom:1px solid var(--role-line);backdrop-filter:none;background:var(--role-card)}
+#application:not(.university-home) .topbar{max-width:1920px;padding:18px 26px;gap:14px 20px;align-items:center}
+#application:not(.university-home) .role-switch{background:var(--role-paper);border:1px solid var(--role-line);border-radius:10px;padding:4px;gap:3px}
+#application:not(.university-home) .role-switch:before{display:none}
+#application:not(.university-home) .role-switch button{font-size:11px;font-weight:500;padding:8px 12px;min-height:36px;color:var(--role-muted);border-radius:7px}
+#application:not(.university-home) .role-switch button.selected{font-weight:600;box-shadow:none}
+#application:not(.university-home) .template-telemetry{background:transparent;border:0;border-radius:0;padding:0;gap:7px;margin-left:auto}
+#application:not(.university-home) .template-telemetry .pill{font-family:'DM Sans',Arial,sans-serif;font-size:10px;letter-spacing:.1px;padding:6px 10px;border-radius:20px}
+#application:not(.university-home) .actions{gap:7px}
+#application:not(.university-home) .actions button,#application:not(.university-home) .workspace-portal-link{min-height:36px;font-size:11px;padding:8px 12px;border-radius:7px;line-height:1.5;box-shadow:none}
+#application:not(.university-home) .actions button:disabled{opacity:.38;cursor:not-allowed}
+#application:not(.university-home) .context{padding:10px 27px;align-items:center;gap:15px;font-size:11px}
+#application:not(.university-home) .context b{font-family:Manrope,Arial,sans-serif;font-weight:600;font-size:10px;letter-spacing:.4px;color:var(--role-hero-text);border:1px solid #ffffff30;background:transparent;padding:5px 8px;border-radius:5px}
+#application:not(.university-home) .context #role-description{font-size:11px;color:var(--role-hero-secondary);margin-left:12px}
+#application:not(.university-home) .context>.mono{font-family:'DM Sans',Arial,sans-serif;font-size:10px;letter-spacing:.3px;color:var(--role-hero-secondary)}
+#application:not(.university-home) .notice{font-size:10px;line-height:1.7;padding:8px 27px;border:0}
+#application:not(.university-home) .live-telemetry{font:10px/1.8 'DM Sans',Arial,sans-serif;letter-spacing:.2px;padding:10px 27px;border-bottom:1px solid var(--role-line);color:var(--role-muted)}
+#application:not(.university-home) .copilot-toggle{display:block;width:fit-content;margin:18px 27px 0;min-height:40px;padding:10px 17px;background:var(--role-accent);border:1px solid var(--role-accent);color:#fff9e9;border-radius:8px;font-size:12px;font-weight:600;box-shadow:none}
+#application:not(.university-home) .workspace{display:block;max-width:1920px;margin:auto}
+#application:not(.university-home) .workspace main{padding:23px 26px 35px;width:100%;display:flex;flex-direction:column;gap:22px}
+#application:not(.university-home) .kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px;margin:0}
+#application:not(.university-home) .kpi{border:1px solid var(--role-line);background:var(--role-card);border-radius:10px;min-height:118px;padding:20px;box-shadow:none;position:relative;overflow:hidden}
+#application:not(.university-home) .kpi:before{content:'';position:absolute;top:20px;bottom:20px;left:0;width:3px;background:var(--role-accent);opacity:.5}
+#application:not(.university-home) .kpi label{font:600 10px/1.5 'DM Sans',Arial,sans-serif;color:var(--role-muted);letter-spacing:.6px;margin:0 0 10px}
+#application:not(.university-home) .kpi strong{font:700 25px/1.2 Manrope,Arial,sans-serif;color:var(--role-dark);letter-spacing:-.8px;white-space:normal}
+#application:not(.university-home) .kpi-inline{display:inline-block;font:500 10px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:0;color:var(--role-accent);margin-left:3px}
+#application:not(.university-home) .kpi small{font:400 11px/1.6 'DM Sans',Arial,sans-serif;color:var(--role-muted);margin-top:9px}
+#application:not(.university-home) .kpi-icon{display:none}
+#application:not(.university-home) .tabs{border:1px solid var(--role-line);border-radius:10px;background:var(--role-card);padding:7px;gap:5px;box-shadow:none;display:flex;flex-wrap:wrap}
+#application:not(.university-home) .tabs button{min-height:41px;padding:10px 16px;font-size:12px;font-weight:500;border-radius:7px;letter-spacing:0;color:var(--role-muted);background:transparent;box-shadow:none}
+#application:not(.university-home) .tabs button.selected{color:var(--role-accent);background:var(--role-soft);font-weight:700;box-shadow:none}
+#application:not(.university-home) .panel{background:var(--role-card);border:1px solid var(--role-line);border-radius:12px;overflow:hidden;box-shadow:none}
+#application:not(.university-home) .panel-head{padding:24px 25px;border-bottom:1px solid var(--role-line);gap:20px}
+#application:not(.university-home) .panel-head h2{font:700 22px/1.4 Manrope,Arial,sans-serif;letter-spacing:-.6px;color:var(--role-dark);margin:0 0 7px}
+#application:not(.university-home) .panel-head p{font:400 12px/1.8 'DM Sans',Arial,sans-serif;color:var(--role-muted);margin:0}
+#application:not(.university-home) .panel-content{font-size:12px;line-height:1.8;padding:22px 25px}
+#application:not(.university-home) .panel-toolbar{font:400 12px/1.7 'DM Sans',Arial,sans-serif;gap:15px;padding:19px 22px;background:var(--role-paper);border-bottom:1px solid var(--role-line)}
+#application:not(.university-home) .template-filter label{font-size:11px;font-weight:500;color:var(--role-muted)}
+#application:not(.university-home) .template-filter .segmented{border:1px solid var(--role-line);padding:3px;background:var(--role-card);border-radius:8px;gap:2px}
+#application:not(.university-home) .template-filter .segmented button{font-size:11px;padding:8px 11px;min-height:35px;border-radius:5px;color:var(--role-muted)}
+#application:not(.university-home) .template-filter .segmented .selected{background:var(--role-soft);color:var(--role-accent);font-weight:600}
+#application:not(.university-home) .template-filter select{min-height:40px;width:190px;max-width:240px;font-size:12px;padding:8px 12px;border-color:var(--role-line);border-radius:7px;background:var(--role-card);color:var(--role-dark)}
+#application:not(.university-home) .entity-meta{font:400 11px/1.6 'DM Sans',Arial,sans-serif;border:0;background:transparent;color:var(--role-muted);padding:0}
+#application:not(.university-home) .template-filter>button{font-size:11px;min-height:38px;padding:8px 13px;color:var(--role-accent);border:1px solid var(--role-line);background:var(--role-card);border-radius:7px}
+#application:not(.university-home) .template-timetable{min-width:1480px}
+#application:not(.university-home) .template-timetable th{height:67px;font:600 12px/1.5 'DM Sans',Arial,sans-serif;letter-spacing:.2px;background:var(--role-paper);border-color:var(--role-line);color:var(--role-dark);padding:12px 10px}
+#application:not(.university-home) .template-timetable th small{font:400 10px/1.6 'DM Sans',Arial,sans-serif;letter-spacing:0;margin-top:6px;color:var(--role-muted)}
+#application:not(.university-home) .template-timetable th.day-label{width:88px;background:var(--role-paper)}
+#application:not(.university-home) .template-timetable tbody .day-label{font:700 12px/1.6 Manrope,Arial,sans-serif;vertical-align:middle;background:var(--role-paper);border-color:var(--role-line)}
+#application:not(.university-home) .template-timetable td{padding:8px;height:170px;border-color:var(--role-line);background:var(--role-card)}
+#application:not(.university-home) .template-timetable .lunch-column{width:55px;background:var(--role-soft);color:var(--role-muted)}
+#application:not(.university-home) .lunch-column span{font:500 10px/1.8 'DM Sans',Arial,sans-serif;letter-spacing:1px;margin-top:40px}
+#application:not(.university-home) .template-timetable .p9-column{background:var(--role-paper)}
+#application:not(.university-home) .template-timetable .p9-column small{color:var(--role-accent)}
+#application:not(.university-home) .template-timetable .event-zone-heading{width:280px;background:var(--role-soft);color:var(--role-accent);font-size:11px}
+#application:not(.university-home) .template-timetable .event-zone-heading small{border:0;background:transparent;color:var(--role-muted);padding:0}
+#application:not(.university-home) .template-timetable .event-zone-bg{background:var(--role-paper)!important}
+#application:not(.university-home) .event-empty{min-height:145px;font:500 12px/1.5 'DM Sans',Arial,sans-serif;color:var(--role-muted);gap:9px}
+#application:not(.university-home) .event-empty small,#application:not(.university-home) .event-empty span{font:400 10px/1.7 'DM Sans',Arial,sans-serif;color:var(--role-subtle)}
+#application:not(.university-home) .free-slot{font:400 11px/1.6 'DM Sans',Arial,sans-serif;color:var(--role-subtle);padding-top:62px}
+#application:not(.university-home) .template-session{padding:12px;min-height:145px;border:1px solid var(--role-line);border-left:3px solid var(--role-accent);border-radius:8px;background:var(--role-soft);color:var(--role-dark);box-shadow:none}
+#application:not(.university-home) .template-session.lab,#application:not(.university-home) .template-session.elective{background:var(--role-soft);border-color:var(--role-line);border-left-color:var(--role-accent);color:var(--role-dark);min-height:145px}
+#application:not(.university-home) .session-top{align-items:center;font:600 10px/1.4 'DM Sans',Arial,sans-serif;margin-bottom:10px;gap:8px}
+#application:not(.university-home) .session-top>b{font-family:Manrope,Arial,sans-serif;font-size:10px;letter-spacing:.3px;padding:4px 7px;border-radius:4px}
+#application:not(.university-home) .session-top span{font-size:8px;color:var(--role-accent);font-weight:600;letter-spacing:.6px}
+#application:not(.university-home) .template-session>strong{font:600 12px/1.5 Manrope,Arial,sans-serif;color:var(--role-dark);letter-spacing:-.15px}
+#application:not(.university-home) .template-session small{font:400 10px/1.7 'DM Sans',Arial,sans-serif;color:var(--role-muted);margin-top:6px}
+#application:not(.university-home) .timetable .explain-slot{font:500 10px/1.5 'DM Sans',Arial,sans-serif;min-height:32px;padding:6px 10px;background:var(--role-card);color:var(--role-accent);border:1px solid var(--role-line);border-radius:6px;margin-top:10px}
+#application:not(.university-home) .template-grid-footer{font:400 11px/1.7 'DM Sans',Arial,sans-serif;background:var(--role-paper);color:var(--role-muted);padding:15px 20px;gap:18px;border-color:var(--role-line)}
+#application:not(.university-home) .table{font-size:12px}
+#application:not(.university-home) .table th{font:600 10px/1.6 'DM Sans',Arial,sans-serif;letter-spacing:.5px;padding:16px 18px;color:var(--role-muted);background:var(--role-paper)}
+#application:not(.university-home) .table td{font:400 12px/1.7 'DM Sans',Arial,sans-serif;padding:17px 18px;border-color:var(--role-line)}
+#application:not(.university-home) .table td .mono,#application:not(.university-home) .panel-content .mono{font-family:'DM Sans',Arial,sans-serif;font-variant-numeric:tabular-nums}
+#application:not(.university-home) .cards{gap:18px;padding:22px}
+#application:not(.university-home) .card{border:1px solid var(--role-line);border-radius:10px;padding:20px;background:var(--role-card);box-shadow:none}
+#application:not(.university-home) .card h3{font:650 16px/1.5 Manrope,Arial,sans-serif;color:var(--role-dark);letter-spacing:-.3px}
+#application:not(.university-home) .card p,#application:not(.university-home) .card .meta{font:400 11px/1.8 'DM Sans',Arial,sans-serif;color:var(--role-muted)}
+#application:not(.university-home) .panel button{font-size:11px;border-radius:6px}
+#application:not(.university-home) .pill{font-family:'DM Sans',Arial,sans-serif;font-size:10px;letter-spacing:.2px}
+#application:not(.university-home) .diff-summary{padding:22px;gap:20px}
+#application:not(.university-home) .diff-summary strong{font:700 28px Manrope,Arial,sans-serif;letter-spacing:-.7px}
+#application:not(.university-home) .diff-summary small{font:500 9px/1.8 'DM Sans',Arial,sans-serif;letter-spacing:.5px}
+#application:not(.university-home) .approval-footer{padding:22px;font-size:12px;line-height:1.8}
+#application:not(.university-home) .footnote{font:400 10px/1.8 'DM Sans',Arial,sans-serif;color:var(--role-muted);gap:15px;padding-top:4px}
+#application:not(.university-home) .workspace aside{position:fixed;top:85px;right:18px;left:auto;bottom:18px;width:405px;max-width:calc(100vw - 30px);min-width:0;z-index:50;overflow-y:auto;border:1px solid var(--role-line);border-radius:14px;box-shadow:0 18px 65px #18261e28;padding:20px;background:var(--role-card)}
+#application:not(.university-home) .workspace.copilot-collapsed aside{display:none}
+#application:not(.university-home) .close-copilot{display:block;margin:0 0 18px auto;font-size:11px;color:var(--role-muted);min-height:35px;border:1px solid var(--role-line);border-radius:6px;background:var(--role-paper)}
+#application:not(.university-home) .copilot-title{margin:0;padding:0 0 18px;background:transparent!important;gap:10px;border-bottom:1px solid var(--role-line)}
+#application:not(.university-home) .copilot-title h2{font:700 20px/1.4 Manrope,Arial,sans-serif;letter-spacing:-.5px;color:var(--role-dark)}
+#application:not(.university-home) .copilot-title p{display:block;font:400 11px/1.7 'DM Sans',Arial,sans-serif;color:var(--role-muted);margin-top:5px}
+#application:not(.university-home) .copilot-icon{display:none}
+#application:not(.university-home) .drawer-tabs{margin:17px 0;padding:4px;gap:4px;border:1px solid var(--role-line);border-radius:8px;background:var(--role-paper)}
+#application:not(.university-home) .drawer-tabs button{font-size:11px;min-height:39px;padding:8px;background:transparent;box-shadow:none}
+#application:not(.university-home) aside label{font:600 11px/1.6 'DM Sans',Arial,sans-serif;margin:16px 0 7px;color:var(--role-muted)}
+#application:not(.university-home) aside input,#application:not(.university-home) aside select,#application:not(.university-home) aside textarea{font:400 12px/1.7 'DM Sans',Arial,sans-serif;padding:10px 12px;border:1px solid var(--role-line);border-radius:6px;background:var(--role-card);color:var(--role-dark)}
+#application:not(.university-home) .scenario-heading{font:600 9px/1.7 'DM Sans',Arial,sans-serif;letter-spacing:1px;color:var(--role-muted)}
+#application:not(.university-home) .judge-scenarios{gap:8px}
+#application:not(.university-home) .judge-scenarios button{padding:11px;border-radius:7px;border-color:var(--role-line);font-size:11px;background:var(--role-paper)}
+#application:not(.university-home) .judge-scenarios b{font-size:10px;color:var(--role-dark)}
+#application:not(.university-home) .judge-scenarios small{font-size:9px;color:var(--role-muted)}
+#application:not(.university-home) #prompt{font-size:12px;min-height:100px;background:var(--role-card)}
+#application:not(.university-home) #booking-form{background:var(--role-paper);border-color:var(--role-line);padding:0 15px 15px}
+#application:not(.university-home) #booking-form .section-label{margin:0 -15px 12px;padding:15px;font:500 9px/1.7 'DM Sans',Arial,sans-serif;letter-spacing:.5px;background:var(--role-soft);color:var(--role-accent);border-color:var(--role-line)}
+#application:not(.university-home) .parser-status{font:400 10px/1.7 'DM Sans',Arial,sans-serif;color:var(--role-muted)}
+#application:not(.university-home) #check,#application:not(.university-home) #submit,#application:not(.university-home) #parse{font-size:11px;min-height:42px;letter-spacing:0;text-transform:none}
+#application:not(.university-home) .firewall-head{font:600 9px/1.7 'DM Sans',Arial,sans-serif;letter-spacing:.4px}
+@media(max-width:1100px){#application:not(.university-home) .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}#application:not(.university-home) .kpi{min-height:105px;padding:17px}#application:not(.university-home) .topbar{padding:15px 20px}#application:not(.university-home) .actions{width:100%}#application:not(.university-home) .campus-page-banner{gap:25px}}
+@media(max-width:760px){#application:not(.university-home) .campus-page-banner{grid-template-columns:1fr;padding:27px 22px;gap:23px}#application:not(.university-home) .campus-page-copy h1{font-size:31px;letter-spacing:-1px}#application:not(.university-home) .campus-page-copy p{font-size:12px}#application:not(.university-home) .campus-page-index{min-height:0;padding:16px 20px}#application:not(.university-home) .campus-page-index strong{font-size:19px;margin:10px 0}#application:not(.university-home) .campus-page-facts{font-size:10px}#application:not(.university-home) .campus-page-copy .campus-eyebrow{font-size:9px}#application:not(.university-home) .topbar{padding:14px;gap:14px}#application:not(.university-home) .role-switch{order:0;width:100%;display:flex;flex-wrap:wrap;gap:3px}#application:not(.university-home) .role-switch button{flex:1 1 auto;font-size:10px;padding:7px 9px;min-height:36px}#application:not(.university-home) .template-telemetry{order:1;justify-content:flex-start;width:100%;margin:0;gap:5px;flex-wrap:wrap}#application:not(.university-home) .template-telemetry .pill{font-size:9px;padding:5px 8px}#application:not(.university-home) .actions{order:2;gap:6px}#application:not(.university-home) .actions button,#application:not(.university-home) .workspace-portal-link{font-size:10px;padding:7px 9px;min-height:35px}#application:not(.university-home) .context{padding:12px 16px}#application:not(.university-home) .context #role-description{display:none}#application:not(.university-home) .notice,#application:not(.university-home) .live-telemetry{padding:9px 16px;font-size:9px;line-height:1.8}#application:not(.university-home) .copilot-toggle{margin:17px 16px 0;font-size:11px}#application:not(.university-home) .workspace main{padding:20px 15px 25px;gap:18px}#application:not(.university-home) .kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#application:not(.university-home) .kpi{padding:16px;min-height:108px}#application:not(.university-home) .kpi:last-child{grid-column:span 2}#application:not(.university-home) .kpi strong{font-size:24px}#application:not(.university-home) .kpi small{font-size:10px}#application:not(.university-home) .kpi label{font-size:9px}#application:not(.university-home) .tabs{gap:4px;padding:6px}#application:not(.university-home) .tabs button{font-size:11px;padding:8px 10px;min-height:38px}#application:not(.university-home) .panel-toolbar{padding:15px;gap:12px}#application:not(.university-home) .template-filter .segmented{width:100%;justify-content:space-between}#application:not(.university-home) .template-filter .segmented button{font-size:10px;padding:7px 9px}#application:not(.university-home) .template-filter select{width:200px}#application:not(.university-home) .template-filter>button{margin-left:0}#application:not(.university-home) .panel-head{padding:21px 18px}#application:not(.university-home) .panel-head h2{font-size:19px}#application:not(.university-home) .panel-head p{font-size:11px}#application:not(.university-home) .cards{padding:15px;gap:13px}#application:not(.university-home) .card{padding:17px}#application:not(.university-home) .workspace aside{top:20px;bottom:20px;right:12px;max-width:calc(100vw - 24px);width:405px;padding:18px;border-radius:12px}#application:not(.university-home) .footnote{font-size:9px}#application:not(.university-home) .template-grid-footer{font-size:10px;padding:15px;gap:10px}}
+@media(prefers-reduced-motion:reduce){#application *{scroll-behavior:auto!important}}
+#application:not(.university-home){--role-muted:#64735e;--role-subtle:#8b9682}#application:not(.university-home) .kpi label{font-weight:600}#application:not(.university-home) .event-chip{background:var(--role-soft);border-color:var(--role-line);color:var(--role-dark);font:500 12px/1.7 "DM Sans",Arial,sans-serif}#application:not(.university-home) .event-chip small{font:400 10px/1.7 "DM Sans",Arial,sans-serif}
+/* Availability is an explicit, visible result of the draft check. */
+#application .availability-result{margin:16px 0;padding:17px;border:1px solid var(--role-line);border-left:3px solid var(--role-accent);border-radius:9px;background:var(--role-card);scroll-margin:18px;outline-offset:3px}
+#application .availability-result h3{font:700 16px/1.4 Manrope,Arial,sans-serif;letter-spacing:-.4px;color:var(--role-dark);margin:0 0 10px}
+#application #availability-summary{font:400 12px/1.8 'DM Sans',Arial,sans-serif;color:var(--role-muted);margin:0 0 14px}
+#application .availability-result .firewall{margin:0;border-radius:7px}
+#application .availability-result .firewall-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:9px;line-height:1.8}
+#application .availability-result[data-status=blocked]{border-left-color:#a77b34}
+#application .availability-result[data-status=incomplete],#application .availability-result[data-status=error]{border-left-color:#a14c38}
+#application .availability-result .offers{margin:16px 0 0}
+#application .availability-result .offers h4{font:600 13px/1.5 Manrope,Arial,sans-serif;color:var(--role-dark);margin:0 0 6px}
+#application .availability-result .offers p{font:400 11px/1.7 'DM Sans',Arial,sans-serif;color:var(--role-muted);margin:0 0 11px}
+#application .availability-result .offers button{display:flex;flex-direction:column;align-items:flex-start;width:100%;text-align:left;gap:6px;padding:12px;min-height:58px;border:1px solid var(--role-line);border-radius:7px;color:var(--role-dark);background:var(--role-soft);font-size:12px;margin:8px 0}
+#application .availability-result .offers button small{font-size:10px;color:var(--role-accent)}
+#application .booking-field-error{display:block;color:#a14c38;font:400 11px/1.7 'DM Sans',Arial,sans-serif;margin:6px 0 0}
+#application #booking-form [aria-invalid=true]{border-color:#a14c38;outline-color:#a14c38}
+#application #check[aria-busy=true]{opacity:.7;cursor:wait}
+#application #check{margin-top:18px}
+#application .available-room-card{border:1px solid var(--role-line);border-radius:9px;background:var(--role-card);padding:15px;margin:11px 0}
+#application .available-room-card>div{display:flex;justify-content:space-between;align-items:flex-start;gap:13px}
+#application .availability-result .available-room-card h4{font-size:14px;line-height:1.5;margin:0 0 8px}
+#application .available-room-card h4 span{display:block;font:400 10px/1.6 'DM Sans',Arial,sans-serif;color:var(--role-muted)}
+#application .available-room-card b{font:700 13px/1.5 Manrope,Arial,sans-serif;color:var(--role-accent);white-space:nowrap}
+#application .availability-result .available-room-card p{font-size:11px;line-height:1.8;margin:7px 0;color:var(--role-muted)}
+#application .availability-result .available-room-card button{display:block;width:100%;min-height:39px;margin:12px 0 0;padding:9px 12px;background:var(--role-soft);font-size:11px;text-align:center;color:var(--role-accent)}
+#application .availability-details{margin-top:17px;border-top:1px solid var(--role-line);padding-top:13px}
+#application .availability-details summary{font:500 11px/1.8 'DM Sans',Arial,sans-serif;color:var(--role-muted);cursor:pointer}
+#application .availability-details summary span{display:none}
+#application .availability-details #checks{font:400 11px/1.8 'DM Sans',Arial,sans-serif;color:var(--role-muted);padding:12px 0 0}
+#application .room-type-suggestions{border-top:1px solid var(--role-line);padding-top:15px;margin-top:17px}
+#application .edit-timetable-entry{margin-top:18px;min-height:42px;border:1px solid var(--role-accent);background:var(--role-accent);color:#fff9e9;padding:11px 18px;border-radius:7px;font-size:12px;font-weight:600}
+#application .edit-timetable-entry:disabled{opacity:.45;cursor:not-allowed}
+#application .session-actions{display:flex;gap:7px;flex-wrap:wrap}
+#application #timetable-editor{width:min(760px,calc(100vw - 30px));max-height:90vh;padding:30px;border:1px solid var(--role-line);border-radius:15px;background:var(--role-paper);color:var(--role-ink);box-shadow:0 22px 80px #15271f35;overflow:auto}
+#application #timetable-editor::backdrop{background:#15271f70}
+#application .editor-header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+#application .editor-header h2{font:700 28px/1.3 Manrope,Arial,sans-serif;letter-spacing:-.8px;margin:12px 0 0;color:var(--role-dark)}
+#application #close-timetable-editor{width:36px;height:36px;min-height:36px;padding:0;border:1px solid var(--role-line);border-radius:7px;background:var(--role-card);color:var(--role-dark);font-size:24px}
+#application .editor-intro{font:400 13px/1.8 'DM Sans',Arial,sans-serif;color:var(--role-muted);margin:18px 0 24px}
+#application #timetable-editor-form label{display:block;font:600 11px/1.6 'DM Sans',Arial,sans-serif;color:var(--role-dark);margin:17px 0 8px}
+#application #timetable-editor-form input,#application #timetable-editor-form select{width:100%;min-height:45px;font:400 13px/1.7 'DM Sans',Arial,sans-serif;border:1px solid var(--role-line);background:var(--role-card);border-radius:7px;color:var(--role-dark);padding:10px 12px}
+#application .editor-current{border:1px solid var(--role-line);background:var(--role-soft);padding:18px;margin:20px 0;border-radius:9px;font-size:13px;line-height:1.8}
+#application .editor-current>span{display:block;font-size:8px;letter-spacing:1.2px;color:var(--role-muted);margin-bottom:8px}
+#application .editor-current>strong{font:600 17px/1.5 Manrope,Arial,sans-serif;color:var(--role-dark)}
+#application .editor-current p{font-size:11px;color:var(--role-muted);margin:7px 0 0}
+#application .editor-field-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+#application .editor-help{font:400 11px/1.8 'DM Sans',Arial,sans-serif;color:var(--role-muted);margin:12px 0 0}
+#application .editor-error{font:400 12px/1.8 'DM Sans',Arial,sans-serif;color:#a14c38;margin:15px 0}
+#application #editor-progress{font:400 12px/1.8 'DM Sans',Arial,sans-serif;color:var(--role-accent)}
+#application .editor-footer{display:flex;justify-content:flex-end;gap:12px;border-top:1px solid var(--role-line);padding-top:20px;margin-top:20px}
+#application .editor-footer button{min-height:43px;font-size:12px;padding:10px 16px;border-radius:7px}
+@media(max-width:600px){#application #timetable-editor{padding:22px 19px;width:calc(100vw - 24px);max-height:94vh}#application .editor-header h2{font-size:24px}#application .editor-intro{font-size:12px}#application .editor-field-grid{grid-template-columns:1fr;gap:0}#application .editor-footer{flex-wrap:wrap}#application .editor-footer button{flex:1}#application .available-room-card>div{flex-wrap:wrap;gap:5px}}
+#application .home-edit-timetable{margin:15px 0 0 14px;border:1px solid var(--role-hero-secondary);border-radius:25px;color:var(--role-hero-text);background:transparent;min-height:44px;padding:11px 18px;font-size:12px}#application .available-room-card[data-selected=true]{border-color:var(--role-accent);background:var(--role-paper)}@media(max-width:600px){#application .home-edit-timetable{margin-left:0;display:block}}
+#editor-options{margin:16px 0;padding:0 4px;font-size:14px;line-height:1.65}#editor-options:empty{display:none}#editor-options button{display:block;width:100%;margin:8px 0;text-align:left;white-space:normal}#check-editor-move{margin:8px 0;width:100%}
+#application .slot-unavailable{display:block;padding:10px 7px;border-left:3px solid var(--role-accent,#755a28);background:var(--role-soft,#f1ead9);font-size:12px;font-weight:700;color:var(--role-dark,#183b36)}#application .slot-unavailable small{display:block;margin-top:5px;font-size:10px;font-weight:400;line-height:1.5}

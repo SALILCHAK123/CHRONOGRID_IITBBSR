@@ -1,0 +1,24 @@
+{
+  "checks": [
+    {
+      "file": "import-unsupported.csv",
+      "message": "Unsupported file. Use a .json change file or ChronoGrid dataset; PDF, Excel and CSV cannot be imported directly.",
+      "url": "http://127.0.0.1:8004/workspace#timetable"
+    },
+    {
+      "file": "import-malformed.json",
+      "message": "Invalid JSON in import-malformed.json. Fix the JSON syntax and import again. Your current timetable is unchanged.",
+      "url": "http://127.0.0.1:8004/workspace#timetable"
+    },
+    {
+      "file": "timetable-with-clash.json",
+      "message": "This is not a change file. Use moves, faculty_leave, room_closures or added_sessions. Full datasets belong in Rooms & resources → Import dataset; exported schedules are for validation, not direct replacement.",
+      "url": "http://127.0.0.1:8004/workspace#timetable"
+    }
+  ],
+  "conflictingChange": "INFEASIBLE; no application",
+  "datasetPreview": "189 sessions / 41 exams; 14 booking conflicts with reasons and alternatives",
+  "cancel": "Active revision 24 preserved",
+  "sessionRecovery": "Stayed on /workspace#timetable; message retained; reauthenticated and parsed",
+  "restart": "Existing session remained valid after isolated server restart"
+}

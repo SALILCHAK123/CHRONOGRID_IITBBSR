@@ -1,0 +1,37 @@
+[
+  {
+    "role": "admin",
+    "roomClosed": 9,
+    "facultyClosed": 10,
+    "gridVisible": true,
+    "toolbarEditEnabled": true
+  },
+  {
+    "role": "admin2",
+    "roomClosed": 9,
+    "facultyClosed": 10,
+    "gridVisible": true,
+    "toolbarEditEnabled": true
+  },
+  {
+    "role": "coordinator",
+    "roomClosed": 9,
+    "facultyClosed": 10,
+    "gridVisible": true,
+    "toolbarEditEnabled": true
+  },
+  {
+    "role": "faculty",
+    "roomClosed": 9,
+    "facultyClosed": 10,
+    "gridVisible": true,
+    "toolbarEditEnabled": true
+  },
+  {
+    "role": "club",
+    "roomClosed": 9,
+    "facultyClosed": 10,
+    "gridVisible": true,
+    "toolbarEditEnabled": false
+  }
+]

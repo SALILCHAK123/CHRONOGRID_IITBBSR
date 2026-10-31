@@ -1,0 +1,606 @@
+{
+  "desktop": [
+    {
+      "accent": "#755a28",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "timetable",
+      "role": "gold",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#755a28",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "spectra",
+      "role": "gold",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#755a28",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "exams",
+      "role": "gold",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#755a28",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "reschedule",
+      "role": "gold",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#755a28",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "approvals",
+      "role": "gold",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#755a28",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "utilisation",
+      "role": "gold",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#444d83",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "timetable",
+      "role": "indigo",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#444d83",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "spectra",
+      "role": "indigo",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#444d83",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "exams",
+      "role": "indigo",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#444d83",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "reschedule",
+      "role": "indigo",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#444d83",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "approvals",
+      "role": "indigo",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#444d83",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "utilisation",
+      "role": "indigo",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#536744",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "timetable",
+      "role": "olive",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#536744",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "spectra",
+      "role": "olive",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#536744",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "exams",
+      "role": "olive",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#536744",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "reschedule",
+      "role": "olive",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#536744",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "approvals",
+      "role": "olive",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#536744",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "utilisation",
+      "role": "olive",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#315f86",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "timetable",
+      "role": "blue",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#315f86",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "spectra",
+      "role": "blue",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#315f86",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "exams",
+      "role": "blue",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#315f86",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "reschedule",
+      "role": "blue",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#315f86",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "approvals",
+      "role": "blue",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#315f86",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "utilisation",
+      "role": "blue",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#9a5b43",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "timetable",
+      "role": "coral",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#9a5b43",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "spectra",
+      "role": "coral",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#9a5b43",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "exams",
+      "role": "coral",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#9a5b43",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "reschedule",
+      "role": "coral",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#9a5b43",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "approvals",
+      "role": "coral",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "accent": "#9a5b43",
+      "drawer": "none",
+      "headingFont": "Manrope, Arial, sans-serif",
+      "headingSize": "38px",
+      "images": 0,
+      "page": "utilisation",
+      "role": "coral",
+      "statSize": "25px",
+      "viewport": 1280,
+      "width": 1274
+    }
+  ],
+  "mobile": [
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "timetable",
+      "role": "gold",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "spectra",
+      "role": "gold",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "exams",
+      "role": "gold",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "reschedule",
+      "role": "gold",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "approvals",
+      "role": "gold",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "utilisation",
+      "role": "gold",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "timetable",
+      "role": "indigo",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "spectra",
+      "role": "indigo",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "exams",
+      "role": "indigo",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "reschedule",
+      "role": "indigo",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "approvals",
+      "role": "indigo",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "utilisation",
+      "role": "indigo",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "timetable",
+      "role": "olive",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "spectra",
+      "role": "olive",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "exams",
+      "role": "olive",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "reschedule",
+      "role": "olive",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "approvals",
+      "role": "olive",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "utilisation",
+      "role": "olive",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "timetable",
+      "role": "blue",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "spectra",
+      "role": "blue",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "exams",
+      "role": "blue",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "reschedule",
+      "role": "blue",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "approvals",
+      "role": "blue",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "utilisation",
+      "role": "blue",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "timetable",
+      "role": "coral",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "spectra",
+      "role": "coral",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "exams",
+      "role": "coral",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "reschedule",
+      "role": "coral",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "approvals",
+      "role": "coral",
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "headingSize": "31px",
+      "images": 0,
+      "page": "utilisation",
+      "role": "coral",
+      "viewport": 390,
+      "width": 385
+    }
+  ]
+}

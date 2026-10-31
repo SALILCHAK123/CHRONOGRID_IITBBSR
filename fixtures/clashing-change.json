@@ -1,0 +1,16 @@
+{
+  "moves": [
+    {
+      "session": "S040",
+      "day": 0,
+      "start_period": 1,
+      "room": "CR-101"
+    },
+    {
+      "session": "S041",
+      "day": 0,
+      "start_period": 1,
+      "room": "CR-101"
+    }
+  ]
+}

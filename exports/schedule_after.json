@@ -1,0 +1,2323 @@
+{
+  "meta": {
+    "synthetic": true,
+    "schema_version": 1,
+    "solver": "OR-Tools CP-SAT",
+    "official_validator_checked": false,
+    "rescheduled": true
+  },
+  "sessions": [
+    {
+      "id": "S001",
+      "day": 2,
+      "start_period": 6,
+      "room": "LAB-3"
+    },
+    {
+      "id": "S002",
+      "day": 1,
+      "start_period": 6,
+      "room": "LAB-4"
+    },
+    {
+      "id": "S003",
+      "day": 1,
+      "start_period": 6,
+      "room": "LAB-2"
+    },
+    {
+      "id": "S004",
+      "day": 3,
+      "start_period": 2,
+      "room": "LAB-3"
+    },
+    {
+      "id": "S005",
+      "day": 4,
+      "start_period": 2,
+      "room": "LAB-2"
+    },
+    {
+      "id": "S006",
+      "day": 4,
+      "start_period": 6,
+      "room": "LAB-5"
+    },
+    {
+      "id": "S007",
+      "day": 3,
+      "start_period": 2,
+      "room": "LAB-5"
+    },
+    {
+      "id": "S008",
+      "day": 1,
+      "start_period": 6,
+      "room": "LAB-6"
+    },
+    {
+      "id": "S009",
+      "day": 2,
+      "start_period": 6,
+      "room": "LAB-7"
+    },
+    {
+      "id": "S010",
+      "day": 3,
+      "start_period": 2,
+      "room": "LAB-1"
+    },
+    {
+      "id": "S011",
+      "day": 0,
+      "start_period": 6,
+      "room": "LAB-5"
+    },
+    {
+      "id": "S012",
+      "day": 1,
+      "start_period": 6,
+      "room": "LAB-5"
+    },
+    {
+      "id": "S013",
+      "day": 4,
+      "start_period": 6,
+      "room": "LAB-6"
+    },
+    {
+      "id": "S014",
+      "day": 4,
+      "start_period": 6,
+      "room": "LAB-7"
+    },
+    {
+      "id": "S015",
+      "day": 4,
+      "start_period": 2,
+      "room": "LAB-1"
+    },
+    {
+      "id": "S016",
+      "day": 4,
+      "start_period": 6,
+      "room": "LAB-3"
+    },
+    {
+      "id": "S017",
+      "day": 3,
+      "start_period": 6,
+      "room": "LAB-4"
+    },
+    {
+      "id": "S018",
+      "day": 1,
+      "start_period": 2,
+      "room": "LAB-1"
+    },
+    {
+      "id": "S019",
+      "day": 2,
+      "start_period": 2,
+      "room": "LAB-2"
+    },
+    {
+      "id": "S020",
+      "day": 2,
+      "start_period": 6,
+      "room": "LAB-5"
+    },
+    {
+      "id": "S021",
+      "day": 0,
+      "start_period": 2,
+      "room": "LAB-5"
+    },
+    {
+      "id": "S022",
+      "day": 3,
+      "start_period": 6,
+      "room": "LAB-6"
+    },
+    {
+      "id": "S023",
+      "day": 1,
+      "start_period": 2,
+      "room": "LAB-7"
+    },
+    {
+      "id": "S024",
+      "day": 2,
+      "start_period": 2,
+      "room": "LAB-1"
+    },
+    {
+      "id": "S025",
+      "day": 1,
+      "start_period": 2,
+      "room": "LAB-5"
+    },
+    {
+      "id": "S026",
+      "day": 2,
+      "start_period": 2,
+      "room": "LAB-5"
+    },
+    {
+      "id": "S027",
+      "day": 2,
+      "start_period": 6,
+      "room": "LAB-6"
+    },
+    {
+      "id": "S028",
+      "day": 2,
+      "start_period": 5,
+      "room": "CR-111"
+    },
+    {
+      "id": "S029",
+      "day": 2,
+      "start_period": 3,
+      "room": "CR-112"
+    },
+    {
+      "id": "S030",
+      "day": 2,
+      "start_period": 5,
+      "room": "CR-107"
+    },
+    {
+      "id": "S031",
+      "day": 2,
+      "start_period": 5,
+      "room": "CR-108"
+    },
+    {
+      "id": "S032",
+      "day": 1,
+      "start_period": 5,
+      "room": "CR-112"
+    },
+    {
+      "id": "S033",
+      "day": 4,
+      "start_period": 6,
+      "room": "CR-102"
+    },
+    {
+      "id": "S034",
+      "day": 1,
+      "start_period": 6,
+      "room": "CR-104"
+    },
+    {
+      "id": "S035",
+      "day": 3,
+      "start_period": 6,
+      "room": "CR-112"
+    },
+    {
+      "id": "S036",
+      "day": 4,
+      "start_period": 1,
+      "room": "CR-109"
+    },
+    {
+      "id": "S037",
+      "day": 3,
+      "start_period": 7,
+      "room": "CR-112"
+    },
+    {
+      "id": "S038",
+      "day": 4,
+      "start_period": 7,
+      "room": "CR-111"
+    },
+    {
+      "id": "S039",
+      "day": 1,
+      "start_period": 5,
+      "room": "CR-107"
+    },
+    {
+      "id": "S040",
+      "day": 4,
+      "start_period": 6,
+      "room": "CR-112"
+    },
+    {
+      "id": "S041",
+      "day": 3,
+      "start_period": 4,
+      "room": "CR-106"
+    },
+    {
+      "id": "S042",
+      "day": 1,
+      "start_period": 8,
+      "room": "CR-111"
+    },
+    {
+      "id": "S043",
+      "day": 2,
+      "start_period": 4,
+      "room": "CR-111"
+    },
+    {
+      "id": "S044",
+      "day": 0,
+      "start_period": 5,
+      "room": "CR-112"
+    },
+    {
+      "id": "S045",
+      "day": 0,
+      "start_period": 5,
+      "room": "CR-105"
+    },
+    {
+      "id": "S046",
+      "day": 0,
+      "start_period": 5,
+      "room": "CR-109"
+    },
+    {
+      "id": "S047",
+      "day": 1,
+      "start_period": 5,
+      "room": "CR-110"
+    },
+    {
+      "id": "S048",
+      "day": 4,
+      "start_period": 4,
+      "room": "CR-102"
+    },
+    {
+      "id": "S049",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-109"
+    },
+    {
+      "id": "S050",
+      "day": 3,
+      "start_period": 4,
+      "room": "CR-112"
+    },
+    {
+      "id": "S051",
+      "day": 3,
+      "start_period": 8,
+      "room": "CR-109"
+    },
+    {
+      "id": "S052",
+      "day": 1,
+      "start_period": 2,
+      "room": "CR-108"
+    },
+    {
+      "id": "S053",
+      "day": 0,
+      "start_period": 4,
+      "room": "CR-103"
+    },
+    {
+      "id": "S054",
+      "day": 2,
+      "start_period": 6,
+      "room": "CR-112"
+    },
+    {
+      "id": "S055",
+      "day": 3,
+      "start_period": 2,
+      "room": "CR-110"
+    },
+    {
+      "id": "S056",
+      "day": 3,
+      "start_period": 5,
+      "room": "CR-102"
+    },
+    {
+      "id": "S057",
+      "day": 1,
+      "start_period": 8,
+      "room": "CR-110"
+    },
+    {
+      "id": "S058",
+      "day": 4,
+      "start_period": 4,
+      "room": "CR-106"
+    },
+    {
+      "id": "S059",
+      "day": 1,
+      "start_period": 5,
+      "room": "CR-111"
+    },
+    {
+      "id": "S060",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-102"
+    },
+    {
+      "id": "S061",
+      "day": 0,
+      "start_period": 4,
+      "room": "CR-109"
+    },
+    {
+      "id": "S062",
+      "day": 0,
+      "start_period": 7,
+      "room": "CR-112"
+    },
+    {
+      "id": "S063",
+      "day": 1,
+      "start_period": 1,
+      "room": "CR-102"
+    },
+    {
+      "id": "S064",
+      "day": 2,
+      "start_period": 4,
+      "room": "CR-102"
+    },
+    {
+      "id": "S065",
+      "day": 0,
+      "start_period": 4,
+      "room": "CR-102"
+    },
+    {
+      "id": "S066",
+      "day": 3,
+      "start_period": 6,
+      "room": "CR-110"
+    },
+    {
+      "id": "S067",
+      "day": 3,
+      "start_period": 6,
+      "room": "CR-108"
+    },
+    {
+      "id": "S068",
+      "day": 2,
+      "start_period": 7,
+      "room": "CR-110"
+    },
+    {
+      "id": "S069",
+      "day": 4,
+      "start_period": 4,
+      "room": "CR-101"
+    },
+    {
+      "id": "S070",
+      "day": 0,
+      "start_period": 5,
+      "room": "CR-101"
+    },
+    {
+      "id": "S071",
+      "day": 1,
+      "start_period": 7,
+      "room": "CR-104"
+    },
+    {
+      "id": "S072",
+      "day": 1,
+      "start_period": 4,
+      "room": "CR-102"
+    },
+    {
+      "id": "S073",
+      "day": 3,
+      "start_period": 4,
+      "room": "CR-105"
+    },
+    {
+      "id": "S074",
+      "day": 2,
+      "start_period": 6,
+      "room": "CR-110"
+    },
+    {
+      "id": "S075",
+      "day": 3,
+      "start_period": 3,
+      "room": "CR-107"
+    },
+    {
+      "id": "S076",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-103"
+    },
+    {
+      "id": "S077",
+      "day": 0,
+      "start_period": 5,
+      "room": "CR-111"
+    },
+    {
+      "id": "S078",
+      "day": 0,
+      "start_period": 1,
+      "room": "CR-111"
+    },
+    {
+      "id": "S079",
+      "day": 0,
+      "start_period": 2,
+      "room": "CR-112"
+    },
+    {
+      "id": "S080",
+      "day": 0,
+      "start_period": 3,
+      "room": "CR-102"
+    },
+    {
+      "id": "S081",
+      "day": 0,
+      "start_period": 3,
+      "room": "CR-112"
+    },
+    {
+      "id": "S082",
+      "day": 0,
+      "start_period": 5,
+      "room": "CR-108"
+    },
+    {
+      "id": "S083",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-111"
+    },
+    {
+      "id": "S084",
+      "day": 1,
+      "start_period": 7,
+      "room": "CR-112"
+    },
+    {
+      "id": "S085",
+      "day": 4,
+      "start_period": 5,
+      "room": "CR-112"
+    },
+    {
+      "id": "S086",
+      "day": 3,
+      "start_period": 7,
+      "room": "CR-102"
+    },
+    {
+      "id": "S087",
+      "day": 1,
+      "start_period": 4,
+      "room": "CR-110"
+    },
+    {
+      "id": "S088",
+      "day": 1,
+      "start_period": 7,
+      "room": "CR-102"
+    },
+    {
+      "id": "S089",
+      "day": 1,
+      "start_period": 1,
+      "room": "CR-108"
+    },
+    {
+      "id": "S090",
+      "day": 0,
+      "start_period": 5,
+      "room": "CR-103"
+    },
+    {
+      "id": "S091",
+      "day": 1,
+      "start_period": 2,
+      "room": "CR-102"
+    },
+    {
+      "id": "S092",
+      "day": 4,
+      "start_period": 3,
+      "room": "CR-109"
+    },
+    {
+      "id": "S093",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-105"
+    },
+    {
+      "id": "S094",
+      "day": 3,
+      "start_period": 5,
+      "room": "CR-111"
+    },
+    {
+      "id": "S095",
+      "day": 1,
+      "start_period": 1,
+      "room": "CR-112"
+    },
+    {
+      "id": "S096",
+      "day": 3,
+      "start_period": 4,
+      "room": "CR-102"
+    },
+    {
+      "id": "S097",
+      "day": 3,
+      "start_period": 5,
+      "room": "CR-104"
+    },
+    {
+      "id": "S098",
+      "day": 4,
+      "start_period": 5,
+      "room": "CR-104"
+    },
+    {
+      "id": "S099",
+      "day": 0,
+      "start_period": 5,
+      "room": "CR-104"
+    },
+    {
+      "id": "S100",
+      "day": 3,
+      "start_period": 8,
+      "room": "CR-110"
+    },
+    {
+      "id": "S101",
+      "day": 3,
+      "start_period": 3,
+      "room": "CR-101"
+    },
+    {
+      "id": "S102",
+      "day": 2,
+      "start_period": 5,
+      "room": "CR-103"
+    },
+    {
+      "id": "S103",
+      "day": 4,
+      "start_period": 5,
+      "room": "CR-102"
+    },
+    {
+      "id": "S104",
+      "day": 0,
+      "start_period": 4,
+      "room": "CR-104"
+    },
+    {
+      "id": "S105",
+      "day": 1,
+      "start_period": 4,
+      "room": "CR-111"
+    },
+    {
+      "id": "S106",
+      "day": 2,
+      "start_period": 5,
+      "room": "CR-112"
+    },
+    {
+      "id": "S107",
+      "day": 3,
+      "start_period": 3,
+      "room": "CR-110"
+    },
+    {
+      "id": "S108",
+      "day": 1,
+      "start_period": 4,
+      "room": "CR-109"
+    },
+    {
+      "id": "S109",
+      "day": 0,
+      "start_period": 5,
+      "room": "CR-102"
+    },
+    {
+      "id": "S110",
+      "day": 3,
+      "start_period": 5,
+      "room": "CR-101"
+    },
+    {
+      "id": "S111",
+      "day": 4,
+      "start_period": 3,
+      "room": "CR-110"
+    },
+    {
+      "id": "S112",
+      "day": 4,
+      "start_period": 4,
+      "room": "CR-111"
+    },
+    {
+      "id": "S113",
+      "day": 3,
+      "start_period": 5,
+      "room": "CR-103"
+    },
+    {
+      "id": "S114",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-101"
+    },
+    {
+      "id": "S115",
+      "day": 2,
+      "start_period": 3,
+      "room": "CR-101"
+    },
+    {
+      "id": "S116",
+      "day": 0,
+      "start_period": 4,
+      "room": "CR-101"
+    },
+    {
+      "id": "S117",
+      "day": 0,
+      "start_period": 3,
+      "room": "CR-109"
+    },
+    {
+      "id": "S118",
+      "day": 3,
+      "start_period": 3,
+      "room": "CR-103"
+    },
+    {
+      "id": "S119",
+      "day": 3,
+      "start_period": 1,
+      "room": "CR-112"
+    },
+    {
+      "id": "S120",
+      "day": 2,
+      "start_period": 3,
+      "room": "CR-103"
+    },
+    {
+      "id": "S121",
+      "day": 3,
+      "start_period": 6,
+      "room": "CR-102"
+    },
+    {
+      "id": "S122",
+      "day": 3,
+      "start_period": 7,
+      "room": "CR-110"
+    },
+    {
+      "id": "S123",
+      "day": 4,
+      "start_period": 1,
+      "room": "CR-111"
+    },
+    {
+      "id": "S124",
+      "day": 4,
+      "start_period": 3,
+      "room": "CR-102"
+    },
+    {
+      "id": "S125",
+      "day": 1,
+      "start_period": 8,
+      "room": "CR-112"
+    },
+    {
+      "id": "S126",
+      "day": 4,
+      "start_period": 3,
+      "room": "CR-107"
+    },
+    {
+      "id": "S127",
+      "day": 3,
+      "start_period": 6,
+      "room": "CR-103"
+    },
+    {
+      "id": "S128",
+      "day": 1,
+      "start_period": 5,
+      "room": "CR-106"
+    },
+    {
+      "id": "S129",
+      "day": 3,
+      "start_period": 5,
+      "room": "CR-110"
+    },
+    {
+      "id": "S130",
+      "day": 2,
+      "start_period": 7,
+      "room": "CR-112"
+    },
+    {
+      "id": "S131",
+      "day": 0,
+      "start_period": 7,
+      "room": "CR-102"
+    },
+    {
+      "id": "S132",
+      "day": 3,
+      "start_period": 1,
+      "room": "CR-102"
+    },
+    {
+      "id": "S133",
+      "day": 0,
+      "start_period": 7,
+      "room": "CR-111"
+    },
+    {
+      "id": "S134",
+      "day": 4,
+      "start_period": 2,
+      "room": "CR-108"
+    },
+    {
+      "id": "S135",
+      "day": 3,
+      "start_period": 5,
+      "room": "CR-106"
+    },
+    {
+      "id": "S136",
+      "day": 1,
+      "start_period": 3,
+      "room": "CR-112"
+    },
+    {
+      "id": "S137",
+      "day": 3,
+      "start_period": 8,
+      "room": "CR-112"
+    },
+    {
+      "id": "S138",
+      "day": 4,
+      "start_period": 4,
+      "room": "CR-112"
+    },
+    {
+      "id": "S139",
+      "day": 0,
+      "start_period": 7,
+      "room": "CR-101"
+    },
+    {
+      "id": "S140",
+      "day": 3,
+      "start_period": 4,
+      "room": "CR-101"
+    },
+    {
+      "id": "S141",
+      "day": 4,
+      "start_period": 1,
+      "room": "CR-102"
+    },
+    {
+      "id": "S142",
+      "day": 1,
+      "start_period": 3,
+      "room": "CR-101"
+    },
+    {
+      "id": "S143",
+      "day": 2,
+      "start_period": 2,
+      "room": "CR-110"
+    },
+    {
+      "id": "S144",
+      "day": 3,
+      "start_period": 7,
+      "room": "CR-108"
+    },
+    {
+      "id": "S145",
+      "day": 2,
+      "start_period": 7,
+      "room": "CR-102"
+    },
+    {
+      "id": "S146",
+      "day": 4,
+      "start_period": 3,
+      "room": "CR-112"
+    },
+    {
+      "id": "S147",
+      "day": 2,
+      "start_period": 2,
+      "room": "CR-112"
+    },
+    {
+      "id": "S148",
+      "day": 3,
+      "start_period": 5,
+      "room": "CR-108"
+    },
+    {
+      "id": "S149",
+      "day": 0,
+      "start_period": 3,
+      "room": "CR-101"
+    },
+    {
+      "id": "S150",
+      "day": 2,
+      "start_period": 1,
+      "room": "CR-109"
+    },
+    {
+      "id": "S151",
+      "day": 1,
+      "start_period": 6,
+      "room": "CR-103"
+    },
+    {
+      "id": "S152",
+      "day": 4,
+      "start_period": 7,
+      "room": "CR-107"
+    },
+    {
+      "id": "S153",
+      "day": 3,
+      "start_period": 6,
+      "room": "CR-111"
+    },
+    {
+      "id": "S154",
+      "day": 3,
+      "start_period": 7,
+      "room": "CR-109"
+    },
+    {
+      "id": "S155",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-104"
+    },
+    {
+      "id": "S156",
+      "day": 4,
+      "start_period": 5,
+      "room": "CR-110"
+    },
+    {
+      "id": "S157",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-112"
+    },
+    {
+      "id": "S158",
+      "day": 3,
+      "start_period": 5,
+      "room": "CR-109"
+    },
+    {
+      "id": "S159",
+      "day": 0,
+      "start_period": 5,
+      "room": "CR-107"
+    },
+    {
+      "id": "S160",
+      "day": 4,
+      "start_period": 5,
+      "room": "CR-109"
+    },
+    {
+      "id": "S161",
+      "day": 3,
+      "start_period": 5,
+      "room": "CR-112"
+    },
+    {
+      "id": "S162",
+      "day": 2,
+      "start_period": 6,
+      "room": "CR-109"
+    },
+    {
+      "id": "S163",
+      "day": 3,
+      "start_period": 4,
+      "room": "CR-111"
+    },
+    {
+      "id": "S164",
+      "day": 2,
+      "start_period": 6,
+      "room": "CR-107"
+    },
+    {
+      "id": "S165",
+      "day": 2,
+      "start_period": 4,
+      "room": "CR-110"
+    },
+    {
+      "id": "S166",
+      "day": 4,
+      "start_period": 5,
+      "room": "CR-111"
+    },
+    {
+      "id": "S167",
+      "day": 3,
+      "start_period": 3,
+      "room": "CR-109"
+    },
+    {
+      "id": "S168",
+      "day": 3,
+      "start_period": 6,
+      "room": "CR-107"
+    },
+    {
+      "id": "S169",
+      "day": 3,
+      "start_period": 4,
+      "room": "CR-110"
+    },
+    {
+      "id": "S170",
+      "day": 2,
+      "start_period": 4,
+      "room": "CR-112"
+    },
+    {
+      "id": "S171",
+      "day": 2,
+      "start_period": 4,
+      "room": "CR-109"
+    },
+    {
+      "id": "S172",
+      "day": 3,
+      "start_period": 6,
+      "room": "CR-109"
+    },
+    {
+      "id": "S173",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-110"
+    },
+    {
+      "id": "S174",
+      "day": 3,
+      "start_period": 2,
+      "room": "CR-102"
+    },
+    {
+      "id": "S175",
+      "day": 4,
+      "start_period": 8,
+      "room": "CR-108"
+    },
+    {
+      "id": "S176",
+      "day": 3,
+      "start_period": 3,
+      "room": "CR-102"
+    },
+    {
+      "id": "S177",
+      "day": 0,
+      "start_period": 5,
+      "room": "CR-110"
+    },
+    {
+      "id": "S178",
+      "day": 2,
+      "start_period": 5,
+      "room": "CR-101"
+    },
+    {
+      "id": "S179",
+      "day": 3,
+      "start_period": 7,
+      "room": "CR-111"
+    },
+    {
+      "id": "S180",
+      "day": 2,
+      "start_period": 5,
+      "room": "CR-102"
+    },
+    {
+      "id": "S181",
+      "day": 4,
+      "start_period": 5,
+      "room": "CR-103"
+    },
+    {
+      "id": "S182",
+      "day": 3,
+      "start_period": 3,
+      "room": "CR-108"
+    },
+    {
+      "id": "S183",
+      "day": 3,
+      "start_period": 3,
+      "room": "CR-112"
+    },
+    {
+      "id": "S184",
+      "day": 2,
+      "start_period": 3,
+      "room": "CR-102"
+    },
+    {
+      "id": "S185",
+      "day": 4,
+      "start_period": 8,
+      "room": "CR-112"
+    },
+    {
+      "id": "S186",
+      "day": 1,
+      "start_period": 6,
+      "room": "CR-102"
+    },
+    {
+      "id": "S187",
+      "day": 2,
+      "start_period": 6,
+      "room": "CR-108"
+    },
+    {
+      "id": "S188",
+      "day": 0,
+      "start_period": 8,
+      "room": "CR-102"
+    },
+    {
+      "id": "S189",
+      "day": 1,
+      "start_period": 3,
+      "room": "CR-102"
+    },
+    {
+      "id": "S190",
+      "day": 3,
+      "start_period": 4,
+      "room": "CR-107"
+    }
+  ],
+  "exams": [
+    {
+      "id": "E001",
+      "day": 0,
+      "start_period": 1,
+      "room": "CR-110"
+    },
+    {
+      "id": "E002",
+      "day": 0,
+      "start_period": 1,
+      "room": "CR-109"
+    },
+    {
+      "id": "E003",
+      "day": 0,
+      "start_period": 1,
+      "room": "CR-112"
+    },
+    {
+      "id": "E004",
+      "day": 0,
+      "start_period": 1,
+      "room": "LH-1"
+    },
+    {
+      "id": "E005",
+      "day": 0,
+      "start_period": 1,
+      "room": "LH-2"
+    },
+    {
+      "id": "E006",
+      "day": 0,
+      "start_period": 1,
+      "room": "LH-3"
+    },
+    {
+      "id": "E007",
+      "day": 0,
+      "start_period": 3,
+      "room": "CR-109"
+    },
+    {
+      "id": "E008",
+      "day": 0,
+      "start_period": 1,
+      "room": "CR-111"
+    },
+    {
+      "id": "E009",
+      "day": 0,
+      "start_period": 3,
+      "room": "CR-112"
+    },
+    {
+      "id": "E010",
+      "day": 0,
+      "start_period": 3,
+      "room": "LH-1"
+    },
+    {
+      "id": "E011",
+      "day": 0,
+      "start_period": 3,
+      "room": "LH-2"
+    },
+    {
+      "id": "E012",
+      "day": 0,
+      "start_period": 3,
+      "room": "LH-3"
+    },
+    {
+      "id": "E013",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-109"
+    },
+    {
+      "id": "E014",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-112"
+    },
+    {
+      "id": "E015",
+      "day": 0,
+      "start_period": 3,
+      "room": "CR-110"
+    },
+    {
+      "id": "E016",
+      "day": 0,
+      "start_period": 6,
+      "room": "LH-1"
+    },
+    {
+      "id": "E017",
+      "day": 0,
+      "start_period": 6,
+      "room": "LH-2"
+    },
+    {
+      "id": "E018",
+      "day": 0,
+      "start_period": 6,
+      "room": "LH-3"
+    },
+    {
+      "id": "E019",
+      "day": 0,
+      "start_period": 8,
+      "room": "CR-109"
+    },
+    {
+      "id": "E020",
+      "day": 0,
+      "start_period": 8,
+      "room": "CR-110"
+    },
+    {
+      "id": "E021",
+      "day": 0,
+      "start_period": 8,
+      "room": "CR-111"
+    },
+    {
+      "id": "E022",
+      "day": 0,
+      "start_period": 3,
+      "room": "CR-111"
+    },
+    {
+      "id": "E023",
+      "day": 0,
+      "start_period": 8,
+      "room": "CR-112"
+    },
+    {
+      "id": "E024",
+      "day": 0,
+      "start_period": 8,
+      "room": "LH-1"
+    },
+    {
+      "id": "E025",
+      "day": 0,
+      "start_period": 8,
+      "room": "LH-2"
+    },
+    {
+      "id": "E026",
+      "day": 0,
+      "start_period": 8,
+      "room": "LH-3"
+    },
+    {
+      "id": "E027",
+      "day": 1,
+      "start_period": 1,
+      "room": "CR-109"
+    },
+    {
+      "id": "E028",
+      "day": 1,
+      "start_period": 1,
+      "room": "CR-110"
+    },
+    {
+      "id": "E029",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-110"
+    },
+    {
+      "id": "E030",
+      "day": 1,
+      "start_period": 1,
+      "room": "CR-111"
+    },
+    {
+      "id": "E031",
+      "day": 1,
+      "start_period": 1,
+      "room": "CR-112"
+    },
+    {
+      "id": "E032",
+      "day": 1,
+      "start_period": 1,
+      "room": "LH-1"
+    },
+    {
+      "id": "E033",
+      "day": 1,
+      "start_period": 1,
+      "room": "LH-2"
+    },
+    {
+      "id": "E034",
+      "day": 1,
+      "start_period": 1,
+      "room": "LH-3"
+    },
+    {
+      "id": "E035",
+      "day": 1,
+      "start_period": 3,
+      "room": "CR-109"
+    },
+    {
+      "id": "E036",
+      "day": 0,
+      "start_period": 6,
+      "room": "CR-111"
+    },
+    {
+      "id": "E037",
+      "day": 1,
+      "start_period": 3,
+      "room": "CR-110"
+    },
+    {
+      "id": "E038",
+      "day": 1,
+      "start_period": 3,
+      "room": "CR-111"
+    },
+    {
+      "id": "E039",
+      "day": 1,
+      "start_period": 3,
+      "room": "CR-112"
+    },
+    {
+      "id": "E040",
+      "day": 1,
+      "start_period": 3,
+      "room": "LH-1"
+    },
+    {
+      "id": "E041",
+      "day": 1,
+      "start_period": 3,
+      "room": "LH-2"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "B001",
+      "title": "Spectra opening 1",
+      "category": "institute",
+      "day": 0,
+      "start_period": 10,
+      "duration": 2,
+      "room": "AUD",
+      "size": 180,
+      "room_type": "auditorium",
+      "accessible": true,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve AUD on Monday at P10 for 2 hours, 180 people for Spectra opening 1.",
+      "status": "approved",
+      "reason": "Passed deterministic room, capacity, availability and mandatory-group checks in priority order.",
+      "alternatives": [],
+      "approved_by": "system-policy"
+    },
+    {
+      "id": "B002",
+      "title": "Guest talk 2",
+      "category": "guest",
+      "day": 1,
+      "start_period": 10,
+      "duration": 1,
+      "room": "SH-1",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Tuesday ko SH-1 chahiye P10 se, 1 ghante, 80 students, Guest talk 2 ke liye.",
+      "status": "alternative",
+      "reason": "Room occupied by B017. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 1,
+          "start_period": 10,
+          "room": "SH-3"
+        },
+        {
+          "day": 1,
+          "start_period": 10,
+          "room": "SH-2"
+        },
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "SH-1"
+        }
+      ]
+    },
+    {
+      "id": "B003",
+      "title": "Department workshop 3",
+      "category": "department",
+      "day": 2,
+      "start_period": 10,
+      "duration": 1,
+      "room": "SH-2",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [
+        "Y2-CSE"
+      ],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-2 on Wednesday at P10 for 1 hours, 80 people for Department workshop 3.",
+      "status": "alternative",
+      "reason": "Room occupied by B018. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 2,
+          "start_period": 10,
+          "room": "SH-3"
+        },
+        {
+          "day": 2,
+          "start_period": 10,
+          "room": "SH-1"
+        },
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "SH-2"
+        }
+      ]
+    },
+    {
+      "id": "B004",
+      "title": "Club showcase 4",
+      "category": "club",
+      "day": 0,
+      "start_period": 10,
+      "duration": 1,
+      "room": "AUD",
+      "size": 80,
+      "room_type": "auditorium",
+      "accessible": false,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Monday AUD chahiye P10 se, 1 ghanta, 80 students, Club showcase ke liye.",
+      "status": "alternative",
+      "reason": "Room occupied by B001. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "AUD"
+        },
+        {
+          "day": 0,
+          "start_period": 2,
+          "room": "AUD"
+        },
+        {
+          "day": 0,
+          "start_period": 3,
+          "room": "AUD"
+        }
+      ]
+    },
+    {
+      "id": "B005",
+      "title": "Spectra opening 5",
+      "category": "institute",
+      "day": 4,
+      "start_period": 10,
+      "duration": 2,
+      "room": "SH-3",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-3 on Friday at P10 for 2 hours, 80 people for Spectra opening 5.",
+      "status": "approved",
+      "reason": "Passed deterministic room, capacity, availability and mandatory-group checks in priority order.",
+      "alternatives": [],
+      "approved_by": "system-policy"
+    },
+    {
+      "id": "B006",
+      "title": "Guest talk 6",
+      "category": "guest",
+      "day": 0,
+      "start_period": 11,
+      "duration": 1,
+      "room": "AUD",
+      "size": 80,
+      "room_type": "auditorium",
+      "accessible": true,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Monday ko AUD chahiye P11 se, 1 ghante, 80 students, Guest talk 6 ke liye.",
+      "status": "alternative",
+      "reason": "Room occupied by B001. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "AUD"
+        },
+        {
+          "day": 0,
+          "start_period": 2,
+          "room": "AUD"
+        },
+        {
+          "day": 0,
+          "start_period": 3,
+          "room": "AUD"
+        }
+      ]
+    },
+    {
+      "id": "B007",
+      "title": "Department workshop 7",
+      "category": "department",
+      "day": 1,
+      "start_period": 11,
+      "duration": 1,
+      "room": "SH-1",
+      "size": 180,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-1 on Tuesday at P11 for 1 hours, 180 people for Department workshop 7.",
+      "status": "rejected",
+      "reason": "Insufficient room capacity; Room occupied by B017. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": []
+    },
+    {
+      "id": "B008",
+      "title": "Club showcase 8",
+      "category": "club",
+      "day": 2,
+      "start_period": 11,
+      "duration": 1,
+      "room": "SH-2",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Wednesday ko SH-2 chahiye P11 se, 1 ghante, 80 students, Club showcase 8 ke liye.",
+      "status": "alternative",
+      "reason": "Room occupied by B023. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 2,
+          "start_period": 11,
+          "room": "SH-3"
+        },
+        {
+          "day": 2,
+          "start_period": 11,
+          "room": "SH-1"
+        },
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "SH-2"
+        }
+      ]
+    },
+    {
+      "id": "B009",
+      "title": "Spectra opening 9",
+      "category": "institute",
+      "day": 3,
+      "start_period": 11,
+      "duration": 2,
+      "room": "OAT",
+      "size": 80,
+      "room_type": "outdoor",
+      "accessible": false,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve OAT on Thursday at P11 for 2 hours, 80 people for Spectra opening 9.",
+      "status": "approved",
+      "reason": "Passed deterministic room, capacity, availability and mandatory-group checks in priority order.",
+      "alternatives": [],
+      "approved_by": "system-policy"
+    },
+    {
+      "id": "B010",
+      "title": "Guest talk 10",
+      "category": "guest",
+      "day": 4,
+      "start_period": 11,
+      "duration": 1,
+      "room": "SH-3",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Friday ko SH-3 chahiye P11 se, 1 ghante, 80 students, Guest talk 10 ke liye.",
+      "status": "alternative",
+      "reason": "Room occupied by B005. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 4,
+          "start_period": 11,
+          "room": "SH-1"
+        },
+        {
+          "day": 4,
+          "start_period": 11,
+          "room": "SH-2"
+        },
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "SH-3"
+        }
+      ]
+    },
+    {
+      "id": "B011",
+      "title": "Department workshop 11",
+      "category": "department",
+      "day": 0,
+      "start_period": 12,
+      "duration": 1,
+      "room": "AUD",
+      "size": 80,
+      "room_type": "auditorium",
+      "accessible": true,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve AUD on Monday at P12 for 1 hours, 80 people for Department workshop 11.",
+      "status": "approved",
+      "reason": "Passed deterministic room, capacity, availability and mandatory-group checks in priority order.",
+      "alternatives": [],
+      "approved_by": "system-policy"
+    },
+    {
+      "id": "B012",
+      "title": "Club showcase 12",
+      "category": "club",
+      "day": 1,
+      "start_period": 12,
+      "duration": 1,
+      "room": "SH-1",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Tuesday ko SH-1 chahiye P12 se, 1 ghante, 80 students, Club showcase 12 ke liye.",
+      "status": "approved",
+      "reason": "Passed deterministic room, capacity, availability and mandatory-group checks in priority order.",
+      "alternatives": [],
+      "approved_by": "system-policy"
+    },
+    {
+      "id": "B013",
+      "title": "Spectra opening 13",
+      "category": "institute",
+      "day": 2,
+      "start_period": 12,
+      "duration": 2,
+      "room": "SH-2",
+      "size": 180,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-2 on Wednesday at P12 for 2 hours, 180 people for Spectra opening 13.",
+      "status": "rejected",
+      "reason": "Insufficient room capacity. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": []
+    },
+    {
+      "id": "B014",
+      "title": "Guest talk 14",
+      "category": "guest",
+      "day": 3,
+      "start_period": 12,
+      "duration": 1,
+      "room": "OAT",
+      "size": 80,
+      "room_type": "outdoor",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Thursday ko OAT chahiye P12 se, 1 ghante, 80 students, Guest talk 14 ke liye.",
+      "status": "alternative",
+      "reason": "Room occupied by B009. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "OAT"
+        },
+        {
+          "day": 0,
+          "start_period": 2,
+          "room": "OAT"
+        },
+        {
+          "day": 0,
+          "start_period": 3,
+          "room": "OAT"
+        }
+      ]
+    },
+    {
+      "id": "B015",
+      "title": "Department workshop 15",
+      "category": "department",
+      "day": 4,
+      "start_period": 12,
+      "duration": 1,
+      "room": "SH-3",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-3 on Friday at P12 for 1 hours, 80 people for Department workshop 15.",
+      "status": "approved",
+      "reason": "Passed deterministic room, capacity, availability and mandatory-group checks in priority order.",
+      "alternatives": [],
+      "approved_by": "system-policy"
+    },
+    {
+      "id": "B016",
+      "title": "Club showcase 16",
+      "category": "club",
+      "day": 0,
+      "start_period": 10,
+      "duration": 1,
+      "room": "AUD",
+      "size": 80,
+      "room_type": "auditorium",
+      "accessible": true,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Monday ko AUD chahiye P10 se, 1 ghante, 80 students, Club showcase 16 ke liye.",
+      "status": "alternative",
+      "reason": "Room occupied by B001. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "AUD"
+        },
+        {
+          "day": 0,
+          "start_period": 2,
+          "room": "AUD"
+        },
+        {
+          "day": 0,
+          "start_period": 3,
+          "room": "AUD"
+        }
+      ]
+    },
+    {
+      "id": "B017",
+      "title": "Spectra opening 17",
+      "category": "institute",
+      "day": 1,
+      "start_period": 10,
+      "duration": 2,
+      "room": "SH-1",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-1 on Tuesday at P10 for 2 hours, 80 people for Spectra opening 17.",
+      "status": "approved",
+      "reason": "Passed deterministic room, capacity, availability and mandatory-group checks in priority order.",
+      "alternatives": [],
+      "approved_by": "system-policy"
+    },
+    {
+      "id": "B018",
+      "title": "Guest talk 18",
+      "category": "guest",
+      "day": 2,
+      "start_period": 10,
+      "duration": 1,
+      "room": "SH-2",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Wednesday ko SH-2 chahiye P10 se, 1 ghante, 80 students, Guest talk 18 ke liye.",
+      "status": "approved",
+      "reason": "Passed deterministic room, capacity, availability and mandatory-group checks in priority order.",
+      "alternatives": [],
+      "approved_by": "system-policy"
+    },
+    {
+      "id": "B019",
+      "title": "Department workshop 19",
+      "category": "department",
+      "day": 3,
+      "start_period": 10,
+      "duration": 1,
+      "room": "OAT",
+      "size": 180,
+      "room_type": "outdoor",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve OAT on Thursday at P10 for 1 hours, 180 people for Department workshop 19.",
+      "status": "approved",
+      "reason": "Passed deterministic room, capacity, availability and mandatory-group checks in priority order.",
+      "alternatives": [],
+      "approved_by": "system-policy"
+    },
+    {
+      "id": "B020",
+      "title": "Club showcase 20",
+      "category": "club",
+      "day": 4,
+      "start_period": 10,
+      "duration": 1,
+      "room": "SH-3",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Friday ko SH-3 chahiye P10 se, 1 ghante, 80 students, Club showcase 20 ke liye.",
+      "status": "alternative",
+      "reason": "Room occupied by B005. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 4,
+          "start_period": 10,
+          "room": "SH-1"
+        },
+        {
+          "day": 4,
+          "start_period": 10,
+          "room": "SH-2"
+        },
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "SH-3"
+        }
+      ]
+    },
+    {
+      "id": "B021",
+      "title": "Spectra opening 21",
+      "category": "institute",
+      "day": 0,
+      "start_period": 11,
+      "duration": 2,
+      "room": "AUD",
+      "size": 80,
+      "room_type": "auditorium",
+      "accessible": true,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve AUD on Monday at P11 for 2 hours, 80 people for Spectra opening 21.",
+      "status": "alternative",
+      "reason": "Room occupied by B001. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "AUD"
+        },
+        {
+          "day": 0,
+          "start_period": 2,
+          "room": "AUD"
+        },
+        {
+          "day": 0,
+          "start_period": 3,
+          "room": "AUD"
+        }
+      ]
+    },
+    {
+      "id": "B022",
+      "title": "Guest talk 22",
+      "category": "guest",
+      "day": 1,
+      "start_period": 11,
+      "duration": 1,
+      "room": "SH-1",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Tuesday ko SH-1 chahiye P11 se, 1 ghante, 80 students, Guest talk 22 ke liye.",
+      "status": "alternative",
+      "reason": "Room occupied by B017. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 1,
+          "start_period": 11,
+          "room": "SH-3"
+        },
+        {
+          "day": 1,
+          "start_period": 11,
+          "room": "SH-2"
+        },
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "SH-1"
+        }
+      ]
+    },
+    {
+      "id": "B023",
+      "title": "Department workshop 23",
+      "category": "department",
+      "day": 2,
+      "start_period": 11,
+      "duration": 1,
+      "room": "SH-2",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-2 on Wednesday at P11 for 1 hours, 80 people for Department workshop 23.",
+      "status": "approved",
+      "reason": "Passed deterministic room, capacity, availability and mandatory-group checks in priority order.",
+      "alternatives": [],
+      "approved_by": "system-policy"
+    },
+    {
+      "id": "B024",
+      "title": "Club showcase 24",
+      "category": "club",
+      "day": 3,
+      "start_period": 11,
+      "duration": 1,
+      "room": "OAT",
+      "size": 80,
+      "room_type": "outdoor",
+      "accessible": false,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Thursday ko OAT chahiye P11 se, 1 ghante, 80 students, Club showcase 24 ke liye.",
+      "status": "alternative",
+      "reason": "Room occupied by B009. Existing classes and higher-priority accepted requests are protected.",
+      "alternatives": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "room": "OAT"
+        },
+        {
+          "day": 0,
+          "start_period": 2,
+          "room": "OAT"
+        },
+        {
+          "day": 0,
+          "start_period": 3,
+          "room": "OAT"
+        }
+      ]
+    },
+    {
+      "id": "B025",
+      "title": "Spectra opening 25",
+      "category": "institute",
+      "day": 4,
+      "start_period": 11,
+      "duration": 2,
+      "room": "SH-3",
+      "size": 180,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": true,
+      "message": "Please reserve SH-3 on Friday at P11 for 2 hours, 180 people for Spectra opening 25.",
+      "status": "cancelled",
+      "reason": "Cancelled by requester; consumes no room capacity.",
+      "alternatives": []
+    }
+  ],
+  "solver": {
+    "sessions": {
+      "status": "OPTIMAL",
+      "moves": 4,
+      "minimum_moves_proven": true,
+      "move_status": "OPTIMAL",
+      "move_bound": 4.0,
+      "time_budget_per_stage_seconds": 15,
+      "objective": 3.0,
+      "best_bound": 3.0
+    },
+    "exams": {
+      "status": "OPTIMAL",
+      "moves": 0,
+      "minimum_moves_proven": true,
+      "move_status": "OPTIMAL",
+      "move_bound": 0.0,
+      "time_budget_per_stage_seconds": 5,
+      "objective": 0.0,
+      "best_bound": 0.0
+    }
+  },
+  "report": {
+    "valid": true,
+    "hard_violations": 0,
+    "errors": [],
+    "soft_penalty": 3,
+    "soft_breakdown": {
+      "faculty_avoid": 0,
+      "group_gaps": 3,
+      "group_overload": 0,
+      "repeated_lecture": 0,
+      "underused_room": 0,
+      "p9": 0
+    },
+    "soft_weights": {
+      "faculty_avoid": 1,
+      "group_gaps": 1,
+      "group_overload": 1,
+      "repeated_lecture": 1,
+      "underused_room": 1,
+      "p9": 1
+    },
+    "scoring": "provisional unit weights; official validator unavailable",
+    "room_utilisation": 24.92,
+    "utilisation": {
+      "week": 7,
+      "periods": "P1-P9",
+      "denominator": "Available room-hours of teaching-compatible room types, excluding maintenance and closures",
+      "available_hours": 979,
+      "used_hours": 244,
+      "percent": 24.92,
+      "rooms": [
+        {
+          "id": "CR-101",
+          "available_hours": 43,
+          "used_hours": 12,
+          "percent": 27.91
+        },
+        {
+          "id": "CR-102",
+          "available_hours": 45,
+          "used_hours": 28,
+          "percent": 62.22
+        },
+        {
+          "id": "CR-103",
+          "available_hours": 45,
+          "used_hours": 10,
+          "percent": 22.22
+        },
+        {
+          "id": "CR-104",
+          "available_hours": 45,
+          "used_hours": 7,
+          "percent": 15.56
+        },
+        {
+          "id": "CR-105",
+          "available_hours": 45,
+          "used_hours": 3,
+          "percent": 6.67
+        },
+        {
+          "id": "CR-106",
+          "available_hours": 45,
+          "used_hours": 4,
+          "percent": 8.89
+        },
+        {
+          "id": "CR-107",
+          "available_hours": 45,
+          "used_hours": 9,
+          "percent": 20.0
+        },
+        {
+          "id": "CR-108",
+          "available_hours": 45,
+          "used_hours": 11,
+          "percent": 24.44
+        },
+        {
+          "id": "CR-109",
+          "available_hours": 45,
+          "used_hours": 16,
+          "percent": 35.56
+        },
+        {
+          "id": "CR-110",
+          "available_hours": 45,
+          "used_hours": 18,
+          "percent": 40.0
+        },
+        {
+          "id": "CR-111",
+          "available_hours": 45,
+          "used_hours": 17,
+          "percent": 37.78
+        },
+        {
+          "id": "CR-112",
+          "available_hours": 45,
+          "used_hours": 28,
+          "percent": 62.22
+        },
+        {
+          "id": "LH-1",
+          "available_hours": 45,
+          "used_hours": 0,
+          "percent": 0.0
+        },
+        {
+          "id": "LH-2",
+          "available_hours": 45,
+          "used_hours": 0,
+          "percent": 0.0
+        },
+        {
+          "id": "LH-3",
+          "available_hours": 45,
+          "used_hours": 0,
+          "percent": 0.0
+        },
+        {
+          "id": "LAB-1",
+          "available_hours": 45,
+          "used_hours": 12,
+          "percent": 26.67
+        },
+        {
+          "id": "LAB-2",
+          "available_hours": 45,
+          "used_hours": 9,
+          "percent": 20.0
+        },
+        {
+          "id": "LAB-3",
+          "available_hours": 36,
+          "used_hours": 9,
+          "percent": 25.0
+        },
+        {
+          "id": "LAB-4",
+          "available_hours": 45,
+          "used_hours": 6,
+          "percent": 13.33
+        },
+        {
+          "id": "LAB-5",
+          "available_hours": 45,
+          "used_hours": 24,
+          "percent": 53.33
+        },
+        {
+          "id": "LAB-6",
+          "available_hours": 45,
+          "used_hours": 12,
+          "percent": 26.67
+        },
+        {
+          "id": "LAB-7",
+          "available_hours": 45,
+          "used_hours": 9,
+          "percent": 20.0
+        },
+        {
+          "id": "AUD",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "SH-1",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "SH-2",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "OAT",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        },
+        {
+          "id": "SH-3",
+          "available_hours": 0,
+          "used_hours": 0,
+          "percent": 0
+        }
+      ]
+    }
+  }
+}

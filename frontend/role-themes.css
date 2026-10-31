@@ -1,0 +1,21 @@
+/* Shared sign-in/workspace palettes. Workspace selection uses the authenticated identity. */
+[data-accent]{--role-ink:#173936;--role-paper:#fbf8ef;--role-card:#fffef9;--role-line:#dce2d3;--role-muted:#81907b;--role-subtle:#9ba58e;--role-hero-text:#f4eed6;--role-hero-secondary:#b4c1ad;--portal-accent:var(--role-accent);--portal-soft:var(--role-soft);--portal-dark:var(--role-dark)}
+[data-accent=gold]{--role-accent:#755a28;--role-soft:#f1ead9;--role-dark:#183b36}
+[data-accent=indigo]{--role-accent:#444d83;--role-soft:#e9eaf3;--role-dark:#252d4b}
+[data-accent=olive]{--role-accent:#536744;--role-soft:#e8eddf;--role-dark:#2e4232}
+[data-accent=blue]{--role-accent:#315f86;--role-soft:#e4edf3;--role-dark:#163f50}
+[data-accent=coral]{--role-accent:#9a5b43;--role-soft:#f3e6df;--role-dark:#483d32}
+#application[data-accent]{--campus-navy:var(--role-dark);--campus-paper:var(--role-paper);--campus-line:var(--role-line);--campus-muted:var(--role-muted);--campus-accent:var(--role-accent);background:var(--role-paper);color:var(--role-ink)}
+#application[data-accent] .campus-service-strip,#application[data-accent] .context{background:var(--role-dark);color:var(--role-hero-text)}
+#application[data-accent].university-home .campus-dashboard-heading{background:var(--role-dark)}
+#application[data-accent].university-home .campus-dashboard-heading>div>h1{color:var(--role-hero-text)}
+#application[data-accent].university-home .campus-dashboard-heading>div>.campus-eyebrow{color:#cccea4}
+#application[data-accent].university-home .campus-dashboard-heading>div>p{color:var(--role-hero-secondary)}
+#application[data-accent] .campus-review-summary,#application[data-accent] .campus-page-index{background:var(--role-paper);border-color:var(--role-line)}
+#application[data-accent] .campus-main-action{background:var(--role-paper);border-color:var(--role-paper);color:var(--role-accent)}
+#application[data-accent] .university-nav,#application[data-accent] .university-footer,#application[data-accent] .workspace{background:var(--role-paper)}
+#application[data-accent] .role-switch .selected,#application[data-accent] .primary,#application[data-accent] .template-session .session-top>b{background:var(--role-accent)!important;color:#fff9e9!important;border-color:var(--role-accent)}
+#application[data-accent] .tabs button.selected,#application[data-accent] .segmented .selected,#application[data-accent] .drawer-tabs .selected{background:var(--role-soft);color:var(--role-accent)}
+#application[data-accent] .template-filter,#application[data-accent] aside,#application[data-accent] .copilot-title{background:var(--role-paper)}
+#application[data-accent] .template-session{background:var(--role-soft);border-color:var(--role-accent)}
+#application[data-accent] .campus-summary-grid{box-shadow:none}

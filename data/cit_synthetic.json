@@ -1,0 +1,5572 @@
+{
+  "meta": {
+    "synthetic": true,
+    "description": "Synthetic CIT development dataset; replace with official starter pack before submission.",
+    "schema_version": 1,
+    "generator": "scripts/create_dataset.py",
+    "seed": 17,
+    "teaching_week": 7,
+    "exam_week": 8
+  },
+  "rooms": [
+    {
+      "id": "CR-101",
+      "name": "Classroom 101",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "unavailable": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "id": "CR-102",
+      "name": "Classroom 102",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "CR-103",
+      "name": "Classroom 103",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "CR-104",
+      "name": "Classroom 104",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "CR-105",
+      "name": "Classroom 105",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "CR-106",
+      "name": "Classroom 106",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "CR-107",
+      "name": "Classroom 107",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "CR-108",
+      "name": "Classroom 108",
+      "type": "classroom",
+      "capacity": 80,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "CR-109",
+      "name": "Classroom 109",
+      "type": "classroom",
+      "capacity": 160,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "CR-110",
+      "name": "Classroom 110",
+      "type": "classroom",
+      "capacity": 160,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "CR-111",
+      "name": "Classroom 111",
+      "type": "classroom",
+      "capacity": 160,
+      "accessible": true,
+      "features": [
+        "projector"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "CR-112",
+      "name": "Classroom 112",
+      "type": "classroom",
+      "capacity": 160,
+      "accessible": false,
+      "features": [
+        "projector"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "LH-1",
+      "name": "Lecture Hall 1",
+      "type": "classroom",
+      "capacity": 200,
+      "accessible": true,
+      "features": [
+        "projector",
+        "audio"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "LH-2",
+      "name": "Lecture Hall 2",
+      "type": "classroom",
+      "capacity": 200,
+      "accessible": true,
+      "features": [
+        "projector",
+        "audio"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "LH-3",
+      "name": "Lecture Hall 3",
+      "type": "classroom",
+      "capacity": 200,
+      "accessible": true,
+      "features": [
+        "projector",
+        "audio"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "LAB-1",
+      "name": "Computer Lab 1",
+      "type": "computer_lab",
+      "capacity": 80,
+      "accessible": true,
+      "department": "CSE",
+      "features": [
+        "workstations"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "LAB-2",
+      "name": "Computer Lab 2",
+      "type": "computer_lab",
+      "capacity": 80,
+      "accessible": true,
+      "department": "CSE",
+      "features": [
+        "workstations"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "LAB-3",
+      "name": "Physics Lab 3",
+      "type": "physics_lab",
+      "capacity": 80,
+      "accessible": true,
+      "department": "COMMON",
+      "features": [
+        "workstations"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "LAB-4",
+      "name": "Chemistry Lab 4",
+      "type": "chemistry_lab",
+      "capacity": 80,
+      "accessible": true,
+      "department": "COMMON",
+      "features": [
+        "workstations"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "LAB-5",
+      "name": "Electrical Lab 5",
+      "type": "electrical_lab",
+      "capacity": 80,
+      "accessible": true,
+      "department": "EE",
+      "features": [
+        "workstations"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "LAB-6",
+      "name": "Mechanical Lab 6",
+      "type": "mechanical_lab",
+      "capacity": 80,
+      "accessible": false,
+      "department": "ME",
+      "features": [
+        "workstations"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "LAB-7",
+      "name": "Civil Lab 7",
+      "type": "civil_lab",
+      "capacity": 80,
+      "accessible": true,
+      "department": "CE",
+      "features": [
+        "workstations"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "AUD",
+      "name": "Main Auditorium",
+      "capacity": 500,
+      "type": "auditorium",
+      "accessible": true,
+      "features": [
+        "audio"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "SH-1",
+      "name": "Seminar Hall 1",
+      "capacity": 120,
+      "type": "seminar",
+      "accessible": true,
+      "features": [
+        "audio"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "SH-2",
+      "name": "Seminar Hall 2",
+      "capacity": 160,
+      "type": "seminar",
+      "accessible": true,
+      "features": [
+        "audio"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "OAT",
+      "name": "Open Air Theatre",
+      "capacity": 600,
+      "type": "outdoor",
+      "accessible": true,
+      "features": [
+        "audio"
+      ],
+      "unavailable": []
+    },
+    {
+      "id": "SH-3",
+      "name": "Seminar Hall 3",
+      "capacity": 100,
+      "type": "seminar",
+      "accessible": true,
+      "features": [
+        "audio"
+      ],
+      "unavailable": []
+    }
+  ],
+  "faculty": [
+    {
+      "id": "F01",
+      "name": "Dr. Mohanty 1",
+      "department": "CSE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 0,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 1,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "name": "Dr. Patnaik 2",
+      "department": "COMMON",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 1,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 2,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "name": "Dr. Das 3",
+      "department": "COMMON",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 2,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 3,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "name": "Dr. Mishra 4",
+      "department": "COMMON",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 3,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 4,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "name": "Dr. Rao 5",
+      "department": "COMMON",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 4,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "name": "Dr. Mohanty 6",
+      "department": "COMMON",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 0,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 1,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "name": "Dr. Patnaik 7",
+      "department": "COMMON",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 1,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 2,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F08",
+      "name": "Dr. Das 8",
+      "department": "COMMON",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 2,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 3,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F09",
+      "name": "Dr. Mishra 9",
+      "department": "COMMON",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 3,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 4,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F10",
+      "name": "Dr. Rao 10",
+      "department": "COMMON",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 4,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F11",
+      "name": "Dr. Mohanty 11",
+      "department": "COMMON",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 0,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 1,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F12",
+      "name": "Dr. Patnaik 12",
+      "department": "CSE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 1,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 2,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F13",
+      "name": "Dr. Das 13",
+      "department": "CSE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 2,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 3,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F14",
+      "name": "Dr. Mishra 14",
+      "department": "CSE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 3,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 4,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F15",
+      "name": "Dr. Rao 15",
+      "department": "CSE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 4,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F16",
+      "name": "Dr. Mohanty 16",
+      "department": "CSE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 0,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 1,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F17",
+      "name": "Dr. Patnaik 17",
+      "department": "ECE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 1,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 2,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F18",
+      "name": "Dr. Das 18",
+      "department": "ECE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 2,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 3,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F19",
+      "name": "Dr. Mishra 19",
+      "department": "ECE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 3,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 4,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F20",
+      "name": "Dr. Rao 20",
+      "department": "ECE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 4,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F21",
+      "name": "Dr. Mohanty 21",
+      "department": "ECE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 0,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 1,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F22",
+      "name": "Dr. Patnaik 22",
+      "department": "ECE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 1,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 2,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F23",
+      "name": "Dr. Das 23",
+      "department": "EE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 2,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 3,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F24",
+      "name": "Dr. Mishra 24",
+      "department": "EE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 3,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 4,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F25",
+      "name": "Dr. Rao 25",
+      "department": "EE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 4,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F26",
+      "name": "Dr. Mohanty 26",
+      "department": "EE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 0,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 1,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F27",
+      "name": "Dr. Patnaik 27",
+      "department": "EE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 1,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 2,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F28",
+      "name": "Dr. Das 28",
+      "department": "EE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 2,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 3,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F29",
+      "name": "Dr. Mishra 29",
+      "department": "ME",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 3,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 4,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F30",
+      "name": "Dr. Rao 30",
+      "department": "ME",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 4,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F31",
+      "name": "Dr. Mohanty 31",
+      "department": "ME",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 0,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 1,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F32",
+      "name": "Dr. Patnaik 32",
+      "department": "ME",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 1,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 2,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F33",
+      "name": "Dr. Das 33",
+      "department": "ME",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 2,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 3,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F34",
+      "name": "Dr. Mishra 34",
+      "department": "ME",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 3,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 4,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F35",
+      "name": "Dr. Rao 35",
+      "department": "CE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 4,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F36",
+      "name": "Dr. Mohanty 36",
+      "department": "CE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 0,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 1,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F37",
+      "name": "Dr. Patnaik 37",
+      "department": "CE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 1,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 2,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F38",
+      "name": "Dr. Das 38",
+      "department": "CE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 2,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 3,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F39",
+      "name": "Dr. Mishra 39",
+      "department": "CE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 3,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 4,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    },
+    {
+      "id": "F40",
+      "name": "Dr. Rao 40",
+      "department": "CE",
+      "daily_limit": 4,
+      "unavailable": [
+        {
+          "day": 4,
+          "start_period": 9,
+          "duration": 1
+        }
+      ],
+      "avoid": [
+        {
+          "day": 0,
+          "start_period": 1,
+          "duration": 1
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "Y1-A",
+      "name": "Year 1 \u00b7 Section A",
+      "size": 70,
+      "department": "COMMON"
+    },
+    {
+      "id": "Y1-B",
+      "name": "Year 1 \u00b7 Section B",
+      "size": 70,
+      "department": "COMMON"
+    },
+    {
+      "id": "Y1-C",
+      "name": "Year 1 \u00b7 Section C",
+      "size": 70,
+      "department": "COMMON"
+    },
+    {
+      "id": "Y1-D",
+      "name": "Year 1 \u00b7 Section D",
+      "size": 70,
+      "department": "COMMON"
+    },
+    {
+      "id": "Y2-CSE",
+      "name": "CSE \u00b7 Year 2",
+      "size": 70,
+      "department": "CSE"
+    },
+    {
+      "id": "Y2-ECE",
+      "name": "ECE \u00b7 Year 2",
+      "size": 70,
+      "department": "ECE"
+    },
+    {
+      "id": "Y2-EE",
+      "name": "EE \u00b7 Year 2",
+      "size": 70,
+      "department": "EE"
+    },
+    {
+      "id": "Y2-ME",
+      "name": "ME \u00b7 Year 2",
+      "size": 70,
+      "department": "ME"
+    },
+    {
+      "id": "Y2-CE",
+      "name": "CE \u00b7 Year 2",
+      "size": 70,
+      "department": "CE"
+    },
+    {
+      "id": "Y3-CSE",
+      "name": "CSE \u00b7 Year 3",
+      "size": 70,
+      "department": "CSE"
+    },
+    {
+      "id": "Y3-ECE",
+      "name": "ECE \u00b7 Year 3",
+      "size": 70,
+      "department": "ECE"
+    },
+    {
+      "id": "Y3-EE",
+      "name": "EE \u00b7 Year 3",
+      "size": 70,
+      "department": "EE"
+    },
+    {
+      "id": "Y3-ME",
+      "name": "ME \u00b7 Year 3",
+      "size": 70,
+      "department": "ME"
+    },
+    {
+      "id": "Y3-CE",
+      "name": "CE \u00b7 Year 3",
+      "size": 70,
+      "department": "CE"
+    }
+  ],
+  "courses": [
+    {
+      "id": "C001",
+      "name": "Engineering Mathematics",
+      "department": "COMMON"
+    },
+    {
+      "id": "C002",
+      "name": "Computational Thinking",
+      "department": "COMMON"
+    },
+    {
+      "id": "C003",
+      "name": "Engineering Physics",
+      "department": "COMMON"
+    },
+    {
+      "id": "C004",
+      "name": "Engineering Chemistry",
+      "department": "COMMON"
+    },
+    {
+      "id": "C005",
+      "name": "Technical Communication",
+      "department": "COMMON"
+    },
+    {
+      "id": "C006",
+      "name": "Engineering Drawing",
+      "department": "COMMON"
+    },
+    {
+      "id": "C007",
+      "name": "Environmental Studies",
+      "department": "COMMON"
+    },
+    {
+      "id": "C008",
+      "name": "Materials Science",
+      "department": "COMMON"
+    },
+    {
+      "id": "C009",
+      "name": "Statistics",
+      "department": "COMMON"
+    },
+    {
+      "id": "C010",
+      "name": "Applied Mathematics",
+      "department": "COMMON"
+    },
+    {
+      "id": "C011",
+      "name": "Physics Practicum",
+      "department": "COMMON"
+    },
+    {
+      "id": "C012",
+      "name": "Chemistry Practicum",
+      "department": "COMMON"
+    },
+    {
+      "id": "C013",
+      "name": "Programming",
+      "department": "CSE"
+    },
+    {
+      "id": "C014",
+      "name": "Data Structures",
+      "department": "CSE"
+    },
+    {
+      "id": "C015",
+      "name": "Algorithms",
+      "department": "CSE"
+    },
+    {
+      "id": "C016",
+      "name": "Computer Architecture",
+      "department": "CSE"
+    },
+    {
+      "id": "C017",
+      "name": "Operating Systems",
+      "department": "CSE"
+    },
+    {
+      "id": "C018",
+      "name": "Databases",
+      "department": "CSE"
+    },
+    {
+      "id": "C019",
+      "name": "Computer Networks",
+      "department": "CSE"
+    },
+    {
+      "id": "C020",
+      "name": "Software Engineering",
+      "department": "CSE"
+    },
+    {
+      "id": "C021",
+      "name": "Machine Learning",
+      "department": "CSE"
+    },
+    {
+      "id": "C022",
+      "name": "Computer Practicum",
+      "department": "CSE"
+    },
+    {
+      "id": "C023",
+      "name": "Electronic Circuits",
+      "department": "ECE"
+    },
+    {
+      "id": "C024",
+      "name": "Digital Electronics",
+      "department": "ECE"
+    },
+    {
+      "id": "C025",
+      "name": "Signals and Systems",
+      "department": "ECE"
+    },
+    {
+      "id": "C026",
+      "name": "Communication Systems",
+      "department": "ECE"
+    },
+    {
+      "id": "C027",
+      "name": "Microprocessors",
+      "department": "ECE"
+    },
+    {
+      "id": "C028",
+      "name": "VLSI Design",
+      "department": "ECE"
+    },
+    {
+      "id": "C029",
+      "name": "Electromagnetics",
+      "department": "ECE"
+    },
+    {
+      "id": "C030",
+      "name": "Embedded Systems",
+      "department": "ECE"
+    },
+    {
+      "id": "C031",
+      "name": "Instrumentation",
+      "department": "ECE"
+    },
+    {
+      "id": "C032",
+      "name": "Electronics Practicum",
+      "department": "ECE"
+    },
+    {
+      "id": "C033",
+      "name": "Circuit Theory",
+      "department": "EE"
+    },
+    {
+      "id": "C034",
+      "name": "Electrical Machines",
+      "department": "EE"
+    },
+    {
+      "id": "C035",
+      "name": "Power Systems",
+      "department": "EE"
+    },
+    {
+      "id": "C036",
+      "name": "Control Systems",
+      "department": "EE"
+    },
+    {
+      "id": "C037",
+      "name": "Power Electronics",
+      "department": "EE"
+    },
+    {
+      "id": "C038",
+      "name": "Electrical Measurements",
+      "department": "EE"
+    },
+    {
+      "id": "C039",
+      "name": "Network Theory",
+      "department": "EE"
+    },
+    {
+      "id": "C040",
+      "name": "Energy Systems",
+      "department": "EE"
+    },
+    {
+      "id": "C041",
+      "name": "Digital Control",
+      "department": "EE"
+    },
+    {
+      "id": "C042",
+      "name": "Electrical Practicum",
+      "department": "EE"
+    },
+    {
+      "id": "C043",
+      "name": "Engineering Mechanics",
+      "department": "ME"
+    },
+    {
+      "id": "C044",
+      "name": "Thermodynamics",
+      "department": "ME"
+    },
+    {
+      "id": "C045",
+      "name": "Fluid Mechanics",
+      "department": "ME"
+    },
+    {
+      "id": "C046",
+      "name": "Machine Design",
+      "department": "ME"
+    },
+    {
+      "id": "C047",
+      "name": "Manufacturing",
+      "department": "ME"
+    },
+    {
+      "id": "C048",
+      "name": "Heat Transfer",
+      "department": "ME"
+    },
+    {
+      "id": "C049",
+      "name": "Dynamics",
+      "department": "ME"
+    },
+    {
+      "id": "C050",
+      "name": "CAD",
+      "department": "ME"
+    },
+    {
+      "id": "C051",
+      "name": "Industrial Engineering",
+      "department": "ME"
+    },
+    {
+      "id": "C052",
+      "name": "Mechanical Practicum",
+      "department": "ME"
+    },
+    {
+      "id": "C053",
+      "name": "Structural Analysis",
+      "department": "CE"
+    },
+    {
+      "id": "C054",
+      "name": "Surveying",
+      "department": "CE"
+    },
+    {
+      "id": "C055",
+      "name": "Geotechnical Engineering",
+      "department": "CE"
+    },
+    {
+      "id": "C056",
+      "name": "Concrete Technology",
+      "department": "CE"
+    },
+    {
+      "id": "C057",
+      "name": "Transportation",
+      "department": "CE"
+    },
+    {
+      "id": "C058",
+      "name": "Hydrology",
+      "department": "CE"
+    },
+    {
+      "id": "C059",
+      "name": "Construction Management",
+      "department": "CE"
+    },
+    {
+      "id": "C060",
+      "name": "Environmental Engineering",
+      "department": "CE"
+    },
+    {
+      "id": "C061",
+      "name": "Strength of Materials",
+      "department": "CE"
+    },
+    {
+      "id": "C062",
+      "name": "Civil Practicum",
+      "department": "CE"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "S001",
+      "course": "C011",
+      "faculty": [
+        "F02"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "physics_lab",
+      "accessible": true,
+      "department": "COMMON"
+    },
+    {
+      "id": "S002",
+      "course": "C012",
+      "faculty": [
+        "F03"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "chemistry_lab",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S003",
+      "course": "C002",
+      "faculty": [
+        "F04"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "computer_lab",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S004",
+      "course": "C011",
+      "faculty": [
+        "F05"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "physics_lab",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S005",
+      "course": "C022",
+      "faculty": [
+        "F01"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "computer_lab",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S006",
+      "course": "C032",
+      "faculty": [
+        "F17"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "electrical_lab",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S007",
+      "course": "C042",
+      "faculty": [
+        "F23"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "electrical_lab",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S008",
+      "course": "C052",
+      "faculty": [
+        "F29"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "mechanical_lab",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S009",
+      "course": "C062",
+      "faculty": [
+        "F35"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "civil_lab",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S010",
+      "course": "C022",
+      "faculty": [
+        "F12"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "computer_lab",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S011",
+      "course": "C032",
+      "faculty": [
+        "F18"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "electrical_lab",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S012",
+      "course": "C042",
+      "faculty": [
+        "F24"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "electrical_lab",
+      "accessible": true,
+      "department": "EE"
+    },
+    {
+      "id": "S013",
+      "course": "C052",
+      "faculty": [
+        "F30"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "mechanical_lab",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S014",
+      "course": "C062",
+      "faculty": [
+        "F36"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "civil_lab",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S015",
+      "course": "C002",
+      "faculty": [
+        "F06"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "computer_lab",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S016",
+      "course": "C011",
+      "faculty": [
+        "F07"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "physics_lab",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S017",
+      "course": "C012",
+      "faculty": [
+        "F08"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "chemistry_lab",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S018",
+      "course": "C002",
+      "faculty": [
+        "F09"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "computer_lab",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S019",
+      "course": "C022",
+      "faculty": [
+        "F13"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "computer_lab",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S020",
+      "course": "C032",
+      "faculty": [
+        "F19"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "electrical_lab",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S021",
+      "course": "C042",
+      "faculty": [
+        "F25"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "electrical_lab",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S022",
+      "course": "C052",
+      "faculty": [
+        "F31"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "mechanical_lab",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S023",
+      "course": "C062",
+      "faculty": [
+        "F37"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "civil_lab",
+      "accessible": true,
+      "department": "CE"
+    },
+    {
+      "id": "S024",
+      "course": "C022",
+      "faculty": [
+        "F14"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "computer_lab",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S025",
+      "course": "C032",
+      "faculty": [
+        "F20"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "electrical_lab",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S026",
+      "course": "C042",
+      "faculty": [
+        "F26"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "electrical_lab",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S027",
+      "course": "C052",
+      "faculty": [
+        "F32"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 3,
+      "kind": "lab",
+      "room_type": "mechanical_lab",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S028",
+      "course": "C001",
+      "faculty": [
+        "F10"
+      ],
+      "groups": [
+        "Y1-A",
+        "Y1-B"
+      ],
+      "size": 140,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S029",
+      "course": "C002",
+      "faculty": [
+        "F11"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON",
+      "fixed": {
+        "day": 2,
+        "start_period": 3
+      }
+    },
+    {
+      "id": "S030",
+      "course": "C013",
+      "faculty": [
+        "F15"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 35,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE",
+      "basket": "ELECTIVE-A"
+    },
+    {
+      "id": "S031",
+      "course": "C014",
+      "faculty": [
+        "F16"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 35,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE",
+      "basket": "ELECTIVE-A"
+    },
+    {
+      "id": "S032",
+      "course": "C003",
+      "faculty": [
+        "F02"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S033",
+      "course": "C015",
+      "faculty": [
+        "F01"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S034",
+      "course": "C023",
+      "faculty": [
+        "F21"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "ECE"
+    },
+    {
+      "id": "S035",
+      "course": "C033",
+      "faculty": [
+        "F27"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S036",
+      "course": "C043",
+      "faculty": [
+        "F33"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S037",
+      "course": "C053",
+      "faculty": [
+        "F38"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S038",
+      "course": "C016",
+      "faculty": [
+        "F12"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S039",
+      "course": "C024",
+      "faculty": [
+        "F22"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S040",
+      "course": "C034",
+      "faculty": [
+        "F28"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S041",
+      "course": "C044",
+      "faculty": [
+        "F34"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S042",
+      "course": "C054",
+      "faculty": [
+        "F39"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S043",
+      "course": "C004",
+      "faculty": [
+        "F03"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S044",
+      "course": "C005",
+      "faculty": [
+        "F04"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S045",
+      "course": "C006",
+      "faculty": [
+        "F05"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "COMMON"
+    },
+    {
+      "id": "S046",
+      "course": "C007",
+      "faculty": [
+        "F06"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S047",
+      "course": "C017",
+      "faculty": [
+        "F13"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S048",
+      "course": "C025",
+      "faculty": [
+        "F17"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S049",
+      "course": "C035",
+      "faculty": [
+        "F23"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S050",
+      "course": "C045",
+      "faculty": [
+        "F29"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S051",
+      "course": "C055",
+      "faculty": [
+        "F40"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S052",
+      "course": "C018",
+      "faculty": [
+        "F14"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S053",
+      "course": "C026",
+      "faculty": [
+        "F18"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S054",
+      "course": "C036",
+      "faculty": [
+        "F24"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S055",
+      "course": "C046",
+      "faculty": [
+        "F30"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S056",
+      "course": "C056",
+      "faculty": [
+        "F35"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "CE"
+    },
+    {
+      "id": "S057",
+      "course": "C008",
+      "faculty": [
+        "F07"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S058",
+      "course": "C009",
+      "faculty": [
+        "F08"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S059",
+      "course": "C010",
+      "faculty": [
+        "F09"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S060",
+      "course": "C011",
+      "faculty": [
+        "F10"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S061",
+      "course": "C019",
+      "faculty": [
+        "F15"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S062",
+      "course": "C027",
+      "faculty": [
+        "F19"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S063",
+      "course": "C037",
+      "faculty": [
+        "F25"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S064",
+      "course": "C047",
+      "faculty": [
+        "F31"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S065",
+      "course": "C057",
+      "faculty": [
+        "F36"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S066",
+      "course": "C020",
+      "faculty": [
+        "F16"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S067",
+      "course": "C028",
+      "faculty": [
+        "F20"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "ECE"
+    },
+    {
+      "id": "S068",
+      "course": "C038",
+      "faculty": [
+        "F26"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S069",
+      "course": "C048",
+      "faculty": [
+        "F32"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S070",
+      "course": "C058",
+      "faculty": [
+        "F37"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S071",
+      "course": "C012",
+      "faculty": [
+        "F11"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S072",
+      "course": "C001",
+      "faculty": [
+        "F02"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S073",
+      "course": "C002",
+      "faculty": [
+        "F03"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S074",
+      "course": "C003",
+      "faculty": [
+        "F04"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S075",
+      "course": "C021",
+      "faculty": [
+        "F01"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S076",
+      "course": "C029",
+      "faculty": [
+        "F21"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S077",
+      "course": "C039",
+      "faculty": [
+        "F27"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S078",
+      "course": "C049",
+      "faculty": [
+        "F33"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "ME"
+    },
+    {
+      "id": "S079",
+      "course": "C059",
+      "faculty": [
+        "F38"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S080",
+      "course": "C022",
+      "faculty": [
+        "F12"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S081",
+      "course": "C030",
+      "faculty": [
+        "F22"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S082",
+      "course": "C040",
+      "faculty": [
+        "F28"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S083",
+      "course": "C050",
+      "faculty": [
+        "F34"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S084",
+      "course": "C060",
+      "faculty": [
+        "F39"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S085",
+      "course": "C004",
+      "faculty": [
+        "F05"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S086",
+      "course": "C005",
+      "faculty": [
+        "F06"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S087",
+      "course": "C006",
+      "faculty": [
+        "F07"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S088",
+      "course": "C007",
+      "faculty": [
+        "F08"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S089",
+      "course": "C013",
+      "faculty": [
+        "F13"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "CSE"
+    },
+    {
+      "id": "S090",
+      "course": "C031",
+      "faculty": [
+        "F17"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S091",
+      "course": "C041",
+      "faculty": [
+        "F23"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S092",
+      "course": "C051",
+      "faculty": [
+        "F29"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S093",
+      "course": "C061",
+      "faculty": [
+        "F40"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S094",
+      "course": "C014",
+      "faculty": [
+        "F14"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S095",
+      "course": "C032",
+      "faculty": [
+        "F18"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S096",
+      "course": "C042",
+      "faculty": [
+        "F24"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S097",
+      "course": "C052",
+      "faculty": [
+        "F30"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S098",
+      "course": "C062",
+      "faculty": [
+        "F35"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S099",
+      "course": "C008",
+      "faculty": [
+        "F09"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S100",
+      "course": "C009",
+      "faculty": [
+        "F10"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "COMMON"
+    },
+    {
+      "id": "S101",
+      "course": "C010",
+      "faculty": [
+        "F11"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S102",
+      "course": "C011",
+      "faculty": [
+        "F02"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S103",
+      "course": "C015",
+      "faculty": [
+        "F15"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S104",
+      "course": "C023",
+      "faculty": [
+        "F19"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S105",
+      "course": "C033",
+      "faculty": [
+        "F25"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S106",
+      "course": "C043",
+      "faculty": [
+        "F31"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S107",
+      "course": "C053",
+      "faculty": [
+        "F36"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S108",
+      "course": "C016",
+      "faculty": [
+        "F16"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S109",
+      "course": "C024",
+      "faculty": [
+        "F20"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S110",
+      "course": "C034",
+      "faculty": [
+        "F26"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S111",
+      "course": "C044",
+      "faculty": [
+        "F32"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "ME"
+    },
+    {
+      "id": "S112",
+      "course": "C054",
+      "faculty": [
+        "F37"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S113",
+      "course": "C012",
+      "faculty": [
+        "F03"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S114",
+      "course": "C001",
+      "faculty": [
+        "F04"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S115",
+      "course": "C002",
+      "faculty": [
+        "F05"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S116",
+      "course": "C003",
+      "faculty": [
+        "F06"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S117",
+      "course": "C017",
+      "faculty": [
+        "F01"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S118",
+      "course": "C025",
+      "faculty": [
+        "F21"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S119",
+      "course": "C035",
+      "faculty": [
+        "F27"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S120",
+      "course": "C045",
+      "faculty": [
+        "F33"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S121",
+      "course": "C055",
+      "faculty": [
+        "F38"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S122",
+      "course": "C018",
+      "faculty": [
+        "F12"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "CSE"
+    },
+    {
+      "id": "S123",
+      "course": "C026",
+      "faculty": [
+        "F22"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S124",
+      "course": "C036",
+      "faculty": [
+        "F28"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S125",
+      "course": "C046",
+      "faculty": [
+        "F34"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S126",
+      "course": "C056",
+      "faculty": [
+        "F39"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S127",
+      "course": "C004",
+      "faculty": [
+        "F07"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S128",
+      "course": "C005",
+      "faculty": [
+        "F08"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S129",
+      "course": "C006",
+      "faculty": [
+        "F09"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S130",
+      "course": "C007",
+      "faculty": [
+        "F10"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S131",
+      "course": "C019",
+      "faculty": [
+        "F13"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S132",
+      "course": "C027",
+      "faculty": [
+        "F17"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S133",
+      "course": "C037",
+      "faculty": [
+        "F23"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "EE"
+    },
+    {
+      "id": "S134",
+      "course": "C047",
+      "faculty": [
+        "F29"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S135",
+      "course": "C057",
+      "faculty": [
+        "F40"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S136",
+      "course": "C020",
+      "faculty": [
+        "F14"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S137",
+      "course": "C028",
+      "faculty": [
+        "F18"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S138",
+      "course": "C038",
+      "faculty": [
+        "F24"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S139",
+      "course": "C048",
+      "faculty": [
+        "F30"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S140",
+      "course": "C058",
+      "faculty": [
+        "F35"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S141",
+      "course": "C008",
+      "faculty": [
+        "F11"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S142",
+      "course": "C009",
+      "faculty": [
+        "F02"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S143",
+      "course": "C010",
+      "faculty": [
+        "F03"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S144",
+      "course": "C011",
+      "faculty": [
+        "F04"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "COMMON"
+    },
+    {
+      "id": "S145",
+      "course": "C021",
+      "faculty": [
+        "F15"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S146",
+      "course": "C029",
+      "faculty": [
+        "F19"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S147",
+      "course": "C039",
+      "faculty": [
+        "F25"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S148",
+      "course": "C049",
+      "faculty": [
+        "F31"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S149",
+      "course": "C059",
+      "faculty": [
+        "F36"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S150",
+      "course": "C022",
+      "faculty": [
+        "F16"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S151",
+      "course": "C030",
+      "faculty": [
+        "F20"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S152",
+      "course": "C040",
+      "faculty": [
+        "F26"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S153",
+      "course": "C050",
+      "faculty": [
+        "F32"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S154",
+      "course": "C060",
+      "faculty": [
+        "F37"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S155",
+      "course": "C012",
+      "faculty": [
+        "F05"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "COMMON"
+    },
+    {
+      "id": "S156",
+      "course": "C001",
+      "faculty": [
+        "F06"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S157",
+      "course": "C002",
+      "faculty": [
+        "F07"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S158",
+      "course": "C003",
+      "faculty": [
+        "F08"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S159",
+      "course": "C013",
+      "faculty": [
+        "F01"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S160",
+      "course": "C031",
+      "faculty": [
+        "F21"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S161",
+      "course": "C041",
+      "faculty": [
+        "F27"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S162",
+      "course": "C051",
+      "faculty": [
+        "F33"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S163",
+      "course": "C061",
+      "faculty": [
+        "F38"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S164",
+      "course": "C014",
+      "faculty": [
+        "F12"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S165",
+      "course": "C032",
+      "faculty": [
+        "F22"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S166",
+      "course": "C042",
+      "faculty": [
+        "F28"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "EE"
+    },
+    {
+      "id": "S167",
+      "course": "C052",
+      "faculty": [
+        "F34"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S168",
+      "course": "C062",
+      "faculty": [
+        "F39"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S169",
+      "course": "C004",
+      "faculty": [
+        "F09"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S170",
+      "course": "C005",
+      "faculty": [
+        "F10"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S171",
+      "course": "C006",
+      "faculty": [
+        "F11"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S172",
+      "course": "C007",
+      "faculty": [
+        "F02"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S173",
+      "course": "C015",
+      "faculty": [
+        "F13"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S174",
+      "course": "C023",
+      "faculty": [
+        "F17"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S175",
+      "course": "C033",
+      "faculty": [
+        "F23"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S176",
+      "course": "C043",
+      "faculty": [
+        "F29"
+      ],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S177",
+      "course": "C053",
+      "faculty": [
+        "F40"
+      ],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "CE"
+    },
+    {
+      "id": "S178",
+      "course": "C016",
+      "faculty": [
+        "F14"
+      ],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S179",
+      "course": "C024",
+      "faculty": [
+        "F18"
+      ],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "S180",
+      "course": "C034",
+      "faculty": [
+        "F24"
+      ],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "S181",
+      "course": "C044",
+      "faculty": [
+        "F30"
+      ],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "S182",
+      "course": "C054",
+      "faculty": [
+        "F35"
+      ],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "S183",
+      "course": "C008",
+      "faculty": [
+        "F03"
+      ],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S184",
+      "course": "C009",
+      "faculty": [
+        "F04"
+      ],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S185",
+      "course": "C010",
+      "faculty": [
+        "F05"
+      ],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S186",
+      "course": "C011",
+      "faculty": [
+        "F06"
+      ],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "S187",
+      "course": "C017",
+      "faculty": [
+        "F15"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "S188",
+      "course": "C025",
+      "faculty": [
+        "F19"
+      ],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "ECE"
+    },
+    {
+      "id": "S189",
+      "course": "C035",
+      "faculty": [
+        "F25"
+      ],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "lecture",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    }
+  ],
+  "exams": [
+    {
+      "id": "E001",
+      "course": "C001",
+      "faculty": [],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "COMMON"
+    },
+    {
+      "id": "E002",
+      "course": "C002",
+      "faculty": [],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "E003",
+      "course": "C003",
+      "faculty": [],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "E004",
+      "course": "C004",
+      "faculty": [],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "E005",
+      "course": "C017",
+      "faculty": [],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "E006",
+      "course": "C028",
+      "faculty": [],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "E007",
+      "course": "C039",
+      "faculty": [],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "E008",
+      "course": "C050",
+      "faculty": [],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "ME"
+    },
+    {
+      "id": "E009",
+      "course": "C061",
+      "faculty": [],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "E010",
+      "course": "C022",
+      "faculty": [],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "E011",
+      "course": "C023",
+      "faculty": [],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "E012",
+      "course": "C034",
+      "faculty": [],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "E013",
+      "course": "C045",
+      "faculty": [],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "E014",
+      "course": "C056",
+      "faculty": [],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "E015",
+      "course": "C003",
+      "faculty": [],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "COMMON"
+    },
+    {
+      "id": "E016",
+      "course": "C004",
+      "faculty": [],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "E017",
+      "course": "C005",
+      "faculty": [],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "E018",
+      "course": "C006",
+      "faculty": [],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "E019",
+      "course": "C021",
+      "faculty": [],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "E020",
+      "course": "C032",
+      "faculty": [],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "E021",
+      "course": "C033",
+      "faculty": [],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "E022",
+      "course": "C044",
+      "faculty": [],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "ME"
+    },
+    {
+      "id": "E023",
+      "course": "C055",
+      "faculty": [],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "E024",
+      "course": "C016",
+      "faculty": [],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "E025",
+      "course": "C027",
+      "faculty": [],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "E026",
+      "course": "C038",
+      "faculty": [],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "E027",
+      "course": "C049",
+      "faculty": [],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    },
+    {
+      "id": "E028",
+      "course": "C060",
+      "faculty": [],
+      "groups": [
+        "Y3-CE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "E029",
+      "course": "C005",
+      "faculty": [],
+      "groups": [
+        "Y1-A"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "COMMON"
+    },
+    {
+      "id": "E030",
+      "course": "C006",
+      "faculty": [],
+      "groups": [
+        "Y1-B"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "E031",
+      "course": "C007",
+      "faculty": [],
+      "groups": [
+        "Y1-C"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "E032",
+      "course": "C008",
+      "faculty": [],
+      "groups": [
+        "Y1-D"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "COMMON"
+    },
+    {
+      "id": "E033",
+      "course": "C015",
+      "faculty": [],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "E034",
+      "course": "C026",
+      "faculty": [],
+      "groups": [
+        "Y2-ECE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "E035",
+      "course": "C037",
+      "faculty": [],
+      "groups": [
+        "Y2-EE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "E036",
+      "course": "C048",
+      "faculty": [],
+      "groups": [
+        "Y2-ME"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": true,
+      "department": "ME"
+    },
+    {
+      "id": "E037",
+      "course": "C059",
+      "faculty": [],
+      "groups": [
+        "Y2-CE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CE"
+    },
+    {
+      "id": "E038",
+      "course": "C020",
+      "faculty": [],
+      "groups": [
+        "Y3-CSE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    },
+    {
+      "id": "E039",
+      "course": "C031",
+      "faculty": [],
+      "groups": [
+        "Y3-ECE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ECE"
+    },
+    {
+      "id": "E040",
+      "course": "C042",
+      "faculty": [],
+      "groups": [
+        "Y3-EE"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "EE"
+    },
+    {
+      "id": "E041",
+      "course": "C043",
+      "faculty": [],
+      "groups": [
+        "Y3-ME"
+      ],
+      "size": 70,
+      "duration": 2,
+      "kind": "exam",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "ME"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "B001",
+      "title": "Spectra opening 1",
+      "category": "institute",
+      "day": 0,
+      "start_period": 10,
+      "duration": 2,
+      "room": "AUD",
+      "size": 180,
+      "room_type": "auditorium",
+      "accessible": true,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve AUD on Monday at P10 for 2 hours, 180 people for Spectra opening 1."
+    },
+    {
+      "id": "B002",
+      "title": "Guest talk 2",
+      "category": "guest",
+      "day": 1,
+      "start_period": 10,
+      "duration": 1,
+      "room": "SH-1",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Tuesday ko SH-1 chahiye P10 se, 1 ghante, 80 students, Guest talk 2 ke liye."
+    },
+    {
+      "id": "B003",
+      "title": "Department workshop 3",
+      "category": "department",
+      "day": 2,
+      "start_period": 10,
+      "duration": 1,
+      "room": "SH-2",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [
+        "Y2-CSE"
+      ],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-2 on Wednesday at P10 for 1 hours, 80 people for Department workshop 3."
+    },
+    {
+      "id": "B004",
+      "title": "Club showcase 4",
+      "category": "club",
+      "day": 0,
+      "start_period": 10,
+      "duration": 1,
+      "room": "AUD",
+      "size": 80,
+      "room_type": "auditorium",
+      "accessible": false,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Monday AUD chahiye P10 se, 1 ghanta, 80 students, Club showcase ke liye."
+    },
+    {
+      "id": "B005",
+      "title": "Spectra opening 5",
+      "category": "institute",
+      "day": 4,
+      "start_period": 10,
+      "duration": 2,
+      "room": "SH-3",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-3 on Friday at P10 for 2 hours, 80 people for Spectra opening 5."
+    },
+    {
+      "id": "B006",
+      "title": "Guest talk 6",
+      "category": "guest",
+      "day": 0,
+      "start_period": 11,
+      "duration": 1,
+      "room": "AUD",
+      "size": 80,
+      "room_type": "auditorium",
+      "accessible": true,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Monday ko AUD chahiye P11 se, 1 ghante, 80 students, Guest talk 6 ke liye."
+    },
+    {
+      "id": "B007",
+      "title": "Department workshop 7",
+      "category": "department",
+      "day": 1,
+      "start_period": 11,
+      "duration": 1,
+      "room": "SH-1",
+      "size": 180,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-1 on Tuesday at P11 for 1 hours, 180 people for Department workshop 7."
+    },
+    {
+      "id": "B008",
+      "title": "Club showcase 8",
+      "category": "club",
+      "day": 2,
+      "start_period": 11,
+      "duration": 1,
+      "room": "SH-2",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Wednesday ko SH-2 chahiye P11 se, 1 ghante, 80 students, Club showcase 8 ke liye."
+    },
+    {
+      "id": "B009",
+      "title": "Spectra opening 9",
+      "category": "institute",
+      "day": 3,
+      "start_period": 11,
+      "duration": 2,
+      "room": "OAT",
+      "size": 80,
+      "room_type": "outdoor",
+      "accessible": false,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve OAT on Thursday at P11 for 2 hours, 80 people for Spectra opening 9."
+    },
+    {
+      "id": "B010",
+      "title": "Guest talk 10",
+      "category": "guest",
+      "day": 4,
+      "start_period": 11,
+      "duration": 1,
+      "room": "SH-3",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Friday ko SH-3 chahiye P11 se, 1 ghante, 80 students, Guest talk 10 ke liye."
+    },
+    {
+      "id": "B011",
+      "title": "Department workshop 11",
+      "category": "department",
+      "day": 0,
+      "start_period": 12,
+      "duration": 1,
+      "room": "AUD",
+      "size": 80,
+      "room_type": "auditorium",
+      "accessible": true,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve AUD on Monday at P12 for 1 hours, 80 people for Department workshop 11."
+    },
+    {
+      "id": "B012",
+      "title": "Club showcase 12",
+      "category": "club",
+      "day": 1,
+      "start_period": 12,
+      "duration": 1,
+      "room": "SH-1",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Tuesday ko SH-1 chahiye P12 se, 1 ghante, 80 students, Club showcase 12 ke liye."
+    },
+    {
+      "id": "B013",
+      "title": "Spectra opening 13",
+      "category": "institute",
+      "day": 2,
+      "start_period": 12,
+      "duration": 2,
+      "room": "SH-2",
+      "size": 180,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-2 on Wednesday at P12 for 2 hours, 180 people for Spectra opening 13."
+    },
+    {
+      "id": "B014",
+      "title": "Guest talk 14",
+      "category": "guest",
+      "day": 3,
+      "start_period": 12,
+      "duration": 1,
+      "room": "OAT",
+      "size": 80,
+      "room_type": "outdoor",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Thursday ko OAT chahiye P12 se, 1 ghante, 80 students, Guest talk 14 ke liye."
+    },
+    {
+      "id": "B015",
+      "title": "Department workshop 15",
+      "category": "department",
+      "day": 4,
+      "start_period": 12,
+      "duration": 1,
+      "room": "SH-3",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-3 on Friday at P12 for 1 hours, 80 people for Department workshop 15."
+    },
+    {
+      "id": "B016",
+      "title": "Club showcase 16",
+      "category": "club",
+      "day": 0,
+      "start_period": 10,
+      "duration": 1,
+      "room": "AUD",
+      "size": 80,
+      "room_type": "auditorium",
+      "accessible": true,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Monday ko AUD chahiye P10 se, 1 ghante, 80 students, Club showcase 16 ke liye."
+    },
+    {
+      "id": "B017",
+      "title": "Spectra opening 17",
+      "category": "institute",
+      "day": 1,
+      "start_period": 10,
+      "duration": 2,
+      "room": "SH-1",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-1 on Tuesday at P10 for 2 hours, 80 people for Spectra opening 17."
+    },
+    {
+      "id": "B018",
+      "title": "Guest talk 18",
+      "category": "guest",
+      "day": 2,
+      "start_period": 10,
+      "duration": 1,
+      "room": "SH-2",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Wednesday ko SH-2 chahiye P10 se, 1 ghante, 80 students, Guest talk 18 ke liye."
+    },
+    {
+      "id": "B019",
+      "title": "Department workshop 19",
+      "category": "department",
+      "day": 3,
+      "start_period": 10,
+      "duration": 1,
+      "room": "OAT",
+      "size": 180,
+      "room_type": "outdoor",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve OAT on Thursday at P10 for 1 hours, 180 people for Department workshop 19."
+    },
+    {
+      "id": "B020",
+      "title": "Club showcase 20",
+      "category": "club",
+      "day": 4,
+      "start_period": 10,
+      "duration": 1,
+      "room": "SH-3",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Friday ko SH-3 chahiye P10 se, 1 ghante, 80 students, Club showcase 20 ke liye."
+    },
+    {
+      "id": "B021",
+      "title": "Spectra opening 21",
+      "category": "institute",
+      "day": 0,
+      "start_period": 11,
+      "duration": 2,
+      "room": "AUD",
+      "size": 80,
+      "room_type": "auditorium",
+      "accessible": true,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve AUD on Monday at P11 for 2 hours, 80 people for Spectra opening 21."
+    },
+    {
+      "id": "B022",
+      "title": "Guest talk 22",
+      "category": "guest",
+      "day": 1,
+      "start_period": 11,
+      "duration": 1,
+      "room": "SH-1",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Tuesday ko SH-1 chahiye P11 se, 1 ghante, 80 students, Guest talk 22 ke liye."
+    },
+    {
+      "id": "B023",
+      "title": "Department workshop 23",
+      "category": "department",
+      "day": 2,
+      "start_period": 11,
+      "duration": 1,
+      "room": "SH-2",
+      "size": 80,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "coordinator",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Please reserve SH-2 on Wednesday at P11 for 1 hours, 80 people for Department workshop 23."
+    },
+    {
+      "id": "B024",
+      "title": "Club showcase 24",
+      "category": "club",
+      "day": 3,
+      "start_period": 11,
+      "duration": 1,
+      "room": "OAT",
+      "size": 80,
+      "room_type": "outdoor",
+      "accessible": false,
+      "groups": [],
+      "requester": "club",
+      "department": "CSE",
+      "cancelled": false,
+      "message": "Thursday ko OAT chahiye P11 se, 1 ghante, 80 students, Club showcase 24 ke liye."
+    },
+    {
+      "id": "B025",
+      "title": "Spectra opening 25",
+      "category": "institute",
+      "day": 4,
+      "start_period": 11,
+      "duration": 2,
+      "room": "SH-3",
+      "size": 180,
+      "room_type": "seminar",
+      "accessible": false,
+      "groups": [],
+      "requester": "admin",
+      "department": "CSE",
+      "cancelled": true,
+      "message": "Please reserve SH-3 on Friday at P11 for 2 hours, 180 people for Spectra opening 25."
+    }
+  ],
+  "priorities": [
+    "exam",
+    "class",
+    "institute",
+    "guest",
+    "department",
+    "club"
+  ]
+}

@@ -1,0 +1,110 @@
+/* Responsive usability pass: preserve role palettes and desktop composition. */
+#application :where(.campus-dashboard-heading,.campus-review-summary,.campus-workflow-grid article,.panel-toolbar,.card,.diff,.approval-footer){min-width:0}
+#application :where(p,h1,h2,h3,small,.meta,.editor-error){overflow-wrap:anywhere}
+#application pre{max-width:100%;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+#application dialog{max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);overflow:auto;overscroll-behavior:contain}
+#application .grid-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+#application :where(input,select,textarea){max-width:100%;min-width:0}
+@media(max-width:900px){
+ #application .university-nav{flex-wrap:wrap;gap:14px;padding:16px 20px}
+ #application .university-links{order:3;width:100%;display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-start;overflow:visible}
+ #application .university-links button{font-size:12px;min-height:44px;padding:10px 14px}
+ #application .university-nav>button:last-child{margin-left:auto;min-height:44px;font-size:12px}
+ #application .university-brand{min-width:0}
+ #application :where(aside,dialog) :where(input,select,textarea),.portal-form-card input{font-size:16px!important}
+ #application :where(aside,dialog) :where(button,summary){min-height:44px}
+ .portal-submit{min-height:48px;font-size:13px}
+ #application .university-footer :where(a,button){min-height:44px;display:flex;align-items:center;font-size:12px}
+}
+@media(max-width:600px){
+ #application .university-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+ #application .university-links button{font-size:11px;padding:9px 5px;white-space:normal}
+ #application .campus-service-strip{font-size:10px;line-height:1.7}
+ #application .campus-service-strip a{font-size:11px;display:inline-flex;min-height:36px;align-items:center}
+ #application .campus-dashboard-heading>div>p,#application .campus-review-summary p,#application .campus-workflow-grid p,#application .campus-bottom-grid p{font-size:14px;line-height:1.75}
+ #application .campus-summary-grid span,#application .campus-summary-grid small{font-size:11px;line-height:1.65}
+ #application .campus-week-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ #application .campus-week-grid>div{padding:14px}
+ #application .campus-week-grid span,#application .campus-week-grid small,#application .campus-week-note{font-size:11px;line-height:1.7}
+ #application .campus-section-heading>span{font-size:11px}
+ #application:not(.university-home) .role-switch button,#application:not(.university-home) .actions button,#application:not(.university-home) .workspace-portal-link{font-size:12px;min-height:44px;padding:10px}
+ #application:not(.university-home) .actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+ #application:not(.university-home) .actions>*{width:100%;min-width:0;white-space:normal;text-align:center}
+ #application:not(.university-home) .tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ #application:not(.university-home) .tabs button{font-size:12px;min-height:48px;white-space:normal;padding:10px 8px}
+ #application:not(.university-home) .template-filter .segmented{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;min-width:0}
+ #application:not(.university-home) .template-filter .segmented button{font-size:11px;min-height:44px;white-space:normal;padding:8px 4px}
+ #application:not(.university-home) .template-filter select{width:100%;font-size:16px}
+ #application:not(.university-home) .panel-head{flex-wrap:wrap}
+ #application:not(.university-home) :where(.panel-head p,.card p,.panel-content,.meta,.editor-help){font-size:12px;line-height:1.75}
+ #application:not(.university-home) .workspace aside{top:max(12px,env(safe-area-inset-top));bottom:max(12px,env(safe-area-inset-bottom));right:10px;left:auto;width:calc(100vw - 20px);max-width:405px;min-width:0;padding:16px;overscroll-behavior:contain}
+ #application :where(aside,dialog) :where(input,select,textarea){font-size:16px!important;min-height:46px}
+ #application :where(aside,dialog) :where(button,summary){min-height:44px;font-size:12px}
+ #application:not(.university-home) #prompt{font-size:16px;min-height:130px}
+ #application:not(.university-home) :where(#check,#submit,#parse){font-size:13px;min-height:48px}
+ #application :where(.drawer-tabs,.editor-footer,.approval-footer){flex-wrap:wrap;gap:10px}
+ #application .drawer-tabs button{flex:1 1 120px;white-space:normal}
+ #application .available-room-card>div{flex-wrap:wrap;gap:6px}
+ #application .availability-result h3{font-size:17px}
+ #application :where(#availability-summary,.availability-result .available-room-card p,.availability-details summary){font-size:12px}
+ #application #timetable-editor{padding:20px 16px;width:calc(100vw - 24px);max-height:calc(100dvh - 24px)}
+ #application #timetable-editor :where(input,select){width:100%}
+ #application .editor-footer button{flex:1 1 120px;white-space:normal}
+ #application .toast{max-width:calc(100vw - 24px);white-space:normal;overflow-wrap:anywhere;font-size:12px;bottom:max(12px,env(safe-area-inset-bottom))}
+ .portal-header{padding:16px 20px;flex-wrap:wrap;gap:12px}
+ .portal-header nav{flex-direction:row;flex-wrap:wrap;text-align:left;gap:10px 18px}
+ .portal-header nav a{min-height:36px;display:flex;align-items:center;font-size:11px}
+ .portal-story{padding:22px 24px}
+ .portal-story-copy{margin-top:22px}
+ .portal-story h1{font-size:38px;letter-spacing:-1.5px}
+ .portal-story-copy>p{font-size:13px;line-height:1.75}
+ .portal-story-bottom{display:none}
+ .portal-form-area{padding:24px}
+ .portal-form-card{margin:24px auto}
+ .portal-form-card :where(.portal-form-intro,label),.portal-access li,.portal-choice p,.portal-directory>p{font-size:13px;line-height:1.75}
+ .portal-form-card input{font-size:16px;min-height:50px}
+ .portal-form-card input[readonly]{padding-right:90px}
+ .password-field button{min-height:44px;top:3px;font-size:12px}
+ .portal-submit{font-size:13px;min-height:50px}
+ .portal-form-card form>small,.demo-credentials p,.demo-credentials code,.portal-back,.other-portals a{font-size:11px;line-height:1.8}
+ .other-portals a{min-height:44px;display:flex;align-items:center}
+ .portal-choice-unit,.portal-choice b{font-size:12px}
+ .demo-credentials{overflow-wrap:anywhere}
+ .oryzo-story .story-nav .story-enter{min-height:44px;font-size:10px;padding:10px}
+ .oryzo-story .opening-tagline{top:108px}
+ .oryzo-story #story-title{top:145px}
+ .oryzo-story .opening-story p,.oryzo-story .rule-detail>p{font-size:12px;line-height:1.65}
+ .oryzo-story .opening-story>a,.oryzo-story .rule-detail>.dark-enter{font-size:11px;min-height:44px}
+ .oryzo-story .rules-panel{height:1440px;min-height:1440px}
+ .oryzo-story .rules-intro{top:110px}
+ .oryzo-story #rules-story-title{top:220px}
+ .oryzo-story .rule-selector button{font-size:10px;min-height:54px}
+ .oryzo-story .rule-selector button>span{font-size:9px}
+ .oryzo-story .rules-bottom button{font-size:10px;min-height:44px}
+}
+@media(max-height:500px) and (orientation:landscape){
+ #application .workspace aside{top:8px!important;bottom:8px!important}
+ #application dialog{max-height:calc(100dvh - 16px);margin:8px auto}
+}
+/* Request decisions and examination agenda. */
+#application .toast[data-kind=error]{background:#713e32;color:#fff;border:1px solid #a57565;max-width:390px;box-shadow:0 8px 25px #0002;line-height:1.6}
+#application .toast button{margin-left:10px;background:transparent;color:inherit;text-decoration:underline;border:0;min-height:32px}
+#application .exam-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:24px;gap:16px;background:var(--role-soft)}
+#application .exam-summary strong{font:700 29px Manrope,sans-serif;display:block;color:var(--role-accent)}
+#application .exam-summary span{font-size:12px;display:block;margin-top:8px}
+#application .exam-days{display:flex;flex-wrap:wrap;gap:9px}
+#application .exam-days [aria-pressed=true]{background:var(--role-dark);color:var(--role-paper)}
+#application .exam-day{padding:10px 24px 24px}
+#application .exam-day>h3{font-size:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;border-bottom:1px solid var(--role-line);padding-bottom:14px}
+#application .exam-day>h3 span{font-size:12px;font-weight:400;color:var(--role-muted)}
+#application .exam-entry{display:grid;grid-template-columns:130px 1fr 230px;gap:22px;padding:22px 0;border-bottom:1px solid var(--role-line);align-items:center}
+#application .exam-time{border-left:3px solid var(--role-accent);padding-left:15px}
+#application .exam-time strong{font-size:20px;color:var(--role-accent)}
+#application .exam-time span,#application .exam-seats span,#application .exam-seats small{display:block;font-size:11px;line-height:1.8}
+#application .exam-entry h4{font:600 18px Manrope,sans-serif;margin:9px 0}
+#application .exam-entry p{font-size:12px;line-height:1.7;color:var(--role-muted)}
+#application .exam-seats{padding:15px;background:var(--role-paper);border:1px solid var(--role-line);border-radius:8px}
+#application .exam-seats strong{font-size:19px;color:var(--role-accent)}
+#application .exam-seats button{margin-top:12px;font-size:11px}
+@media(max-width:800px){#application .exam-entry{grid-template-columns:100px minmax(0,1fr);gap:15px}#application .exam-seats{grid-column:1/-1}#application .exam-day{padding:10px 16px 20px}#application .exam-summary{padding:20px 16px;gap:10px}#application .exam-summary strong{font-size:24px}}
+@media(max-width:480px){#application .exam-entry{grid-template-columns:minmax(0,1fr)}#application .exam-entry h4{overflow-wrap:anywhere}#application .toast[data-kind=error]{max-width:calc(100vw - 24px)}}

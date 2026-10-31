@@ -1,0 +1,104 @@
+{
+  "checked_at": "2026-10-31T15:30:16.982926+00:00",
+  "revision": 15,
+  "snapshot_sha256": "85db555f531ae563ed21065f0dac474805c57f61d516174a390d8537b93e2cf3",
+  "synthetic": true,
+  "teaching_sessions": 190,
+  "teaching_hours": 244,
+  "exams": 41,
+  "approved_bookings": 10,
+  "maximum_faculty_daily_hours": 4,
+  "rules": [
+    {
+      "id": "H01",
+      "rule": "Exactly one day, start period and room per session",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H02",
+      "rule": "No simultaneous faculty assignments",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H03",
+      "rule": "No group clashes; all combined groups count; same-basket exception",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H04",
+      "rule": "No simultaneous room assignments",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H05",
+      "rule": "Room capacity; floor(capacity / 2) for examinations",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H06",
+      "rule": "Required room type matches",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H07",
+      "rule": "Faculty unavailability respected",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H08",
+      "rule": "Room unavailability respected",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H09",
+      "rule": "No lunch crossing; three-hour labs only P2\u2013P4 or P6\u2013P8",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H10",
+      "rule": "Accessible sessions receive accessible rooms",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H11",
+      "rule": "Same-basket sessions share day and start period",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H12",
+      "rule": "Faculty daily teaching hours stay within their limit",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H13",
+      "rule": "Approved bookings protect rooms and mandatory groups",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "id": "H14",
+      "rule": "Original fixed slots are preserved",
+      "passed": true,
+      "findings": []
+    }
+  ],
+  "passed": true,
+  "independent_validator": {
+    "valid": true,
+    "hard_violations": 0,
+    "errors": []
+  },
+  "limitation": "Local synthetic dataset and local validator; official starter pack/validator not supplied."
+}

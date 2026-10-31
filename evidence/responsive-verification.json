@@ -1,0 +1,1297 @@
+{
+  "workspace": [
+    {
+      "width": 320,
+      "page": "home",
+      "actualWidth": 320,
+      "body": 314,
+      "overflow": []
+    },
+    {
+      "width": 320,
+      "page": "timetable",
+      "actualWidth": 320,
+      "body": 314,
+      "overflow": []
+    },
+    {
+      "width": 320,
+      "page": "spectra",
+      "actualWidth": 320,
+      "body": 314,
+      "overflow": []
+    },
+    {
+      "width": 320,
+      "page": "exams",
+      "actualWidth": 320,
+      "body": 314,
+      "overflow": []
+    },
+    {
+      "width": 320,
+      "page": "reschedule",
+      "actualWidth": 320,
+      "body": 314,
+      "overflow": []
+    },
+    {
+      "width": 320,
+      "page": "approvals",
+      "actualWidth": 320,
+      "body": 314,
+      "overflow": []
+    },
+    {
+      "width": 320,
+      "page": "utilisation",
+      "actualWidth": 320,
+      "body": 314,
+      "overflow": []
+    },
+    {
+      "width": 390,
+      "page": "home",
+      "actualWidth": 390,
+      "body": 385,
+      "overflow": []
+    },
+    {
+      "width": 390,
+      "page": "timetable",
+      "actualWidth": 390,
+      "body": 385,
+      "overflow": []
+    },
+    {
+      "width": 390,
+      "page": "spectra",
+      "actualWidth": 390,
+      "body": 385,
+      "overflow": []
+    },
+    {
+      "width": 390,
+      "page": "exams",
+      "actualWidth": 390,
+      "body": 385,
+      "overflow": []
+    },
+    {
+      "width": 390,
+      "page": "reschedule",
+      "actualWidth": 390,
+      "body": 385,
+      "overflow": []
+    },
+    {
+      "width": 390,
+      "page": "approvals",
+      "actualWidth": 390,
+      "body": 385,
+      "overflow": []
+    },
+    {
+      "width": 390,
+      "page": "utilisation",
+      "actualWidth": 390,
+      "body": 385,
+      "overflow": []
+    },
+    {
+      "width": 600,
+      "page": "home",
+      "actualWidth": 600,
+      "body": 594,
+      "overflow": []
+    },
+    {
+      "width": 600,
+      "page": "timetable",
+      "actualWidth": 600,
+      "body": 594,
+      "overflow": []
+    },
+    {
+      "width": 600,
+      "page": "spectra",
+      "actualWidth": 600,
+      "body": 594,
+      "overflow": []
+    },
+    {
+      "width": 600,
+      "page": "exams",
+      "actualWidth": 600,
+      "body": 594,
+      "overflow": []
+    },
+    {
+      "width": 600,
+      "page": "reschedule",
+      "actualWidth": 600,
+      "body": 594,
+      "overflow": []
+    },
+    {
+      "width": 600,
+      "page": "approvals",
+      "actualWidth": 600,
+      "body": 594,
+      "overflow": []
+    },
+    {
+      "width": 600,
+      "page": "utilisation",
+      "actualWidth": 600,
+      "body": 594,
+      "overflow": []
+    },
+    {
+      "width": 768,
+      "page": "home",
+      "actualWidth": 768,
+      "body": 762,
+      "overflow": []
+    },
+    {
+      "width": 768,
+      "page": "timetable",
+      "actualWidth": 768,
+      "body": 762,
+      "overflow": []
+    },
+    {
+      "width": 768,
+      "page": "spectra",
+      "actualWidth": 768,
+      "body": 762,
+      "overflow": []
+    },
+    {
+      "width": 768,
+      "page": "exams",
+      "actualWidth": 768,
+      "body": 762,
+      "overflow": []
+    },
+    {
+      "width": 768,
+      "page": "reschedule",
+      "actualWidth": 768,
+      "body": 762,
+      "overflow": []
+    },
+    {
+      "width": 768,
+      "page": "approvals",
+      "actualWidth": 768,
+      "body": 762,
+      "overflow": []
+    },
+    {
+      "width": 768,
+      "page": "utilisation",
+      "actualWidth": 768,
+      "body": 762,
+      "overflow": []
+    },
+    {
+      "width": 900,
+      "page": "home",
+      "actualWidth": 900,
+      "body": 894,
+      "overflow": []
+    },
+    {
+      "width": 900,
+      "page": "timetable",
+      "actualWidth": 900,
+      "body": 894,
+      "overflow": []
+    },
+    {
+      "width": 900,
+      "page": "spectra",
+      "actualWidth": 900,
+      "body": 894,
+      "overflow": []
+    },
+    {
+      "width": 900,
+      "page": "exams",
+      "actualWidth": 900,
+      "body": 894,
+      "overflow": []
+    },
+    {
+      "width": 900,
+      "page": "reschedule",
+      "actualWidth": 900,
+      "body": 894,
+      "overflow": []
+    },
+    {
+      "width": 900,
+      "page": "approvals",
+      "actualWidth": 900,
+      "body": 894,
+      "overflow": []
+    },
+    {
+      "width": 900,
+      "page": "utilisation",
+      "actualWidth": 900,
+      "body": 894,
+      "overflow": []
+    },
+    {
+      "width": 1024,
+      "page": "home",
+      "actualWidth": 1024,
+      "body": 1018,
+      "overflow": []
+    },
+    {
+      "width": 1024,
+      "page": "timetable",
+      "actualWidth": 1024,
+      "body": 1018,
+      "overflow": []
+    },
+    {
+      "width": 1024,
+      "page": "spectra",
+      "actualWidth": 1024,
+      "body": 1018,
+      "overflow": []
+    },
+    {
+      "width": 1024,
+      "page": "exams",
+      "actualWidth": 1024,
+      "body": 1018,
+      "overflow": []
+    },
+    {
+      "width": 1024,
+      "page": "reschedule",
+      "actualWidth": 1024,
+      "body": 1018,
+      "overflow": []
+    },
+    {
+      "width": 1024,
+      "page": "approvals",
+      "actualWidth": 1024,
+      "body": 1018,
+      "overflow": []
+    },
+    {
+      "width": 1024,
+      "page": "utilisation",
+      "actualWidth": 1024,
+      "body": 1018,
+      "overflow": []
+    },
+    {
+      "width": 1440,
+      "page": "home",
+      "actualWidth": 1440,
+      "body": 1434,
+      "overflow": []
+    },
+    {
+      "width": 1440,
+      "page": "timetable",
+      "actualWidth": 1440,
+      "body": 1434,
+      "overflow": []
+    },
+    {
+      "width": 1440,
+      "page": "spectra",
+      "actualWidth": 1440,
+      "body": 1434,
+      "overflow": []
+    },
+    {
+      "width": 1440,
+      "page": "exams",
+      "actualWidth": 1440,
+      "body": 1434,
+      "overflow": []
+    },
+    {
+      "width": 1440,
+      "page": "reschedule",
+      "actualWidth": 1440,
+      "body": 1434,
+      "overflow": []
+    },
+    {
+      "width": 1440,
+      "page": "approvals",
+      "actualWidth": 1440,
+      "body": 1434,
+      "overflow": []
+    },
+    {
+      "width": 1440,
+      "page": "utilisation",
+      "actualWidth": 1440,
+      "body": 1434,
+      "overflow": []
+    }
+  ],
+  "public": [
+    {
+      "width": 320,
+      "path": "/",
+      "body": 314,
+      "issues": [],
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "path": "/login",
+      "body": 305,
+      "issues": [],
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "path": "/login/admin",
+      "body": 305,
+      "issues": [],
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "path": "/login/deputy-admin",
+      "body": 305,
+      "issues": [],
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "path": "/login/department-coordinator",
+      "body": 305,
+      "issues": [],
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "path": "/login/faculty",
+      "body": 305,
+      "issues": [],
+      "viewport": 320
+    },
+    {
+      "width": 320,
+      "path": "/login/club-representative",
+      "body": 305,
+      "issues": [],
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "path": "/",
+      "body": 385,
+      "issues": [],
+      "viewport": 390
+    },
+    {
+      "width": 390,
+      "path": "/login",
+      "body": 375,
+      "issues": [],
+      "viewport": 390
+    },
+    {
+      "width": 390,
+      "path": "/login/admin",
+      "body": 375,
+      "issues": [],
+      "viewport": 390
+    },
+    {
+      "width": 390,
+      "path": "/login/deputy-admin",
+      "body": 375,
+      "issues": [],
+      "viewport": 390
+    },
+    {
+      "width": 390,
+      "path": "/login/department-coordinator",
+      "body": 375,
+      "issues": [],
+      "viewport": 390
+    },
+    {
+      "width": 390,
+      "path": "/login/faculty",
+      "body": 375,
+      "issues": [],
+      "viewport": 390
+    },
+    {
+      "width": 390,
+      "path": "/login/club-representative",
+      "body": 375,
+      "issues": [],
+      "viewport": 390
+    },
+    {
+      "width": 600,
+      "path": "/",
+      "body": 594,
+      "issues": [],
+      "viewport": 600
+    },
+    {
+      "width": 600,
+      "path": "/login",
+      "body": 585,
+      "issues": [],
+      "viewport": 600
+    },
+    {
+      "width": 600,
+      "path": "/login/admin",
+      "body": 585,
+      "issues": [],
+      "viewport": 600
+    },
+    {
+      "width": 600,
+      "path": "/login/deputy-admin",
+      "body": 585,
+      "issues": [],
+      "viewport": 600
+    },
+    {
+      "width": 600,
+      "path": "/login/department-coordinator",
+      "body": 585,
+      "issues": [],
+      "viewport": 600
+    },
+    {
+      "width": 600,
+      "path": "/login/faculty",
+      "body": 585,
+      "issues": [],
+      "viewport": 600
+    },
+    {
+      "width": 600,
+      "path": "/login/club-representative",
+      "body": 585,
+      "issues": [],
+      "viewport": 600
+    },
+    {
+      "width": 768,
+      "path": "/",
+      "body": 762,
+      "issues": [],
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "path": "/login",
+      "body": 753,
+      "issues": [],
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "path": "/login/admin",
+      "body": 753,
+      "issues": [],
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "path": "/login/deputy-admin",
+      "body": 753,
+      "issues": [],
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "path": "/login/department-coordinator",
+      "body": 753,
+      "issues": [],
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "path": "/login/faculty",
+      "body": 753,
+      "issues": [],
+      "viewport": 768
+    },
+    {
+      "width": 768,
+      "path": "/login/club-representative",
+      "body": 753,
+      "issues": [],
+      "viewport": 768
+    },
+    {
+      "width": 900,
+      "path": "/",
+      "body": 894,
+      "issues": [],
+      "viewport": 900
+    },
+    {
+      "width": 900,
+      "path": "/login",
+      "body": 885,
+      "issues": [],
+      "viewport": 900
+    },
+    {
+      "width": 900,
+      "path": "/login/admin",
+      "body": 885,
+      "issues": [],
+      "viewport": 900
+    },
+    {
+      "width": 900,
+      "path": "/login/deputy-admin",
+      "body": 885,
+      "issues": [],
+      "viewport": 900
+    },
+    {
+      "width": 900,
+      "path": "/login/department-coordinator",
+      "body": 885,
+      "issues": [],
+      "viewport": 900
+    },
+    {
+      "width": 900,
+      "path": "/login/faculty",
+      "body": 885,
+      "issues": [],
+      "viewport": 900
+    },
+    {
+      "width": 900,
+      "path": "/login/club-representative",
+      "body": 885,
+      "issues": [],
+      "viewport": 900
+    },
+    {
+      "width": 1024,
+      "path": "/",
+      "body": 1018,
+      "issues": [],
+      "viewport": 1024
+    },
+    {
+      "width": 1024,
+      "path": "/login",
+      "body": 1009,
+      "issues": [],
+      "viewport": 1024
+    },
+    {
+      "width": 1024,
+      "path": "/login/admin",
+      "body": 1009,
+      "issues": [],
+      "viewport": 1024
+    },
+    {
+      "width": 1024,
+      "path": "/login/deputy-admin",
+      "body": 1009,
+      "issues": [],
+      "viewport": 1024
+    },
+    {
+      "width": 1024,
+      "path": "/login/department-coordinator",
+      "body": 1009,
+      "issues": [],
+      "viewport": 1024
+    },
+    {
+      "width": 1024,
+      "path": "/login/faculty",
+      "body": 1009,
+      "issues": [],
+      "viewport": 1024
+    },
+    {
+      "width": 1024,
+      "path": "/login/club-representative",
+      "body": 1009,
+      "issues": [],
+      "viewport": 1024
+    },
+    {
+      "width": 1440,
+      "path": "/",
+      "body": 1434,
+      "issues": [],
+      "viewport": 1440
+    },
+    {
+      "width": 1440,
+      "path": "/login",
+      "body": 1425,
+      "issues": [],
+      "viewport": 1440
+    },
+    {
+      "width": 1440,
+      "path": "/login/admin",
+      "body": 1425,
+      "issues": [],
+      "viewport": 1440
+    },
+    {
+      "width": 1440,
+      "path": "/login/deputy-admin",
+      "body": 1425,
+      "issues": [],
+      "viewport": 1440
+    },
+    {
+      "width": 1440,
+      "path": "/login/department-coordinator",
+      "body": 1425,
+      "issues": [],
+      "viewport": 1440
+    },
+    {
+      "width": 1440,
+      "path": "/login/faculty",
+      "body": 1425,
+      "issues": [],
+      "viewport": 1440
+    },
+    {
+      "width": 1440,
+      "path": "/login/club-representative",
+      "body": 1425,
+      "issues": [],
+      "viewport": 1440
+    }
+  ],
+  "roles": [
+    {
+      "width": 390,
+      "role": "admin",
+      "page": "timetable",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin",
+      "page": "spectra",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin",
+      "page": "exams",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin",
+      "page": "reschedule",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin",
+      "page": "approvals",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin",
+      "page": "utilisation",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin",
+      "page": "home",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin2",
+      "page": "timetable",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin2",
+      "page": "spectra",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin2",
+      "page": "exams",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin2",
+      "page": "reschedule",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin2",
+      "page": "approvals",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin2",
+      "page": "utilisation",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "admin2",
+      "page": "home",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "coordinator",
+      "page": "timetable",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "coordinator",
+      "page": "spectra",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "coordinator",
+      "page": "exams",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "coordinator",
+      "page": "reschedule",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "coordinator",
+      "page": "approvals",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "coordinator",
+      "page": "utilisation",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "coordinator",
+      "page": "home",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "faculty",
+      "page": "timetable",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "faculty",
+      "page": "spectra",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "faculty",
+      "page": "exams",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "faculty",
+      "page": "reschedule",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "faculty",
+      "page": "approvals",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "faculty",
+      "page": "utilisation",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "faculty",
+      "page": "home",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "club",
+      "page": "timetable",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "club",
+      "page": "spectra",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "club",
+      "page": "exams",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "club",
+      "page": "reschedule",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "club",
+      "page": "approvals",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "club",
+      "page": "utilisation",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 390,
+      "role": "club",
+      "page": "home",
+      "actual": 390,
+      "body": 385
+    },
+    {
+      "width": 768,
+      "role": "admin",
+      "page": "timetable",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin",
+      "page": "spectra",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin",
+      "page": "exams",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin",
+      "page": "reschedule",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin",
+      "page": "approvals",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin",
+      "page": "utilisation",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin",
+      "page": "home",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin2",
+      "page": "timetable",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin2",
+      "page": "spectra",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin2",
+      "page": "exams",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin2",
+      "page": "reschedule",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin2",
+      "page": "approvals",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin2",
+      "page": "utilisation",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "admin2",
+      "page": "home",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "coordinator",
+      "page": "timetable",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "coordinator",
+      "page": "spectra",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "coordinator",
+      "page": "exams",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "coordinator",
+      "page": "reschedule",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "coordinator",
+      "page": "approvals",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "coordinator",
+      "page": "utilisation",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "coordinator",
+      "page": "home",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "faculty",
+      "page": "timetable",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "faculty",
+      "page": "spectra",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "faculty",
+      "page": "exams",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "faculty",
+      "page": "reschedule",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "faculty",
+      "page": "approvals",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "faculty",
+      "page": "utilisation",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "faculty",
+      "page": "home",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "club",
+      "page": "timetable",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "club",
+      "page": "spectra",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "club",
+      "page": "exams",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "club",
+      "page": "reschedule",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "club",
+      "page": "approvals",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "club",
+      "page": "utilisation",
+      "actual": 768,
+      "body": 762
+    },
+    {
+      "width": 768,
+      "role": "club",
+      "page": "home",
+      "actual": 768,
+      "body": 762
+    }
+  ],
+  "dialogs": [
+    {
+      "size": {
+        "width": 320,
+        "height": 740
+      },
+      "bottom": 728,
+      "fieldFont": "16px",
+      "height": 740,
+      "left": 9.199999809265137,
+      "right": 305.19999980926514,
+      "scrollable": true,
+      "top": 12,
+      "width": 320
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "bottom": 832,
+      "fieldFont": "16px",
+      "height": 844,
+      "left": 9.199999809265137,
+      "right": 375.5999937057495,
+      "scrollable": true,
+      "top": 12,
+      "width": 390
+    },
+    {
+      "size": {
+        "width": 844,
+        "height": 390
+      },
+      "bottom": 359.3500061035156,
+      "fieldFont": "13px",
+      "height": 390,
+      "left": 39.20000076293945,
+      "right": 799.2000007629395,
+      "scrollable": true,
+      "top": 8,
+      "width": 844
+    },
+    {
+      "size": {
+        "width": 768,
+        "height": 1024
+      },
+      "bottom": 972.8000373840332,
+      "fieldFont": "13px",
+      "height": 1024,
+      "left": 12.199999809265137,
+      "right": 750.1999998092651,
+      "scrollable": true,
+      "top": 51.20000076293945,
+      "width": 768
+    }
+  ],
+  "drawers": [
+    {
+      "size": {
+        "width": 320,
+        "height": 740
+      },
+      "bottom": 728,
+      "height": 740,
+      "left": 4.400000095367432,
+      "right": 304.40000009536743,
+      "scrollable": true,
+      "top": 12,
+      "width": 320
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "bottom": 832,
+      "height": 844,
+      "left": 4.400000095367432,
+      "right": 374.7999939918518,
+      "scrollable": true,
+      "top": 12,
+      "width": 390
+    },
+    {
+      "size": {
+        "width": 844,
+        "height": 390
+      },
+      "bottom": 382.3999938964844,
+      "height": 390,
+      "left": 415.3999938964844,
+      "right": 820.3999938964844,
+      "scrollable": true,
+      "top": 8,
+      "width": 844
+    },
+    {
+      "size": {
+        "width": 768,
+        "height": 1024
+      },
+      "bottom": 1006,
+      "height": 1024,
+      "left": 339.3999938964844,
+      "right": 744.3999938964844,
+      "scrollable": true,
+      "top": 85,
+      "width": 768
+    }
+  ],
+  "note": "Final CSS also raises tablet form input sizes to 16px."
+}

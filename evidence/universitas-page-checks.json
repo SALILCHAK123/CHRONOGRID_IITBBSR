@@ -1,0 +1,102 @@
+{
+  "desktop": [
+    {
+      "content": "By Student GroupBy FacultyBy Room (27)Target:Year 1 · Section AYear 1 · Section BYear 1 · Section CY",
+      "image": "/static/assets/universitas/home-imgRectangle13.png",
+      "layout": "campus-page-banner classroom",
+      "page": "timetable",
+      "title": "Teaching timetable",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "content": "Spectra venue decisions10 approved · 12 alternatives · cancellations release capacityAPPROVEDPriorit",
+      "image": "/static/assets/universitas/home-imgRectangle30.png",
+      "layout": "campus-page-banner event",
+      "page": "spectra",
+      "title": "Spectra & venue bookings",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "content": "Week 8 · Midsem examinations41 exams · effective capacity = floor(physical seats ÷ 2)APPROVEDE00170 ",
+      "image": "/static/assets/universitas/home-imgRectangle14.png",
+      "layout": "campus-page-banner library",
+      "page": "exams",
+      "title": "Midsem examinations",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "content": "Schedule repair workspaceMinimum-change proposals · transparent diffs · independent Admin approvalLo",
+      "image": "/static/assets/universitas/home-imgRectangle29.png",
+      "layout": "campus-page-banner review",
+      "page": "reschedule",
+      "title": "Schedule changes",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "content": "Pending approvals0 venue requests · 0 timetable proposals▦Everything is up to date.New booking and s",
+      "image": "/static/assets/universitas/19-11-imgPattern1.png",
+      "layout": "campus-page-banner desk",
+      "page": "approvals",
+      "title": "Requests & approvals",
+      "viewport": 1280,
+      "width": 1274
+    },
+    {
+      "content": "Room utilisation & healthWeek 7 teaching-compatible room-hours, minus maintenance/closures. Event ho",
+      "image": "/static/assets/universitas/home-imgRectangle15.png",
+      "layout": "campus-page-banner facility",
+      "page": "utilisation",
+      "title": "Rooms & resources",
+      "viewport": 1280,
+      "width": 1274
+    }
+  ],
+  "mobile": [
+    {
+      "layout": "campus-page-banner classroom",
+      "page": "timetable",
+      "photo": 1080,
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "layout": "campus-page-banner event",
+      "page": "spectra",
+      "photo": 600,
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "layout": "campus-page-banner library",
+      "page": "exams",
+      "photo": 735,
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "layout": "campus-page-banner review",
+      "page": "reschedule",
+      "photo": 800,
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "layout": "campus-page-banner desk",
+      "page": "approvals",
+      "photo": 564,
+      "viewport": 390,
+      "width": 385
+    },
+    {
+      "layout": "campus-page-banner facility",
+      "page": "utilisation",
+      "photo": 500,
+      "viewport": 390,
+      "width": 385
+    }
+  ]
+}

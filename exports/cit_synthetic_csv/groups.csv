@@ -1,0 +1,15 @@
+﻿id,name,size,department
+Y1-A,Year 1 · Section A,70,COMMON
+Y1-B,Year 1 · Section B,70,COMMON
+Y1-C,Year 1 · Section C,70,COMMON
+Y1-D,Year 1 · Section D,70,COMMON
+Y2-CSE,CSE · Year 2,70,CSE
+Y2-ECE,ECE · Year 2,70,ECE
+Y2-EE,EE · Year 2,70,EE
+Y2-ME,ME · Year 2,70,ME
+Y2-CE,CE · Year 2,70,CE
+Y3-CSE,CSE · Year 3,70,CSE
+Y3-ECE,ECE · Year 3,70,ECE
+Y3-EE,EE · Year 3,70,EE
+Y3-ME,ME · Year 3,70,ME
+Y3-CE,CE · Year 3,70,CE

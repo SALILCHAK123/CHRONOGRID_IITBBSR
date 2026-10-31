@@ -1,0 +1,286 @@
+{
+  "roles": [
+    {
+      "account": "admin",
+      "signIn": {
+        "accent": "rgb(117, 90, 40)",
+        "dark": "rgb(24, 59, 54)",
+        "paper": "rgb(251, 248, 239)"
+      },
+      "workspace": {
+        "accent": "rgb(117, 90, 40)",
+        "dark": "rgb(24, 59, 54)",
+        "paper": "rgb(251, 248, 239)",
+        "theme": "gold"
+      }
+    },
+    {
+      "account": "admin2",
+      "signIn": {
+        "accent": "rgb(68, 77, 131)",
+        "dark": "rgb(37, 45, 75)",
+        "paper": "rgb(251, 248, 239)"
+      },
+      "workspace": {
+        "accent": "rgb(68, 77, 131)",
+        "dark": "rgb(37, 45, 75)",
+        "paper": "rgb(251, 248, 239)",
+        "theme": "indigo"
+      }
+    },
+    {
+      "account": "coordinator",
+      "signIn": {
+        "accent": "rgb(83, 103, 68)",
+        "dark": "rgb(46, 66, 50)",
+        "paper": "rgb(251, 248, 239)"
+      },
+      "workspace": {
+        "accent": "rgb(83, 103, 68)",
+        "dark": "rgb(46, 66, 50)",
+        "paper": "rgb(251, 248, 239)",
+        "theme": "olive"
+      }
+    },
+    {
+      "account": "faculty",
+      "signIn": {
+        "accent": "rgb(49, 95, 134)",
+        "dark": "rgb(22, 63, 80)",
+        "paper": "rgb(251, 248, 239)"
+      },
+      "workspace": {
+        "accent": "rgb(49, 95, 134)",
+        "dark": "rgb(22, 63, 80)",
+        "paper": "rgb(251, 248, 239)",
+        "theme": "blue"
+      }
+    },
+    {
+      "account": "club",
+      "signIn": {
+        "accent": "rgb(154, 91, 67)",
+        "dark": "rgb(72, 61, 50)",
+        "paper": "rgb(251, 248, 239)"
+      },
+      "workspace": {
+        "accent": "rgb(154, 91, 67)",
+        "dark": "rgb(72, 61, 50)",
+        "paper": "rgb(251, 248, 239)",
+        "theme": "coral"
+      }
+    }
+  ],
+  "views": [
+    {
+      "accent": "rgb(117, 90, 40)",
+      "dark": "rgb(24, 59, 54)",
+      "images": 0,
+      "page": "timetable",
+      "theme": "gold"
+    },
+    {
+      "accent": "rgb(117, 90, 40)",
+      "dark": "rgb(24, 59, 54)",
+      "images": 0,
+      "page": "spectra",
+      "theme": "gold"
+    },
+    {
+      "accent": "rgb(117, 90, 40)",
+      "dark": "rgb(24, 59, 54)",
+      "images": 0,
+      "page": "exams",
+      "theme": "gold"
+    },
+    {
+      "accent": "rgb(117, 90, 40)",
+      "dark": "rgb(24, 59, 54)",
+      "images": 0,
+      "page": "reschedule",
+      "theme": "gold"
+    },
+    {
+      "accent": "rgb(117, 90, 40)",
+      "dark": "rgb(24, 59, 54)",
+      "images": 0,
+      "page": "approvals",
+      "theme": "gold"
+    },
+    {
+      "accent": "rgb(117, 90, 40)",
+      "dark": "rgb(24, 59, 54)",
+      "images": 0,
+      "page": "utilisation",
+      "theme": "gold"
+    },
+    {
+      "accent": "rgb(68, 77, 131)",
+      "dark": "rgb(37, 45, 75)",
+      "images": 0,
+      "page": "timetable",
+      "theme": "indigo"
+    },
+    {
+      "accent": "rgb(68, 77, 131)",
+      "dark": "rgb(37, 45, 75)",
+      "images": 0,
+      "page": "spectra",
+      "theme": "indigo"
+    },
+    {
+      "accent": "rgb(68, 77, 131)",
+      "dark": "rgb(37, 45, 75)",
+      "images": 0,
+      "page": "exams",
+      "theme": "indigo"
+    },
+    {
+      "accent": "rgb(68, 77, 131)",
+      "dark": "rgb(37, 45, 75)",
+      "images": 0,
+      "page": "reschedule",
+      "theme": "indigo"
+    },
+    {
+      "accent": "rgb(68, 77, 131)",
+      "dark": "rgb(37, 45, 75)",
+      "images": 0,
+      "page": "approvals",
+      "theme": "indigo"
+    },
+    {
+      "accent": "rgb(68, 77, 131)",
+      "dark": "rgb(37, 45, 75)",
+      "images": 0,
+      "page": "utilisation",
+      "theme": "indigo"
+    },
+    {
+      "accent": "rgb(83, 103, 68)",
+      "dark": "rgb(46, 66, 50)",
+      "images": 0,
+      "page": "timetable",
+      "theme": "olive"
+    },
+    {
+      "accent": "rgb(83, 103, 68)",
+      "dark": "rgb(46, 66, 50)",
+      "images": 0,
+      "page": "spectra",
+      "theme": "olive"
+    },
+    {
+      "accent": "rgb(83, 103, 68)",
+      "dark": "rgb(46, 66, 50)",
+      "images": 0,
+      "page": "exams",
+      "theme": "olive"
+    },
+    {
+      "accent": "rgb(83, 103, 68)",
+      "dark": "rgb(46, 66, 50)",
+      "images": 0,
+      "page": "reschedule",
+      "theme": "olive"
+    },
+    {
+      "accent": "rgb(83, 103, 68)",
+      "dark": "rgb(46, 66, 50)",
+      "images": 0,
+      "page": "approvals",
+      "theme": "olive"
+    },
+    {
+      "accent": "rgb(83, 103, 68)",
+      "dark": "rgb(46, 66, 50)",
+      "images": 0,
+      "page": "utilisation",
+      "theme": "olive"
+    },
+    {
+      "accent": "rgb(49, 95, 134)",
+      "dark": "rgb(22, 63, 80)",
+      "images": 0,
+      "page": "timetable",
+      "theme": "blue"
+    },
+    {
+      "accent": "rgb(49, 95, 134)",
+      "dark": "rgb(22, 63, 80)",
+      "images": 0,
+      "page": "spectra",
+      "theme": "blue"
+    },
+    {
+      "accent": "rgb(49, 95, 134)",
+      "dark": "rgb(22, 63, 80)",
+      "images": 0,
+      "page": "exams",
+      "theme": "blue"
+    },
+    {
+      "accent": "rgb(49, 95, 134)",
+      "dark": "rgb(22, 63, 80)",
+      "images": 0,
+      "page": "reschedule",
+      "theme": "blue"
+    },
+    {
+      "accent": "rgb(49, 95, 134)",
+      "dark": "rgb(22, 63, 80)",
+      "images": 0,
+      "page": "approvals",
+      "theme": "blue"
+    },
+    {
+      "accent": "rgb(49, 95, 134)",
+      "dark": "rgb(22, 63, 80)",
+      "images": 0,
+      "page": "utilisation",
+      "theme": "blue"
+    },
+    {
+      "accent": "rgb(154, 91, 67)",
+      "dark": "rgb(72, 61, 50)",
+      "images": 0,
+      "page": "timetable",
+      "theme": "coral"
+    },
+    {
+      "accent": "rgb(154, 91, 67)",
+      "dark": "rgb(72, 61, 50)",
+      "images": 0,
+      "page": "spectra",
+      "theme": "coral"
+    },
+    {
+      "accent": "rgb(154, 91, 67)",
+      "dark": "rgb(72, 61, 50)",
+      "images": 0,
+      "page": "exams",
+      "theme": "coral"
+    },
+    {
+      "accent": "rgb(154, 91, 67)",
+      "dark": "rgb(72, 61, 50)",
+      "images": 0,
+      "page": "reschedule",
+      "theme": "coral"
+    },
+    {
+      "accent": "rgb(154, 91, 67)",
+      "dark": "rgb(72, 61, 50)",
+      "images": 0,
+      "page": "approvals",
+      "theme": "coral"
+    },
+    {
+      "accent": "rgb(154, 91, 67)",
+      "dark": "rgb(72, 61, 50)",
+      "images": 0,
+      "page": "utilisation",
+      "theme": "coral"
+    }
+  ]
+}

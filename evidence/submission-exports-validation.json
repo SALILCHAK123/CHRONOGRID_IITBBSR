@@ -1,0 +1,16 @@
+{
+  "baseline": {
+    "file": "exports\\schedule.json",
+    "hard_violations": 0,
+    "sessions": 189,
+    "exams": 41,
+    "sha256": "c1f0692a96e36474fb809c45150201aeeb0ce01b5a3f457350b1e3d86b406872"
+  },
+  "after": {
+    "file": "exports\\schedule_after.json",
+    "hard_violations": 0,
+    "sessions": 190,
+    "exams": 41,
+    "sha256": "a8a9b586ac1879bff6d4e06b43fc8de73a1dc05d5a848861e7e8240dafab9cf0"
+  }
+}

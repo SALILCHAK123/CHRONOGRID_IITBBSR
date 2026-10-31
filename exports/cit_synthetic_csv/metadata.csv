@@ -1,0 +1,8 @@
+﻿key,value
+synthetic,true
+description,Synthetic CIT development dataset; replace with official starter pack before submission.
+schema_version,1
+generator,scripts/create_dataset.py
+seed,17
+teaching_week,7
+exam_week,8

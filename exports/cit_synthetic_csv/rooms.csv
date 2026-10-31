@@ -1,0 +1,28 @@
+﻿id,name,type,capacity,accessible,features,unavailable,department
+CR-101,Classroom 101,classroom,80,true,"[""projector""]","[{""day"": 0, ""start_period"": 1, ""duration"": 2}]",
+CR-102,Classroom 102,classroom,80,true,"[""projector""]",[],
+CR-103,Classroom 103,classroom,80,false,"[""projector""]",[],
+CR-104,Classroom 104,classroom,80,true,"[""projector""]",[],
+CR-105,Classroom 105,classroom,80,true,"[""projector""]",[],
+CR-106,Classroom 106,classroom,80,false,"[""projector""]",[],
+CR-107,Classroom 107,classroom,80,true,"[""projector""]",[],
+CR-108,Classroom 108,classroom,80,true,"[""projector""]",[],
+CR-109,Classroom 109,classroom,160,false,"[""projector""]",[],
+CR-110,Classroom 110,classroom,160,true,"[""projector""]",[],
+CR-111,Classroom 111,classroom,160,true,"[""projector""]",[],
+CR-112,Classroom 112,classroom,160,false,"[""projector""]",[],
+LH-1,Lecture Hall 1,classroom,200,true,"[""projector"", ""audio""]",[],
+LH-2,Lecture Hall 2,classroom,200,true,"[""projector"", ""audio""]",[],
+LH-3,Lecture Hall 3,classroom,200,true,"[""projector"", ""audio""]",[],
+LAB-1,Computer Lab 1,computer_lab,80,true,"[""workstations""]",[],CSE
+LAB-2,Computer Lab 2,computer_lab,80,true,"[""workstations""]",[],CSE
+LAB-3,Physics Lab 3,physics_lab,80,true,"[""workstations""]",[],COMMON
+LAB-4,Chemistry Lab 4,chemistry_lab,80,true,"[""workstations""]",[],COMMON
+LAB-5,Electrical Lab 5,electrical_lab,80,true,"[""workstations""]",[],EE
+LAB-6,Mechanical Lab 6,mechanical_lab,80,false,"[""workstations""]",[],ME
+LAB-7,Civil Lab 7,civil_lab,80,true,"[""workstations""]",[],CE
+AUD,Main Auditorium,auditorium,500,true,"[""audio""]",[],
+SH-1,Seminar Hall 1,seminar,120,true,"[""audio""]",[],
+SH-2,Seminar Hall 2,seminar,160,true,"[""audio""]",[],
+OAT,Open Air Theatre,outdoor,600,true,"[""audio""]",[],
+SH-3,Seminar Hall 3,seminar,100,true,"[""audio""]",[],

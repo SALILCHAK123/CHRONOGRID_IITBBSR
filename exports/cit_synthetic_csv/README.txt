@@ -1,0 +1,2 @@
+Synthetic development data, not the official starter pack. Source: data/cit_synthetic.json.
+UTF-8 BOM; comma-separated with headers. Lists, objects, booleans and null are JSON in cells. Empty optional cells mean absent fields. References use stable IDs matching JSON. Week absent/null means recurring; week 7/8 means calendar-specific. Days 0=Monday through 4=Friday. P1-P5=08:00-13:00; lunch=13:00-14:00; P6-P9=14:00-18:00; P10-P13=18:00-22:00 events only.

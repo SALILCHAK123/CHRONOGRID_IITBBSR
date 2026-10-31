@@ -1,0 +1,38 @@
+{
+  "room_closures": [
+    {
+      "week": 7,
+      "room": "LAB-3",
+      "day": 0,
+      "start_period": 1,
+      "duration": 9
+    }
+  ],
+  "faculty_leave": [
+    {
+      "week": 7,
+      "faculty": "F01",
+      "day": 1,
+      "start_period": 1,
+      "duration": 9
+    }
+  ],
+  "added_sessions": [
+    {
+      "id": "S190",
+      "course": "C013",
+      "faculty": [
+        "F01"
+      ],
+      "groups": [
+        "Y2-CSE"
+      ],
+      "size": 70,
+      "duration": 1,
+      "kind": "tutorial",
+      "room_type": "classroom",
+      "accessible": false,
+      "department": "CSE"
+    }
+  ]
+}

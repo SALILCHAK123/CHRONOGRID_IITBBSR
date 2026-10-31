@@ -1,0 +1,29 @@
+{
+  "timetable_rejected": true,
+  "timetable_errors": [
+    "Room clash: S040, S041"
+  ],
+  "booking_rejected": true,
+  "booking_errors": [
+    "Room occupied by S001",
+    "Mandatory group occupied by S001"
+  ],
+  "booking_alternatives": [
+    {
+      "day": 0,
+      "start_period": 1,
+      "room": "CR-102"
+    },
+    {
+      "day": 0,
+      "start_period": 1,
+      "room": "CR-103"
+    },
+    {
+      "day": 0,
+      "start_period": 1,
+      "room": "CR-104"
+    }
+  ],
+  "active_file_unchanged": true
+}

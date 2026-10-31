@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+runtime/
+node_modules/
+
+# Never publish local credentials, sessions or disposable QA state.
+.env.*
+!.env.example
+**/sessions.json
+evidence/workflow-preview-runtime/
+# Unused historical reference photography is not shipped by the image-free app.
+frontend/assets/
