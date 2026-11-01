@@ -1,7 +1,7 @@
 """Server-owned category entitlements and independent approver policy."""
 CATEGORY_ENTITLEMENTS={
     'admin':('institute','guest','department','club'),
-    'coordinator':('department','guest'),
+    'coordinator':('department',),
     'faculty':(),
     'club':('club',),
 }

@@ -1,6 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
 import backend.main as service
+from backend.approvals import CATEGORY_ENTITLEMENTS, can_approve_booking
 from backend.portals import PORTALS
 
 @pytest.fixture
@@ -39,6 +40,24 @@ def test_portal_directory_and_unknown_portals(portal_client):
     assert {p['slug'] for p in c.get('/api/login-portals').json()['portals']}==set(PORTALS)
     assert c.get('/login/unknown').status_code==404
     assert c.post('/api/login/unknown',json={'username':'admin','password':'portal-test-password'}).status_code==404
+
+def test_role_and_priority_policy_matches_submission_rules(portal_client):
+    """The four role types follow the published booking authority matrix."""
+    assert CATEGORY_ENTITLEMENTS=={
+        'admin':('institute','guest','department','club'),
+        'coordinator':('department',),
+        'faculty':(),
+        'club':('club',),
+    }
+    room=dict(id='LAB-1',department='CSE',type='physics_lab')
+    booking=dict(requester='coordinator')
+    assert can_approve_booking(service.ACCOUNTS['admin'],booking,room)
+    assert can_approve_booking(service.ACCOUNTS['coordinator'],dict(requester='club'),room)
+    assert not can_approve_booking(service.ACCOUNTS['coordinator'],booking,room)
+    assert not can_approve_booking(service.ACCOUNTS['faculty'],booking,room)
+    assert portal_client.post('/api/login/department-coordinator',json={'username':'coordinator','password':'portal-test-password'}).status_code==200
+    forbidden=dict(title='Guest lecture',room='AUD',day=0,start_period=13,duration=1,size=20,category='guest')
+    assert portal_client.post('/api/bookings',json=forbidden).status_code==403
 
 def test_session_survives_memory_reset_but_expiry_and_logout_revoke(portal_client):
     import json

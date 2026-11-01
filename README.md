@@ -54,7 +54,7 @@ python3 -m venv .venv
 DEMO_MODE=true .venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --workers 1
 ```
 
-Open [http://127.0.0.1:8000](http://127.0.0.1:8000), choose a sign-in portal and use the demo credentials below. Fresh checkouts start without a generated timetable. Admin can **Generate timetable**, or use **Reset demo data** to restore and solve the clean synthetic dataset. Generation reports real solver stages and may take tens of seconds.
+Open [http://127.0.0.1:8000](http://127.0.0.1:8000), choose a sign-in portal and use the demo credentials below. Fresh checkouts start without a generated timetable. Admin can **Generate timetable**, or use **Reset demo data** to restore the committed, independently validated clean schedule. Generation reports real solver stages and may take tens of seconds.
 
 The app serves frontend and API from one origin. No Node build is needed. System fonts work without the optional Google Fonts connection. Environment files are not loaded automatically: set variables in the shell/host; `.env.example` lists every supported application variable and contains no real keys.
 
@@ -62,17 +62,17 @@ The app serves frontend and API from one origin. No Node build is needed. System
 
 All five identities use **`ChronoGrid2026!`** by default. `DEMO_PASSWORD` can override it. Four roles are represented, with a second Admin for independent approval.
 
-| Portal | Username | Role and scope |
-| --- | --- | --- |
-| `/login/admin` | `admin` | Administrator: generate, reset, import/export and review others' requests |
-| `/login/deputy-admin` | `admin2` | Independent second Administrator; cannot approve its own requests |
-| `/login/department-coordinator` | `coordinator` | CSE coordination, department/guest bookings and eligible CSE lab approvals |
-| `/login/faculty` | `faculty` | Faculty F01: own leave, session moves and extra-class requests |
-| `/login/club-representative` | `club` | Club bookings, own request history, alternatives and cancellation |
+| Portal | Demo username | Demo password | Role and scope |
+| --- | --- | --- | --- |
+| `/login/admin` | `admin` | `ChronoGrid2026!` | Dean's Office: generate, reset, import/export, change priority order and independently review others' requests |
+| `/login/deputy-admin` | `admin2` | `ChronoGrid2026!` | Independent second Administrator; cannot approve its own requests |
+| `/login/department-coordinator` | `coordinator` | `ChronoGrid2026!` | CSE coordination, department-event bookings and eligible CSE lab approvals |
+| `/login/faculty` | `faculty` | `ChronoGrid2026!` | Faculty F01: own timetable, leave, session moves and extra-class requests |
+| `/login/club-representative` | `club` | `ChronoGrid2026!` | Club bookings, own request status/reasons, alternatives and cancellation |
 
-Username fields are editable. The server checks the account belongs to the selected portal. Each portal displays its demo username/password when `DEMO_MODE=true`. That flag also enables explicit judge-demo role switching; disable it for normal credential-based operation. These are disposable demonstration accounts, not production university identities.
+Username fields are editable. The server checks the account belongs to the selected portal. Each role portal always displays its assigned demo username and the default demo password. `DEMO_MODE=true` additionally enables explicit in-workspace judge-demo role switching; disable it for normal credential-based operation. These are disposable demonstration accounts, not production university identities.
 
-**Admin reset:** the **Reset demo data** button restores the baseline dataset and regenerates a checked timetable, so judges can start clean. Self-approval is blocked. Sign in as `admin2` to approve a proposal submitted by `admin`.
+**Admin reset:** the **Reset demo data** button restores the baseline dataset and validated timetable, so judges can start clean. Self-approval is blocked. Sign in as `admin2` to approve a proposal submitted by `admin`.
 
 ## Main workflows
 

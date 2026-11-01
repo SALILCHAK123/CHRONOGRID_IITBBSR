@@ -74,4 +74,8 @@
 .oryzo-story .story-nav .story-enter{min-width:180px;min-height:44px;padding:12px 18px;background:#fff0d9;color:#293d2e;border-color:#fff9eb;font-size:10px;letter-spacing:.8px}
 .oryzo-story.viewing-rules .story-nav{background:#f8ecd3dc;border-color:#30443424;color:#23372c}
 .oryzo-story.viewing-rules .story-logo{color:#23372c}
+.oryzo-story .story-nav{transition:color .25s,background .25s,border-color .25s,opacity .2s,transform .2s;opacity:1}
+/* The floating introduction controls belong only to the opening campus scene. */
+.oryzo-story.viewing-rules .story-nav{opacity:0;pointer-events:none;transform:translate(-50%,-18px)}
 @media(max-width:900px){.oryzo-story .story-nav{width:auto;min-height:58px;padding:8px 23px 8px 12px}.oryzo-story .story-nav .story-logo{min-width:0;gap:7px}.oryzo-story .story-logo img{width:35px;height:35px}.oryzo-story .story-logo-copy b{font-size:13px}.oryzo-story .story-logo-copy small{font-size:6px;letter-spacing:.9px}.oryzo-story .story-nav-actions{gap:8px}.oryzo-story .story-nav-actions>a{display:none}.oryzo-story .story-nav .story-enter{min-width:0;min-height:35px;padding:8px 10px;font-size:8px}.portal-mark{width:42px;height:42px}}
+@media(max-width:900px){.oryzo-story.viewing-rules .story-nav{transform:translateY(-18px)}}
