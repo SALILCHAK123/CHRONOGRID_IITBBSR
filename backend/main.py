@@ -18,7 +18,11 @@ from .errors import booking_findings
 from .portals import PORTALS
 from . import sessions
 
-ROOT=Path(__file__).resolve().parents[1]; RUNTIME=ROOT/'runtime'; RUNTIME.mkdir(exist_ok=True)
+ROOT=Path(__file__).resolve().parents[1]
+# Vercel functions mount application files read-only; use their writable temporary
+# storage while retaining the persistent local runtime directory during development.
+RUNTIME=Path('/tmp/chronogrid') if os.getenv('VERCEL') else ROOT/'runtime'
+RUNTIME.mkdir(parents=True, exist_ok=True)
 DATA=ROOT/'data'/'cit_synthetic.json'; LOCK=threading.RLock(); TOKENS={}; JOBS={}
 IMPORT_PREVIEWS={}
 ACCOUNTS={
