@@ -71,14 +71,19 @@ def user(request:Request):
 
 def cookie_name():return os.getenv('AUTH_COOKIE_NAME','chronogrid_session')
 
+def serverless_session_secret():
+    return os.getenv('AUTH_SIGNING_SECRET') if os.getenv('VERCEL') else None
+
 def session_account(request):
-    account=sessions.resolve(RUNTIME/'sessions.json',request.cookies.get(cookie_name()))
+    token=request.cookies.get(cookie_name()); secret=serverless_session_secret()
+    account=sessions.resolve_signed(token,secret) if secret else sessions.resolve(RUNTIME/'sessions.json',token)
     return account if isinstance(account,str) and account in ACCOUNTS else None
 
 def issue_session(account,response):
-    token=secrets.token_urlsafe(32)
-    with LOCK:sessions.issue(RUNTIME/'sessions.json',token,account)
-    TOKENS[token]=account
+    secret=serverless_session_secret(); token=sessions.issue_signed(account,secret) if secret else secrets.token_urlsafe(32)
+    if not secret:
+        with LOCK:sessions.issue(RUNTIME/'sessions.json',token,account)
+        TOKENS[token]=account
     response.set_cookie(cookie_name(),token,httponly=True,samesite='strict',secure=os.getenv('COOKIE_SECURE','false')=='true',max_age=86400)
 
 def admin(u):
@@ -173,8 +178,10 @@ def portal_login(portal:str,body:PortalLogin,response:Response):
 @app.post('/api/logout')
 def logout(request:Request,response:Response):
     token=request.cookies.get(cookie_name())
-    with LOCK:sessions.revoke(RUNTIME/'sessions.json',token)
-    TOKENS.pop(token,None); response.delete_cookie(cookie_name()); return dict(ok=True)
+    if not serverless_session_secret():
+        with LOCK:sessions.revoke(RUNTIME/'sessions.json',token)
+        TOKENS.pop(token,None)
+    response.delete_cookie(cookie_name()); return dict(ok=True)
 
 @app.get('/api/state')
 def state(u=Depends(user)):
