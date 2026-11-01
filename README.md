@@ -2,7 +2,7 @@
 
 Campus timetable and venue management for Chilika Institute of Technology: constraint-checked teaching schedules, Week 8 exams, English/Hinglish booking drafts, minimum-change repairs, private requests and independent approvals.
 
-**Hosted demo:** pending — the team will add its public deployment URL. `localhost` is a local development address, not the judge demo link.
+**Hosted demo:** [chronogrid-iitbbsr.vercel.app](https://chronogrid-iitbbsr.vercel.app) — public Vercel demo. `localhost` is a local development address, not the judge demo link.
 
 **Dataset:** the included data is synthetic development data: 27 rooms, 40 faculty, 14 groups / 980 students, 62 courses, 189 sessions / 243 teaching hours, 25 event requests and 41 exams. The official dataset and validator were not supplied.
 
@@ -119,7 +119,7 @@ docker build -t chronogrid .
 docker run --rm -p 8000:8000 -e DEMO_MODE=true -v chronogrid-runtime:/app/runtime -v chronogrid-exports:/app/exports chronogrid
 ```
 
-A GitHub source upload is not a deployed Python application. The team will add the public demo URL and verify all four roles, independent second Admin, reset and session behavior on that host before submission. See [SUBMISSION.md](SUBMISSION.md).
+The public Git deployment is available at [chronogrid-iitbbsr.vercel.app](https://chronogrid-iitbbsr.vercel.app). Its FastAPI entrypoint is configured in `pyproject.toml`. Vercel's `/tmp` storage is ephemeral, so the hosted demo is suitable for showcasing flows but not for durable multi-user timetable state. Use the Docker deployment above for persistent runtime and export storage. See [SUBMISSION.md](SUBMISSION.md).
 
 ## Known limitations
 
@@ -129,7 +129,7 @@ A GitHub source upload is not a deployed Python application. The team will add t
 - Single-process JSON persistence is intended for the prototype. Campus SSO, production per-person identities, database/multi-worker deployment and rate limiting are not implemented.
 - Venue priorities do not silently displace teaching. Use an explicit checked repair and independent approval for academic changes. Counter-offers reserve nothing.
 - Google Fonts are optional external resources with system fallbacks. Signed-in pages use no photographs; unused historical reference photographs are excluded from the repository.
-- The public demo URL and walkthrough recording remain to be supplied by the team. Localhost is not accessible to judges.
+- The public demo is hosted on Vercel, but its serverless `/tmp` state is ephemeral. Localhost is not accessible to judges.
 
 
 ## Contributors
