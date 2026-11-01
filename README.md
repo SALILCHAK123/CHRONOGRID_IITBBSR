@@ -1,43 +1,115 @@
 # CIT ChronoGrid
 
-Campus timetable and venue management for Chilika Institute of Technology: constraint-checked teaching schedules, Week 8 exams, English/Hinglish booking drafts, minimum-change repairs, private requests and independent approvals.
+> Developed by **Team Inferno** for the **Tech Zypher Hackathon**.
 
-**Hosted demo:** [chronogrid-iitbbsr.vercel.app](https://chronogrid-iitbbsr.vercel.app) — public Vercel demo. `localhost` is a local development address, not the judge demo link.
+**CIT ChronoGrid** is a role-based campus timetable and venue-management platform for Chilika Institute of Technology. It creates and validates Week 7 teaching schedules, Week 8 midsem examinations, venue requests, timetable repairs and faculty leave plans.
 
-**Dataset:** the included data is synthetic development data: 27 rooms, 40 faculty, 14 groups / 980 students, 62 courses, 189 sessions / 243 teaching hours, 25 event requests and 41 exams. The official dataset and validator were not supplied.
+**Live demo:** [chronogrid-iitbbsr.vercel.app](https://chronogrid-iitbbsr.vercel.app)
 
-## Tech stack
+> The bundled dataset is synthetic development data. It is not an official CIT dataset or a claim of official validation.
 
-- Python 3.12, FastAPI, Uvicorn and Pydantic.
-- Google OR-Tools CP-SAT for scheduling and minimum-change repairs.
-- Independent deterministic Python constraint validator.
-- Native HTML/CSS/JavaScript with responsive, image-free role workspaces.
-- Atomic JSON state/audit storage; expiring, revocable sessions persisted as token hashes.
-- Optional OpenAI-compatible model parser; conservative local rule parser and manual forms work without an API key.
-- pytest regression tests; pinned runtime dependencies in `requirements.txt`, installed transitive versions in `requirements-lock.txt`.
+## What it does
+
+- Generates a clash-checked teaching timetable and midsem schedule with OR-Tools CP-SAT.
+- Enforces hard constraints through independent deterministic Python validation.
+- Supports English/Hinglish request drafting, with editable forms and a manual fallback.
+- Finds compatible rooms and timing alternatives with seat capacity, room type, access and clash details.
+- Stages timetable repairs, bookings and leave requests for independent approval.
+- Applies approved bookings, repairs and leave plans to the shared timetable revision.
+- Maintains strict approval authority, self-approval protection and event-priority ordering.
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-    Browser[Role-based browser UI] --> API[FastAPI + server-owned permissions]
-    API --> Parser[Optional AI / local parser]
-    Parser --> Draft[User-editable untrusted draft]
+    UI[Role-based browser UI] --> API[FastAPI API]
+    UI --> Draft[Editable manual or AI-assisted draft]
     Draft --> API
+    API --> Auth[Server-side role and approval policy]
     API --> Solver[OR-Tools CP-SAT]
-    Solver --> Check[Independent deterministic validator]
-    API --> Check
-    Check --> Queue[Pending requests / repair previews]
-    Queue --> Review[Independent authorised approval]
-    Review --> Recheck[Fresh validation + revision check]
-    Recheck --> Store[Atomic JSON state + audit + exports]
+    Solver --> Validator[Independent deterministic validator]
+    API --> Validator
+    Validator --> Queue[Pending booking, repair or leave request]
+    Queue --> Review[Independent authorised reviewer]
+    Review --> Recheck[Fresh validation and revision check]
+    Recheck --> State[Shared Vercel Blob state and audit]
+    State --> UI
 ```
 
-AI never decides validity, grants priority or changes the timetable directly. All submissions and approvals run code-based checks. See [AI_USAGE.md](AI_USAGE.md), [THIRD_PARTY.md](THIRD_PARTY.md) and [CONSTRAINTS.md](CONSTRAINTS.md).
+## Dataset and supplied artifacts
+
+The synthetic dataset is in [`data/cit_synthetic.json`](data/cit_synthetic.json).
+
+| Item | Count / scope |
+| --- | --- |
+| Rooms | 27: classrooms, lecture halls, auditorium, seminar halls, open-air theatre and 7 labs |
+| Faculty | 40 |
+| Student groups | 14 / 980 students |
+| Courses | 62 |
+| Teaching sessions | 189 / 243 weekly teaching hours |
+| Spectra venue requests | 25 seed requests, including cancelled requests and original text |
+| Midsem examinations | 41 |
+
+CSV mirrors are available under [`data/cit_synthetic_csv`](data/cit_synthetic_csv), with the packaged archive at [`exports/cit_synthetic_dataset_csv.zip`](exports/cit_synthetic_dataset_csv.zip). Every session already contains its faculty and student-group assignments; scheduling assigns a day, start period and room.
+
+Useful included files:
+
+- [`data/sample_disruption.json`](data/sample_disruption.json): a sample change file.
+- [`exports/schedule.json`](exports/schedule.json): validated baseline schedule.
+- [`exports/schedule_after.json`](exports/schedule_after.json): schedule after the sample disruption.
+- [`exports/dataset_after.json`](exports/dataset_after.json): matching post-disruption dataset.
+- [`scripts/validate_schedule.py`](scripts/validate_schedule.py): deterministic local validation command.
+- [`CONSTRAINTS.md`](CONSTRAINTS.md): hard constraints and soft objectives.
+
+## Roles, approval authority and priority
+
+Nobody can approve their own request.
+
+| Role | Can submit / do | Can approve |
+| --- | --- | --- |
+| Admin (Dean's Office) | Generate/reset timetable, import data, edit event priority, submit/manage requests | Any independent booking, timetable repair or leave request |
+| Deputy Admin | Same Admin powers | Any request not submitted by that identity |
+| Department Coordinator | Department session changes and department-event bookings | Independent bookings in that coordinator's department labs only |
+| Faculty | View own timetable, request own leave, extra or moved sessions | Nothing |
+| Club Representative | Submit/cancel venue requests and see their status/reason | Nothing |
+
+When competing requests need the same room/time, the server enforces this order before a lower-priority request can be approved:
+
+1. Exams
+2. Regular classes
+3. Institute events
+4. Guest lectures
+5. Department events
+6. Club events
+
+The visible approval button is not authoritative; every decision is rechecked server-side against identity, scope, current timetable revision and constraints.
+
+## Hard-constraint checks
+
+The deterministic validator covers, among other checks:
+
+- exactly-once session placement;
+- faculty, student-group, room and mandatory-group clash prevention;
+- capacity, room-type and accessible-room requirements;
+- faculty and room unavailability/maintenance;
+- lunch protection and permitted three-hour lab windows;
+- elective basket synchronisation;
+- faculty daily load limits;
+- approved booking conflicts; and
+- fixed-slot preservation.
+
+Run it directly:
+
+```powershell
+.venv\Scripts\python.exe scripts/validate_schedule.py data/cit_synthetic.json exports/schedule.json
+.venv\Scripts\python.exe scripts/validate_schedule.py exports/dataset_after.json exports/schedule_after.json
+```
+
+The validator reports hard-constraint violations and schedule metrics. It is the validity authority; a model response, browser response or solver response is never treated as proof that a schedule is valid.
 
 ## Setup
 
-Install Python 3.12, then from the repository root:
+Requires Python 3.12+.
 
 ```powershell
 python -m venv .venv
@@ -46,95 +118,87 @@ $env:DEMO_MODE = 'true'
 .venv\Scripts\python.exe -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --workers 1
 ```
 
-On macOS/Linux:
-
-```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-DEMO_MODE=true .venv/bin/python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --workers 1
-```
-
-Open [http://127.0.0.1:8000](http://127.0.0.1:8000), choose a sign-in portal and use the demo credentials below. Fresh checkouts start without a generated timetable. Admin can **Generate timetable**, or use **Reset demo data** to restore the committed, independently validated clean schedule. Generation reports real solver stages and may take tens of seconds.
-
-The app serves frontend and API from one origin. No Node build is needed. System fonts work without the optional Google Fonts connection. Environment files are not loaded automatically: set variables in the shell/host; `.env.example` lists every supported application variable and contains no real keys.
+Open [http://127.0.0.1:8000](http://127.0.0.1:8000). No Node build is required. Copy environment-variable names from [`.env.example`](.env.example); do not commit real credentials.
 
 ## Demo accounts
 
-All five identities use **`ChronoGrid2026!`** by default. `DEMO_PASSWORD` can override it. Four roles are represented, with a second Admin for independent approval.
+All demo accounts use password **`ChronoGrid2026!`** unless `DEMO_PASSWORD` is configured.
 
-| Portal | Demo username | Demo password | Role and scope |
+| Portal | Username | Password | Purpose |
 | --- | --- | --- | --- |
-| `/login/admin` | `admin` | `ChronoGrid2026!` | Dean's Office: generate, reset, import/export, change priority order and independently review others' requests |
-| `/login/deputy-admin` | `admin2` | `ChronoGrid2026!` | Independent second Administrator; cannot approve its own requests |
-| `/login/department-coordinator` | `coordinator` | `ChronoGrid2026!` | CSE coordination, department-event bookings and eligible CSE lab approvals |
-| `/login/faculty` | `faculty` | `ChronoGrid2026!` | Faculty F01: own timetable, leave, session moves and extra-class requests |
-| `/login/club-representative` | `club` | `ChronoGrid2026!` | Club bookings, own request status/reasons, alternatives and cancellation |
+| `/login/admin` | `admin` | `ChronoGrid2026!` | Dean's Office / universal independent reviewer |
+| `/login/deputy-admin` | `admin2` | `ChronoGrid2026!` | Second Admin for independent approval |
+| `/login/department-coordinator` | `coordinator` | `ChronoGrid2026!` | CSE department coordinator |
+| `/login/faculty` | `faculty` | `ChronoGrid2026!` | Faculty F01 / Dr. Mohanty |
+| `/login/club-representative` | `club` | `ChronoGrid2026!` | Robotics Club representative |
 
-Username fields are editable. The server checks the account belongs to the selected portal. Each role portal always displays its assigned demo username and the default demo password. `DEMO_MODE=true` additionally enables explicit in-workspace judge-demo role switching; disable it for normal credential-based operation. These are disposable demonstration accounts, not production university identities.
+The Admin workspace has **Reset demo data**, which restores the validated baseline so judges can begin from a clean state.
 
-**Admin reset:** the **Reset demo data** button restores the baseline dataset and validated timetable, so judges can start clean. Self-approval is blocked. Sign in as `admin2` to approve a proposal submitted by `admin`.
+## AI use and manual fallback
 
-## Main workflows
+AI is optional. The Campus Assistant can read a request, identify missing details and produce an **untrusted editable draft**. It may be configured with an OpenAI-compatible endpoint through `AI_BASE_URL`, `AI_MODEL` and server-only `AI_API_KEY`.
 
-1. **Timetable:** filter by group/faculty/room. Maintenance and leave show as Unavailable. Empty cells are not a promise that every scheduling constraint is satisfied.
-2. **Campus Assistant:** create an editable booking or schedule/leave draft; review the populated fields, resolve clarifications and submit. Manual forms remain usable during AI outage. Assistant timetable drafts populate session/day/period/room controls.
-3. **Venue requests:** submission checks capacity, type, accessibility, timing, maintenance and room/mandatory-group clashes. Conflicts produce room/time alternatives. Submission does not reserve space until independent approval.
-4. **Changes and leave:** stage a minimum-change repair. Review before/after placements before approval. Leave approval activates the validated repaired timetable. Infeasible leave stays pending; stale previews cannot apply.
-5. **Imports:** JSON only, up to 5 MB. Scoped change files stage repairs. Complete dataset imports get a solved preview with conflicts and alternatives before explicit replacement. Invalid/infeasible imports and cancellation preserve the current timetable. Approved manual bookings/leave are protected. See [SESSION_IMPORT_GUIDE.md](SESSION_IMPORT_GUIDE.md).
-6. **Privacy and reviews:** requesters see their own history; authorised reviewers see actionable pending work. Approval buttons are server-authorised per request. Public approved room occupancy remains visible.
-7. **Exams:** day-filtered Week 8 agenda with physical/effective seat counts; effective capacity is `floor(physical seats / 2)`.
+The model is not allowed to:
 
-## Required exports
+- decide schedule or booking validity;
+- assign event priority;
+- grant roles or approval authority;
+- approve a request;
+- override a fixed slot; or
+- write persistent timetable state.
 
-- [`exports/schedule.json`](exports/schedule.json): app-generated baseline for [`data/cit_synthetic.json`](data/cit_synthetic.json).
-- [`exports/schedule_after.json`](exports/schedule_after.json): after applying [`data/sample_disruption.json`](data/sample_disruption.json) and independent approval.
-- [`exports/dataset_after.json`](exports/dataset_after.json): complete post-disruption input for validation.
-- [`exports/repair_proposal.json`](exports/repair_proposal.json): before/after diff, moved counts, solver status and proof metadata.
+All model output passes strict schemas, server-side permission checks and deterministic validation before submission. If no key is present, the provider fails, credits end, or the response is malformed, the manual booking and timetable-change forms remain available. See [AI_USAGE.md](AI_USAGE.md) for the full declaration, prompt location and development-tool disclosure.
 
-Regenerate these through the app's API in an isolated temporary runtime (does not reset your live campus state):
+## Implementation compliance
+
+- The application uses a Python/FastAPI/native-JavaScript stack, but the architecture does not depend on a particular UI framework.
+- Any enabled hosted model uses a team-controlled API key configured only in the deployment environment; keys are never committed.
+- Every model/API used by the product and every AI development tool used for this repository is declared in [AI_USAGE.md](AI_USAGE.md).
+- Open-source libraries and their licences are declared in [THIRD_PARTY.md](THIRD_PARTY.md).
+- Manual forms remain functional if an AI provider fails, runs out of quota or is intentionally not configured.
+- The project team is responsible for ensuring repository origin and commit history meet the event's submission rules.
+
+## Third-party software
+
+Primary dependencies are pinned in [`requirements.txt`](requirements.txt): Python, FastAPI, Pydantic, Uvicorn, HTTPX, pytest, OR-Tools and Vercel Blob. OR-Tools is used for optimisation; it is not the final validity authority. See [THIRD_PARTY.md](THIRD_PARTY.md) for licences, optional fonts and reference-template disclosure.
+
+## Exports, imports and verification
+
+Regenerate the checked synthetic exports:
 
 ```powershell
 .venv\Scripts\python.exe scripts/generate_exports.py
-.venv\Scripts\python.exe scripts/validate_schedule.py data/cit_synthetic.json exports/schedule.json
-.venv\Scripts\python.exe scripts/validate_schedule.py exports/dataset_after.json exports/schedule_after.json
 ```
 
-These are synthetic example exports, not official-dataset certification. Deliberately conflicting test files and instructions are in [fixtures/README.md](fixtures/README.md).
-
-## Verification
+Run regression checks:
 
 ```powershell
 .venv\Scripts\python.exe -m pytest -q
 node scripts/verify_slot_rendering.cjs
 ```
 
-Node is optional and only needed for the additional renderer smoke check. The latest local suite passed **109 tests**. Tests cover all 14 hard constraints, six soft criteria, scopes, category abuse, manual outage fallback, competing approvals, leave repair, session expiry/restart, import conflicts and stale previews. Browser evidence and limits are documented in [VERIFICATION.md](VERIFICATION.md).
+JSON imports receive a preview before replacement. Change files stage a repair rather than silently altering the active schedule. Imports and approvals are revalidated before they affect campus state. See [SESSION_IMPORT_GUIDE.md](SESSION_IMPORT_GUIDE.md) and [VERIFICATION.md](VERIFICATION.md).
 
 ## Deployment
 
-The included Dockerfile runs the complete Python backend and frontend on port 8000. Use a Python/container host with durable `/app/runtime` and `/app/exports` storage and **one worker**. Use HTTPS and `COOKIE_SECURE=true` on the public host. Never commit a real AI key; configure it in the host's environment.
+The live Vercel deployment uses FastAPI and a private Vercel Blob store for shared role requests, approvals, timetable revisions and audit state. `AUTH_SIGNING_SECRET` and `BLOB_READ_WRITE_TOKEN` are host-managed secrets and must never be committed. Generated artifacts use writable runtime storage in serverless deployments.
+
+For a long-running single-host deployment, the included Dockerfile supports a mounted runtime directory:
 
 ```bash
 docker build -t chronogrid .
-docker run --rm -p 8000:8000 -e DEMO_MODE=true -v chronogrid-runtime:/app/runtime -v chronogrid-exports:/app/exports chronogrid
+docker run --rm -p 8000:8000 -e DEMO_MODE=true -v chronogrid-runtime:/app/runtime chronogrid
 ```
-
-The public Git deployment is available at [chronogrid-iitbbsr.vercel.app](https://chronogrid-iitbbsr.vercel.app). Its FastAPI entrypoint is configured in `pyproject.toml`. Vercel's `/tmp` storage is ephemeral, so the hosted demo is suitable for showcasing flows but not for durable multi-user timetable state. Use the Docker deployment above for persistent runtime and export storage. See [SUBMISSION.md](SUBMISSION.md).
 
 ## Known limitations
 
-- Official CIT starter files, export format and unmodified official validator were not supplied; this implementation uses a clearly labelled synthetic development schema.
-- Soft scoring uses provisional unit weights. Local repair counts/proofs must still be compared with the official scoring rules.
-- No live external LLM is configured or accuracy-certified. The no-key parser is deliberately conservative; configured timeout/quota/malformed-output fallback is tested.
-- Single-process JSON persistence is intended for the prototype. Campus SSO, production per-person identities, database/multi-worker deployment and rate limiting are not implemented.
-- Venue priorities do not silently displace teaching. Use an explicit checked repair and independent approval for academic changes. Counter-offers reserve nothing.
-- Google Fonts are optional external resources with system fallbacks. Signed-in pages use no photographs; unused historical reference photographs are excluded from the repository.
-- The public demo is hosted on Vercel, but its serverless `/tmp` state is ephemeral. Localhost is not accessible to judges.
-
+- The repository uses a labelled synthetic dataset because the official starter dataset and official checker were not supplied.
+- Soft-constraint weights are provisional and should be compared with the official scoring specification when available.
+- This is a demo authentication model, not production campus SSO or per-person identity management.
+- The private Blob state store is suitable for this demo; a production rollout should use transactional database storage, rate limiting and operational monitoring.
+- No live AI provider is required or configured by default.
 
 ## Contributors
 
 - **Shinjan** ([shinjan-2006](https://github.com/shinjan-2006)) — project owner and product direction.
-- **OpenAI Codex** — AI-assisted implementation, debugging, tests, UI refinement and documentation. Contributions were directed and reviewed through the project chat; see [AI_USAGE.md](AI_USAGE.md) for the disclosure.
-
-This is an explicit contributor acknowledgement. GitHub's automatic Contributors graph is computed from commit authorship, not this section.
+- **OpenAI Codex** — AI-assisted implementation, debugging, testing, UI refinement and documentation; full disclosure in [AI_USAGE.md](AI_USAGE.md).

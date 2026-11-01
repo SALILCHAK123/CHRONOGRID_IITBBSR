@@ -8,3 +8,5 @@
 @media(prefers-reduced-motion:reduce){.oryzo-story *{animation:none!important;transition:none!important;scroll-behavior:auto!important}.academic-planner{transform:rotateX(35deg) rotateZ(-20deg)!important}.rule-object{transform:rotateX(12deg) rotateY(-12deg) rotateZ(-7deg)!important}}
 
 @media(min-width:701px) and (max-width:900px){.academic-planner{scale:1.15}.opening-story{left:35px;right:35px;gap:0 30px}.opening-story h2{font-size:42px}.opening-story p{font-size:13px}.opening-story>.story-overline{font-size:9px}.rule-detail{left:35px;right:35px;gap:0 30px}.rule-detail>p{font-size:13px}.rule-detail h3{font-size:38px}.rule-object{scale:1.1}.rule-selector button{font-size:9px}.story-live-metrics strong{font-size:27px}}
+
+.story-rail .story-credit{margin-top:2px;color:#a45e35;font:700 7px/1.35 'JetBrains Mono',monospace;letter-spacing:.65px;writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;white-space:nowrap}

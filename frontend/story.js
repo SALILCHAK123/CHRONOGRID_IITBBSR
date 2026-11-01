@@ -21,7 +21,7 @@ const storyRoot=document.getElementById('introduction');
 storyRoot.className='introduction oryzo-story';
 storyRoot.innerHTML=`
  <nav class="story-nav" aria-label="Campus introduction"><a href="#campus-opening" class="story-logo"><img src="/static/assets/cit-scheduler-mark.png" alt=""><span class="story-logo-copy"><b>CIT</b><small>CHRONOGRID</small></span></a><div class="story-nav-actions"><a href="#campus-opening">01 / THE CAMPUS</a><a href="#campus-rules">02 / THE RULES</a><button class="story-enter" data-enter-campus>ENTER WORKSPACE ↗</button></div></nav>
- <aside class="story-rail" aria-label="Introduction progress"><span>CIT / ACADEMIC OPERATIONS</span><div class="story-progress"><i id="story-progress-fill"></i></div><a href="#campus-opening" aria-label="First section">01</a><a href="#campus-rules" aria-label="Second section">02</a></aside>
+ <aside class="story-rail" aria-label="Introduction progress"><span>CIT / ACADEMIC OPERATIONS</span><div class="story-progress"><i id="story-progress-fill"></i></div><a href="#campus-opening" aria-label="First section">01</a><a href="#campus-rules" aria-label="Second section">02</a><span class="story-credit">DEVELOPED BY TEAM INFERNO / TECH ZYPHER HACKATHON</span></aside>
  <section id="campus-opening" class="story-panel opening-panel" aria-labelledby="story-title">
   <div class="desk-surface" aria-hidden="true"></div><div class="desk-mat" aria-hidden="true"><span>CIT / CAMPUS PLANNING STUDIO</span></div>
   <p class="opening-tagline">FOR EVERY CLASS. FOR EVERY CAMPUS MOMENT.</p>
