@@ -32,7 +32,11 @@ RUNTIME=Path('/tmp/chronogrid') if os.getenv('VERCEL') else ROOT/'runtime'
 RUNTIME.mkdir(parents=True, exist_ok=True)
 DATA=ROOT/'data'/'cit_synthetic.json'; LOCK=threading.RLock(); TOKENS={}; JOBS={}
 IMPORT_PREVIEWS={}
+# Blob objects are cached at the edge after an overwrite.  State revisions are
+# therefore immutable objects; each reader discovers the newest revision rather
+# than asking an edge cache for a recently overwritten object.
 STATE_BLOB_PATH='chronogrid/shared-state.json'
+STATE_BLOB_PREFIX='chronogrid/state-revision-'
 ACCOUNTS={
     'admin':dict(id='admin',role='admin',name='Dean · Admin',department='CSE'),
     'admin2':dict(id='admin2',role='admin',name='Deputy Dean · Admin',department='CSE'),
@@ -62,7 +66,10 @@ def read_state():
         if vercel_blob is None:
             raise RuntimeError('Vercel Blob support is unavailable in this deployment')
         try:
-            record=vercel_blob.get_blob(STATE_BLOB_PATH,access='private')
+            revisions=list(vercel_blob.query_blobs(prefix=STATE_BLOB_PREFIX,page_size=100))
+            newest=max(revisions,key=lambda item:item.uploaded_at) if revisions else None
+            # One-time compatibility with the original single-object format.
+            record=vercel_blob.get_blob(newest.url if newest else STATE_BLOB_PATH,access='private')
             return json.loads(record.body.decode('utf-8'))
         except Exception as error:
             # The first request after provisioning has no state object yet.
@@ -77,8 +84,9 @@ def write_state():
         if vercel_blob is None:
             raise RuntimeError('Vercel Blob support is unavailable in this deployment')
         payload=json.dumps(STATE,separators=(',',':')).encode('utf-8')
+        pathname=f'{STATE_BLOB_PREFIX}{STATE["revision"]}-{uuid.uuid4().hex}.json'
         try:
-            vercel_blob.put_blob(STATE_BLOB_PATH,payload,access='private',content_type='application/json',allow_overwrite=True,cache_control_max_age=0)
+            vercel_blob.put_blob(pathname,payload,access='private',content_type='application/json',cache_control_max_age=0)
         except Exception as error:
             raise RuntimeError('Shared campus state could not be saved') from error
         return
