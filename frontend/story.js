@@ -86,7 +86,8 @@ function updateStoryScroll(){
  storyRoot.style.setProperty('--scene-blend',Math.max(0,Math.min(1,(firstProgress-.55)/.45)).toFixed(3));
  const ruleTop=document.getElementById('campus-rules').getBoundingClientRect().top;storyRoot.style.setProperty('--rule-reveal',Math.max(0,Math.min(1,1-ruleTop/height)).toFixed(3));
  document.getElementById('story-progress-fill').style.height=(progress*100)+'%';
- storyRoot.classList.toggle('viewing-rules',document.getElementById('campus-rules').getBoundingClientRect().top<height*.4);
+ // Keep the fixed navigation exclusive to page one; page two is intentionally distraction-free.
+ storyRoot.classList.toggle('viewing-rules',document.getElementById('campus-rules').getBoundingClientRect().top<=0);
  if(!reduceStoryMotion.matches)storyRoot.style.setProperty('--hero-scroll',Math.max(0,Math.min(1,-bounds.top/height)).toFixed(3));
  storyFrame=false;
 }
