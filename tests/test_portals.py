@@ -1,7 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
 import backend.main as service
-from backend.approvals import CATEGORY_ENTITLEMENTS, can_approve_booking
+from backend.approvals import CATEGORY_ENTITLEMENTS, can_approve_booking, can_approve_timetable_change
 from backend.portals import PORTALS
 
 @pytest.fixture
@@ -52,6 +52,11 @@ def test_role_and_priority_policy_matches_submission_rules(portal_client):
     room=dict(id='LAB-1',department='CSE',type='physics_lab')
     booking=dict(requester='coordinator')
     assert can_approve_booking(service.ACCOUNTS['admin'],booking,room)
+    assert not can_approve_booking(service.ACCOUNTS['admin2'],booking,room)
+    assert can_approve_timetable_change(service.ACCOUNTS['admin'], 'club')
+    assert not can_approve_timetable_change(service.ACCOUNTS['admin2'], 'club')
+    assert can_approve_timetable_change(service.ACCOUNTS['admin2'], 'admin')
+    assert can_approve_timetable_change(service.ACCOUNTS['admin'], 'admin2')
     assert can_approve_booking(service.ACCOUNTS['coordinator'],dict(requester='club'),room)
     assert not can_approve_booking(service.ACCOUNTS['coordinator'],booking,room)
     assert not can_approve_booking(service.ACCOUNTS['faculty'],booking,room)

@@ -13,7 +13,7 @@ from .solver import solve
 from .bookings import decide, alternatives, venue_availability
 from .assistant import parse_request, parse_local, guard_interpretation
 from .persistence import atomic_json
-from .approvals import CATEGORY_ENTITLEMENTS, can_approve_booking, higher_priority_blocker
+from .approvals import CATEGORY_ENTITLEMENTS, approval_route, can_approve_booking, can_approve_timetable_change, higher_priority_blocker
 from .errors import booking_findings
 from .portals import PORTALS
 from . import sessions
@@ -266,8 +266,10 @@ def state(u=Depends(user)):
             room=next((r for r in STATE['data']['rooms'] if r['id']==b['room']),{})
             return b['status']=='pending' and can_approve_booking(u,b,room)
         requests=[{**b,'can_approve':booking_right(b)} for b in STATE['requests'] if b['requester']==u['id'] or booking_right(b)]
-        proposals=[{**{k:v for k,v in p.items() if k not in ['data','schedule']},'can_approve':p['status']=='pending' and u['role']=='admin' and p['requester']!=u['id']} for p in STATE['proposals'] if p['requester']==u['id'] or (p['status']=='pending' and u['role']=='admin')]
-        leaves=[{**{k:v for k,v in p.items() if not k.startswith('_')},'can_approve':p['status']=='pending' and u['role']=='admin' and p['requester']!=u['id']} for p in STATE.get('leaves',[]) if p['requester']==u['id'] or (p['status']=='pending' and u['role']=='admin')]
+        proposal_right=lambda p:p['status']=='pending' and can_approve_timetable_change(u,p['requester'])
+        proposals=[{**{k:v for k,v in p.items() if k not in ['data','schedule']},'required_reviewer':approval_route(p['requester']),'can_approve':proposal_right(p)} for p in STATE['proposals'] if p['requester']==u['id'] or proposal_right(p)]
+        leave_right=lambda p:p['status']=='pending' and can_approve_timetable_change(u,p['requester'])
+        leaves=[{**{k:v for k,v in p.items() if not k.startswith('_')},'required_reviewer':approval_route(p['requester']),'can_approve':leave_right(p)} for p in STATE.get('leaves',[]) if p['requester']==u['id'] or leave_right(p)]
         public_data=copy.deepcopy(STATE['data'])
         public_data['bookings']=[b for b in public_data['bookings'] if b.get('requester')==u['id'] or b.get('id') in {x['id'] for x in (schedule or {}).get('bookings',[]) if x['status']=='approved'}]
         if schedule:schedule['bookings']=[b for b in schedule['bookings'] if b['status']=='approved' or b.get('requester')==u['id']]
@@ -382,7 +384,7 @@ def booking_submit(body:Booking,u=Depends(user)):
     with transaction():
         b=body.model_dump(); result=check_booking(b,u)
         if not result['valid']:raise HTTPException(422,result)
-        b.update(id='R-'+uuid.uuid4().hex[:8],requester=u['id'],department=u['department'],status='pending',reason='Validated draft submitted; awaiting an authorised independent approver.',alternatives=[])
+        b.update(id='R-'+uuid.uuid4().hex[:8],requester=u['id'],department=u['department'],required_reviewer=approval_route(u['id']),status='pending',reason='Validated draft submitted; awaiting the authorised independent approver.',alternatives=[])
         STATE['requests'].append(b);save('submit-booking',u);return b
 
 @app.post('/api/bookings/{bid}/cancel')
@@ -403,7 +405,7 @@ def booking_approve(bid:str,u=Depends(user)):
         if not b or b['status']!='pending':raise HTTPException(404,'Pending request not found')
         if b['requester']==u['id']:raise HTTPException(403,'Self-approval is forbidden')
         room=next(r for r in STATE['data']['rooms'] if r['id']==b['room'])
-        if not can_approve_booking(u,b,room):raise HTTPException(403,'Admin or the department lab coordinator must approve')
+        if not can_approve_booking(u,b,room):raise HTTPException(403,'This request must be decided by its authorised independent reviewer')
         blocker=higher_priority_blocker(STATE['data'],active(),STATE['requests'],b)
         if blocker:
             raise HTTPException(409,f"Priority order requires {blocker['id']} ({blocker['category']}) to be decided before this {b['category']} request.")
@@ -417,7 +419,7 @@ def booking_reject(bid:str,body:dict,u=Depends(user)):
         b=next((b for b in STATE['requests'] if b['id']==bid and b['status']=='pending'),None)
         if not b:raise HTTPException(404,'Pending request not found')
         room=next(r for r in STATE['data']['rooms'] if r['id']==b['room'])
-        if not can_approve_booking(u,b,room):raise HTTPException(403,'You cannot decide this request')
+        if not can_approve_booking(u,b,room):raise HTTPException(403,'This request must be decided by its authorised independent reviewer')
         if b['requester']==u['id']:raise HTTPException(403,'Cannot decide your own request')
         reason=str(body.get('reason','')).strip()
         if not reason:raise HTTPException(422,'A reason is required')
@@ -429,7 +431,7 @@ def request_leave(body:LeaveRequest,u=Depends(user)):
     with transaction():
         window=FacultyLeave.model_validate(body.model_dump(exclude={'reason'}))
         changed_data(Disruption(faculty_leave=[window]),u)
-        request=dict(id='L-'+uuid.uuid4().hex[:8],requester=u['id'],status='pending',**body.model_dump(),message='Leave requested; approval must first produce a valid timetable repair.')
+        request=dict(id='L-'+uuid.uuid4().hex[:8],requester=u['id'],required_reviewer=approval_route(u['id']),status='pending',**body.model_dump(),message='Leave requested; approval must first produce a valid timetable repair.')
         STATE.setdefault('leaves',[]).append(request);save('request-leave',u)
         return request
 
@@ -439,7 +441,7 @@ def preview_leave(lid:str,u=Depends(user)):
     with transaction():
         leave=next((p for p in STATE.get('leaves',[]) if p['id']==lid and p['status']=='pending'),None)
         if not leave:raise HTTPException(404,'Pending leave not found')
-        if leave['requester']==u['id']:raise HTTPException(403,'Independent review is required')
+        if not can_approve_timetable_change(u,leave['requester']):raise HTTPException(403,'This leave request must be reviewed by its authorised independent Admin')
         window=FacultyLeave.model_validate({k:leave[k] for k in FacultyLeave.model_fields})
         data=changed_data(Disruption(faculty_leave=[window]),ACCOUNTS[leave['requester']]);current=active()
         approved=[b for b in current['bookings'] if b['status']=='approved']
@@ -463,7 +465,7 @@ def approve_leave(lid:str,u=Depends(user)):
     with transaction():
         leave=next((p for p in STATE.get('leaves',[]) if p['id']==lid and p['status']=='pending'),None)
         if not leave:raise HTTPException(404,'Pending leave not found')
-        if leave['requester']==u['id']:raise HTTPException(403,'Self-approval is forbidden')
+        if not can_approve_timetable_change(u,leave['requester']):raise HTTPException(403,'This leave request must be approved by its authorised independent Admin')
         if not leave.get('_schedule') or leave.get('preview_revision')!=STATE['revision']:raise HTTPException(409,'Preview a fresh timetable repair and review its diff before approving leave.')
         candidate=leave['_schedule'];data=leave['_data'];candidate['report']=validated(data,candidate)
         STATE.update(data=data,schedule=candidate)
@@ -479,7 +481,7 @@ def reject_leave(lid:str,body:dict,u=Depends(user)):
     with transaction():
         leave=next((p for p in STATE.get('leaves',[]) if p['id']==lid and p['status']=='pending'),None)
         if not leave:raise HTTPException(404,'Pending leave not found')
-        if leave['requester']==u['id']:raise HTTPException(403,'Self-decision is forbidden')
+        if not can_approve_timetable_change(u,leave['requester']):raise HTTPException(403,'This leave request must be decided by its authorised independent Admin')
         leave.update(status='rejected',message=body['reason'].strip(),decided_by=u['id']);save('reject-leave',u)
         return dict(ok=True)
 
@@ -617,7 +619,7 @@ def propose(body:Disruption,u=Depends(user)):
         before_exams={a['id']:a for a in current['exams']}
         exam_diff=[dict(id=a['id'],before=before_exams.get(a['id']),after=a) for a in candidate['exams'] if a!=before_exams.get(a['id'])]
         candidate['solver']=dict(sessions={k:v for k,v in result.items() if k!='assignments'},exams={k:v for k,v in exams.items() if k!='assignments'})
-        p=dict(id='P-'+uuid.uuid4().hex[:8],status='pending',requester=u['id'],revision=STATE['revision']+1,data=data,schedule=candidate,diff=diff,exam_diff=exam_diff,exam_moved=sum(x['before'] is not None for x in exam_diff),moved=sum(x['before'] is not None for x in diff),added=sum(x['before'] is None for x in diff),minimum_moves_proven=result.get('minimum_moves_proven'),exam_minimum_moves_proven=exams.get('minimum_moves_proven'),solver_status=result['status'],solver=candidate['solver'],before_report=current['report'],after_report=candidate['report'],change=body.model_dump())
+        p=dict(id='P-'+uuid.uuid4().hex[:8],status='pending',requester=u['id'],required_reviewer=approval_route(u['id']),revision=STATE['revision']+1,data=data,schedule=candidate,diff=diff,exam_diff=exam_diff,exam_moved=sum(x['before'] is not None for x in exam_diff),moved=sum(x['before'] is not None for x in diff),added=sum(x['before'] is None for x in diff),minimum_moves_proven=result.get('minimum_moves_proven'),exam_minimum_moves_proven=exams.get('minimum_moves_proven'),solver_status=result['status'],solver=candidate['solver'],before_report=current['report'],after_report=candidate['report'],change=body.model_dump())
         STATE['proposals'].append(p);save('propose-change',u);return {k:v for k,v in p.items() if k not in ['data','schedule']}
 
 @app.post('/api/changes/{pid}/approve')
@@ -626,7 +628,7 @@ def approve_change(pid:str,u=Depends(user)):
     with transaction():
         p=next((p for p in STATE['proposals'] if p['id']==pid and p['status']=='pending'),None)
         if not p:raise HTTPException(404,'Pending proposal not found')
-        if p['requester']==u['id']:raise HTTPException(403,'Self-approval is forbidden; use a second authorised Admin')
+        if not can_approve_timetable_change(u,p['requester']):raise HTTPException(403,'This timetable request must be approved by its authorised independent Admin')
         if p['revision']!=STATE['revision']:raise HTTPException(409,'The schedule or requests changed. Generate a fresh proposal before approval.')
         p['schedule']['report']=validated(p['data'],p['schedule']);STATE['data']=p['data'];STATE['schedule']=p['schedule'];p.update(status='approved',approved_by=u['id']);save('approve-change',u)
         write_generated_export('schedule_after.json',active());return dict(ok=True)
@@ -693,7 +695,7 @@ def reject_change(pid:str,body:dict,u=Depends(user)):
     with transaction():
         p=next((p for p in STATE['proposals'] if p['id']==pid and p['status']=='pending'),None)
         if not p:raise HTTPException(404,'Pending proposal not found')
-        if p['requester']==u['id']:raise HTTPException(403,'Self-approval or rejection is forbidden')
+        if not can_approve_timetable_change(u,p['requester']):raise HTTPException(403,'This timetable request must be decided by its authorised independent Admin')
         p.update(status='rejected',reason=body['reason'].strip(),decided_by=u['id']);save('reject-change',u)
         return dict(ok=True)
 

@@ -193,8 +193,10 @@ def test_auth_roles_priority_and_manual_outage(client):
     b['category']='club';r=client.post('/api/bookings',json=b);assert r.status_code==200,r.text
     bid=r.json()['id'];assert client.post(f'/api/bookings/{bid}/approve',json={}).status_code==403
     assert client.post('/api/assistant/parse',json=dict(message='Book something',outage=True)).json()['source']=='unavailable'
+    sign_in(client,'admin2');assert client.post(f'/api/bookings/{bid}/approve',json={}).status_code==403
     sign_in(client,'admin');assert client.post(f'/api/bookings/{bid}/approve',json={}).status_code==200
     assert validate(service.STATE['data'],service.STATE['schedule'])['valid']
+    assert any(x['id']==bid and x['status']=='approved' for x in client.get('/api/state').json()['schedule']['bookings'])
     sign_in(client,'club');assert client.post(f'/api/bookings/{bid}/cancel',json={}).status_code==200
 
 def test_server_blocks_forged_fields_and_constraints(client):
@@ -215,6 +217,8 @@ def test_repair_staging_self_approval_and_commit(client,monkeypatch,tmp_path):
     (tmp_path/'exports').mkdir();monkeypatch.setattr(service,'ROOT',tmp_path)
     sign_in(client,'admin2');r=client.post('/api/changes/'+p['id']+'/approve',json={});assert r.status_code==200,r.text
     assert validate(service.STATE['data'],service.STATE['schedule'])['valid']
+    active=client.get('/api/state').json()['schedule']
+    assert any(x['id']==a['id'] and (x['room'],x['day'],x['start_period'])!=(a['room'],a['day'],a['start_period']) for x in active['sessions'])
     assert (tmp_path/'exports'/'schedule_after.json').exists()
 
 def test_proven_impossible_fixed_slot(data,baseline):
