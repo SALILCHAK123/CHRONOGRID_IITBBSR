@@ -57,6 +57,15 @@
  .opening-panel:after{height:180px}
 }
 @media(prefers-reduced-motion:reduce){.opening-panel:after{opacity:0}.opening-bottom{opacity:1}.rules-intro,.rules-panel #rules-story-title,.rule-detail,.rule-selector,.rule-object-stage{opacity:1;translate:none;transition:none}.desk-pencil{transition:none}.oryzo-story .story-nav{transition:none}}
+
+/* Give the movable pencil a recognisable barrel, eraser and graphite point. */
+.desk-pencil{width:22px;height:190px;top:17%;right:14%;border:1px solid #5a371d;border-radius:5px 5px 3px 3px;background:linear-gradient(90deg,#6e3e1f 0 7%,#b8662e 8% 18%,#f0b968 38% 51%,#bc6c31 70% 86%,#683719 100%);box-shadow:6px 10px 9px #15241980,inset 2px 0 1px #ffe4a077,inset -2px 0 1px #4e2b1670}
+.desk-pencil:before{content:'';position:absolute;top:-17px;bottom:auto;left:-1px;right:-1px;height:18px;background:linear-gradient(90deg,#9c4035,#ec8d76 45%,#b74b3e);border:1px solid #5a371d;border-bottom:0;border-radius:5px 5px 2px 2px;box-shadow:inset 0 -3px #6b3b2b;pointer-events:none}
+.desk-pencil:after{left:-1px;top:100%;border-left:11px solid transparent;border-right:11px solid transparent;border-top:35px solid #e6bf82;filter:drop-shadow(0 2px 1px #24302266)}
+.desk-pencil i{top:calc(100% + 24px);left:7px;border-left-width:4px;border-right-width:4px;border-top:12px solid #1c2621}
+.desk-pencil:hover,.desk-pencil:focus-visible{background:linear-gradient(90deg,#6e3e1f 0 7%,#c47335 8% 18%,#ffd27b 38% 51%,#c97738 70% 86%,#683719 100%)}
+.pencil-guide{top:calc(17% + 235px);right:7%}
+@media(max-width:900px){.desk-pencil{width:16px;height:118px;top:25%;right:13%;border-radius:4px}.desk-pencil:before{top:-13px;height:14px;border-radius:4px 4px 1px 1px}.desk-pencil:after{left:-1px;border-left-width:8px;border-right-width:8px;border-top-width:27px}.desk-pencil i{top:calc(100% + 18px);left:4px;border-left-width:4px;border-right-width:4px;border-top-width:10px}.pencil-guide{top:calc(25% + 157px);right:5%;font-size:5px}}
 @media(min-width:701px) and (max-width:900px){.oryzo-story #rules-story-title{font-size:9vw}.rule-object-stage{top:32%}.rule-object-caption-below{bottom:6%}}
 
 /* Reference-aligned navigation for both the campus and rules scenes. */
