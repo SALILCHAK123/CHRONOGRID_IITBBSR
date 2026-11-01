@@ -35,6 +35,12 @@ ACCOUNTS={
 def initial():
     return dict(data=json.loads(DATA.read_text(encoding='utf-8')),schedule=None,proposals=[],requests=[],leaves=[],audit=[],revision=0)
 
+def clean_demo_schedule(data):
+    """Restore the committed, independently validated demo rather than re-solving on reset."""
+    schedule=json.loads((ROOT/'exports'/'schedule.json').read_text(encoding='utf-8'))
+    validated(data,schedule)
+    return schedule
+
 STATE=json.loads((RUNTIME/'state.json').read_text(encoding='utf-8')) if (RUNTIME/'state.json').exists() else initial()
 app=FastAPI(title='CIT ChronoGrid',version='0.1.0')
 
@@ -212,7 +218,7 @@ def generate(u=Depends(user)):
 def reset(u=Depends(user)):
     admin(u)
     with transaction():
-        fresh=initial(); fresh['schedule']=make_schedule(fresh['data']);fresh['revision']=STATE['revision'];fresh['audit']=STATE['audit']; STATE.clear(); STATE.update(fresh); save('reset',u)
+        fresh=initial(); fresh['schedule']=clean_demo_schedule(fresh['data']);fresh['revision']=STATE['revision'];fresh['audit']=STATE['audit']; STATE.clear(); STATE.update(fresh); save('reset',u)
         return dict(ok=True)
 
 @app.post('/api/dataset')
