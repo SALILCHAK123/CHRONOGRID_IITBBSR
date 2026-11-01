@@ -26,7 +26,7 @@ function readableError(detail){
  }
  return 'The request could not be completed. Check the entered details and try again.';
 }
-async function api(path,body,method){const response=await fetch('/api/'+path,{method:method||(body===undefined?'GET':'POST'),headers:body===undefined?{}:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});let result;try{result=await response.json()}catch{throw Error('Server returned an unreadable response')}
+async function api(path,body,method){const response=await fetch('/api/'+path,{method:method||(body===undefined?'GET':'POST'),headers:body===undefined?{}:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});const raw=await response.text();let result;try{result=JSON.parse(raw)}catch{throw Error(response.ok?'The server completed this request without a usable response. Refresh the timetable before retrying.':`The server could not complete this request (HTTP ${response.status}). Refresh once; if it persists, retry the action.`)}
  if(!response.ok){if(response.status===401&&!path.startsWith('login')){requestReauthentication();throw Error('Your session expired. Sign in again here; your draft has been kept.');}throw Error(readableError(result.detail??result))}return result}
 function clearPromptError(){if($('prompt').getAttribute('aria-invalid')==='true'){$('parse-result').textContent='';$('parse-result').classList.remove('red');$('prompt').removeAttribute('aria-invalid')}}
 async function task(title,fn){$('error').classList.add('hidden');$('busy-title').textContent=title;$('busy').classList.remove('hidden');try{return await fn()}catch(e){showError(e)}finally{$('busy').classList.add('hidden')}}

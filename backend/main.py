@@ -48,6 +48,12 @@ def baseline_demo_schedule():
     """Load the committed timetable so a new judge session is ready to inspect."""
     return json.loads((ROOT/'exports'/'schedule.json').read_text(encoding='utf-8'))
 
+def write_generated_export(filename,schedule):
+    """Keep generated artifacts out of Vercel's read-only application bundle."""
+    directory=(RUNTIME/'exports') if os.getenv('VERCEL') else (ROOT/'exports')
+    directory.mkdir(parents=True,exist_ok=True)
+    atomic_json(directory/filename,schedule)
+
 def initial():
     return dict(data=json.loads(DATA.read_text(encoding='utf-8')),schedule=baseline_demo_schedule(),proposals=[],requests=[],leaves=[],audit=[],revision=0)
 
@@ -191,7 +197,7 @@ def start_generation(u=Depends(user)):
             with transaction():
                 if STATE['revision']!=revision:raise HTTPException(409,'Campus state changed during generation. Run generation again.')
                 JOBS[jid]['stage']='Persisting independently validated timetable'
-                atomic_json(ROOT/'exports'/'schedule.json',schedule)
+                write_generated_export('schedule.json',schedule)
                 STATE['schedule']=schedule;STATE['proposals']=[];save('generate-job',u)
             JOBS[jid].update(status='complete',stage='Complete',report=schedule['report'])
         except Exception as exc:
@@ -273,7 +279,7 @@ def generate(u=Depends(user)):
     with transaction():
         if any(r['status']=='approved' for r in STATE['requests']): raise HTTPException(409,'Reset first: regeneration would replace approved manual bookings')
         schedule=make_schedule(STATE['data']); STATE['schedule']=schedule; STATE['proposals']=[]; save('generate',u)
-        (ROOT/'exports').mkdir(exist_ok=True); atomic_json(ROOT/'exports'/'schedule.json',schedule)
+        write_generated_export('schedule.json',schedule)
         return schedule
 
 @app.post('/api/reset')
@@ -623,7 +629,7 @@ def approve_change(pid:str,u=Depends(user)):
         if p['requester']==u['id']:raise HTTPException(403,'Self-approval is forbidden; use a second authorised Admin')
         if p['revision']!=STATE['revision']:raise HTTPException(409,'The schedule or requests changed. Generate a fresh proposal before approval.')
         p['schedule']['report']=validated(p['data'],p['schedule']);STATE['data']=p['data'];STATE['schedule']=p['schedule'];p.update(status='approved',approved_by=u['id']);save('approve-change',u)
-        (ROOT/'exports').mkdir(exist_ok=True);atomic_json(ROOT/'exports'/'schedule_after.json',active());return dict(ok=True)
+        write_generated_export('schedule_after.json',active());return dict(ok=True)
 
 @app.post('/api/assistant/parse')
 def assistant(body:Parse,u=Depends(user)):
