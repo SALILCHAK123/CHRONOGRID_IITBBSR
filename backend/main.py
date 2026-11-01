@@ -361,6 +361,7 @@ def booking_reject(bid:str,body:dict,u=Depends(user)):
 
 @app.post('/api/leaves')
 def request_leave(body:LeaveRequest,u=Depends(user)):
+    if u['role']!='faculty':raise HTTPException(403,'Only Faculty accounts can request leave. Department Coordinators request session changes instead.')
     with transaction():
         window=FacultyLeave.model_validate(body.model_dump(exclude={'reason'}))
         changed_data(Disruption(faculty_leave=[window]),u)
