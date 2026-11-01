@@ -32,16 +32,23 @@ ACCOUNTS={
     'faculty':dict(id='faculty',role='faculty',name='Dr. Mohanty',department='CSE',faculty='F01'),
     'club':dict(id='club',role='club',name='Robotics Club',department='CSE')}
 
+def baseline_demo_schedule():
+    """Load the committed timetable so a new judge session is ready to inspect."""
+    return json.loads((ROOT/'exports'/'schedule.json').read_text(encoding='utf-8'))
+
 def initial():
-    return dict(data=json.loads(DATA.read_text(encoding='utf-8')),schedule=None,proposals=[],requests=[],leaves=[],audit=[],revision=0)
+    return dict(data=json.loads(DATA.read_text(encoding='utf-8')),schedule=baseline_demo_schedule(),proposals=[],requests=[],leaves=[],audit=[],revision=0)
 
 def clean_demo_schedule(data):
     """Restore the committed, independently validated demo rather than re-solving on reset."""
-    schedule=json.loads((ROOT/'exports'/'schedule.json').read_text(encoding='utf-8'))
+    schedule=baseline_demo_schedule()
     validated(data,schedule)
     return schedule
 
 STATE=json.loads((RUNTIME/'state.json').read_text(encoding='utf-8')) if (RUNTIME/'state.json').exists() else initial()
+# Upgrade an earlier empty baseline state without overwriting an imported campus dataset.
+if not STATE.get('schedule') and STATE.get('data')==json.loads(DATA.read_text(encoding='utf-8')):
+    STATE['schedule']=baseline_demo_schedule()
 app=FastAPI(title='CIT ChronoGrid',version='0.1.0')
 
 @app.middleware('http')
