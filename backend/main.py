@@ -13,7 +13,7 @@ from .solver import solve
 from .bookings import decide, alternatives, venue_availability
 from .assistant import parse_request, parse_local, guard_interpretation
 from .persistence import atomic_json
-from .approvals import CATEGORY_ENTITLEMENTS, can_approve_booking
+from .approvals import CATEGORY_ENTITLEMENTS, can_approve_booking, higher_priority_blocker
 from .errors import booking_findings
 from .portals import PORTALS
 from . import sessions
@@ -398,6 +398,9 @@ def booking_approve(bid:str,u=Depends(user)):
         if b['requester']==u['id']:raise HTTPException(403,'Self-approval is forbidden')
         room=next(r for r in STATE['data']['rooms'] if r['id']==b['room'])
         if not can_approve_booking(u,b,room):raise HTTPException(403,'Admin or the department lab coordinator must approve')
+        blocker=higher_priority_blocker(STATE['data'],active(),STATE['requests'],b)
+        if blocker:
+            raise HTTPException(409,f"Priority order requires {blocker['id']} ({blocker['category']}) to be decided before this {b['category']} request.")
         candidate=copy.deepcopy(active()); approved={**b,'status':'approved','approved_by':u['id'],'reason':'Independently approved after fresh deterministic validation.'};candidate['bookings'].append(approved)
         candidate['report']=validated(STATE['data'],candidate);STATE['schedule']=candidate;b.update(approved);save('approve-booking',u);return approved
 
