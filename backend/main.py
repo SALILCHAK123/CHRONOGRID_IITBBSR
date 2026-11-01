@@ -540,12 +540,60 @@ def move_options(body:Move,u=Depends(user)):
             elif len(repair_candidates)<6:repair_candidates.append({**described,'conflicts':errors,'requires_solver_check':True})
         return dict(revision=STATE['revision'],static_errors=static,details=details,direct_errors=check(requested),alternatives=alternatives,repair_candidates=repair_candidates if not alternatives else [],keeps_other_sessions=True)
 
+def direct_move_preview(data,current,body):
+    """Handle a single, fully specified move without making the global optimiser a gate.
+
+    A direct replacement is still passed through the complete deterministic validator.
+    If the requested cell clashes, return legal nearby cells for an explicit user choice
+    instead of calling an optimisation result "impossible" merely because it timed out.
+    """
+    if len(body.moves)!=1 or body.room_closures or body.faculty_leave or body.added_sessions:
+        return None
+    move=body.moves[0]
+    session=next((s for s in STATE['data']['sessions'] if s['id']==move.session),None)
+    previous=next((s for s in current['sessions'] if s['id']==move.session),None)
+    if not session or not previous:return None
+
+    def candidate_for(choice):
+        candidate_data=copy.deepcopy(STATE['data'])
+        source=next(s for s in candidate_data['sessions'] if s['id']==choice['session'])
+        source['fixed']={k:choice[k] for k in ('day','start_period','room')}
+        candidate=copy.deepcopy(current)
+        placement=dict(id=choice['session'],day=choice['day'],start_period=choice['start_period'],room=choice['room'])
+        candidate['sessions']=[placement if row['id']==choice['session'] else row for row in candidate['sessions']]
+        report=validate(candidate_data,candidate)
+        return (candidate_data,candidate,report) if report['valid'] else None
+
+    requested=dict(session=move.session,day=move.day,start_period=move.start_period,room=move.room or previous['room'])
+    direct=candidate_for(requested)
+    if direct:
+        return dict(status='DIRECT',assignments=direct[1]['sessions'],moves=1,minimum_moves_proven=True,move_status='DIRECT',objective=0,best_bound=0,time_budget_per_stage_seconds=0)
+
+    eligible=[r for r in STATE['data']['rooms'] if r['type']==session['room_type'] and r['capacity']>=session['size'] and (not session.get('accessible') or r['accessible'])]
+    choices=[]
+    for day in range(5):
+        for period in range(1,10):
+            for room in eligible:
+                choice=dict(session=move.session,day=day,start_period=period,room=room['id'])
+                if choice==requested or (day==previous['day'] and period==previous['start_period'] and room['id']==previous['room']):continue
+                if candidate_for(choice):
+                    choices.append(dict(**choice,name=room['name'],capacity=room['capacity'],duration=session['duration']))
+    choices.sort(key=lambda item:(item['day']!=move.day,abs(item['day']-move.day),abs(item['start_period']-move.start_period),item['room']!=requested['room']))
+    return dict(status='NEEDS_ALTERNATIVE',assignments=[],diagnostics=['The requested slot conflicts with a scheduled class, faculty member or student group. Choose one of the validated alternatives below.'],alternatives=choices[:6])
+
 @app.post('/api/changes')
 def propose(body:Disruption,u=Depends(user)):
     with transaction():
         current=active(); data=changed_data(body,u)
         approved=[b for b in current['bookings'] if b['status']=='approved']
-        result=solve(data,baseline=current['sessions'],reservations=approved,seconds=15)
+        result=direct_move_preview(data,current,body)
+        if result and result['status']=='NEEDS_ALTERNATIVE':return result
+        if not result:
+            result=solve(data,baseline=current['sessions'],reservations=approved,seconds=15)
+            # A second, bounded attempt is useful for multi-change requests while
+            # retaining a predictable serverless response time.
+            if not result['assignments'] and result.get('status')=='UNKNOWN':
+                result=solve(data,baseline=current['sessions'],reservations=approved,seconds=20)
         if not result['assignments']:return result
         candidate=copy.deepcopy(current);candidate['sessions']=result['assignments']
         # A requested move constrains this proposal, not every future repair.
