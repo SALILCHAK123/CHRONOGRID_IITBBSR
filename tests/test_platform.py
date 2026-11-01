@@ -219,6 +219,9 @@ def test_repair_staging_self_approval_and_commit(client,monkeypatch,tmp_path):
     assert validate(service.STATE['data'],service.STATE['schedule'])['valid']
     active=client.get('/api/state').json()['schedule']
     assert any(x['id']==a['id'] and (x['room'],x['day'],x['start_period'])!=(a['room'],a['day'],a['start_period']) for x in active['sessions'])
+    # The accepted schedule is campus-wide, not scoped to the reviewing Admin.
+    sign_in(client,'faculty');shared=client.get('/api/state').json()['schedule']
+    assert next(x for x in shared['sessions'] if x['id']==a['id'])==next(x for x in active['sessions'] if x['id']==a['id'])
     assert (tmp_path/'exports'/'schedule_after.json').exists()
 
 def test_proven_impossible_fixed_slot(data,baseline):

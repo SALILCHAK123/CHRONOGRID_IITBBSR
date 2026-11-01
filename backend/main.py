@@ -73,7 +73,13 @@ def read_state():
             raise RuntimeError('Vercel Blob support is unavailable in this deployment')
         try:
             revisions=list(vercel_blob.query_blobs(prefix=STATE_BLOB_PREFIX,page_size=100))
-            newest=max(revisions,key=lambda item:item.uploaded_at) if revisions else None
+            # Blob timestamps can tie when two function instances save within the
+            # same millisecond.  The revision is the authoritative ordering, so
+            # never pick a state object only by edge-visible upload time.
+            def revision_key(item):
+                match=re.search(r'state-revision-(\d+)-',getattr(item,'pathname',''))
+                return (int(match.group(1)) if match else -1,getattr(item,'uploaded_at',0))
+            newest=max(revisions,key=revision_key) if revisions else None
             # One-time compatibility with the original single-object format.
             record=vercel_blob.get_blob(newest.url if newest else STATE_BLOB_PATH,access='private')
             return json.loads(record.body.decode('utf-8'))
@@ -115,6 +121,10 @@ async def frontend_cache_policy(request,call_next):
         except RuntimeError as error:
             return JSONResponse(status_code=503,content=dict(detail=str(error)))
     response=await call_next(request)
+    if request.url.path.startswith('/api/'):
+        # Every role portal must read the same current campus revision after an
+        # approval; no browser or CDN response may pin an older timetable.
+        response.headers['Cache-Control']='no-store, max-age=0'
     if request.url.path=='/' or request.url.path=='/workspace' or request.url.path.startswith(('/static/','/login')):
         response.headers['Cache-Control']='no-store'
     return response
@@ -410,7 +420,7 @@ def booking_approve(bid:str,u=Depends(user)):
         if blocker:
             raise HTTPException(409,f"Priority order requires {blocker['id']} ({blocker['category']}) to be decided before this {b['category']} request.")
         candidate=copy.deepcopy(active()); approved={**b,'status':'approved','approved_by':u['id'],'reason':'Independently approved after fresh deterministic validation.'};candidate['bookings'].append(approved)
-        candidate['report']=validated(STATE['data'],candidate);STATE['schedule']=candidate;b.update(approved);save('approve-booking',u);return approved
+        candidate['report']=validated(STATE['data'],candidate);STATE['schedule']=candidate;b.update(approved);save('approve-booking',u);return dict(request=approved,revision=STATE['revision'],schedule=copy.deepcopy(active()))
 
 @app.post('/api/bookings/{bid}/reject')
 def booking_reject(bid:str,body:dict,u=Depends(user)):
@@ -472,7 +482,7 @@ def approve_leave(lid:str,u=Depends(user)):
         leave.pop('_data',None);leave.pop('_schedule',None)
         leave.update(status='approved',approved_by=u['id'],message='Leave approved and the repaired timetable is active.')
         save('approve-leave',u)
-        return dict(ok=True,request=leave,revision=STATE['revision'])
+        return dict(ok=True,request=leave,revision=STATE['revision'],schedule=copy.deepcopy(active()))
 
 @app.post('/api/leaves/{lid}/reject')
 def reject_leave(lid:str,body:dict,u=Depends(user)):
@@ -631,7 +641,7 @@ def approve_change(pid:str,u=Depends(user)):
         if not can_approve_timetable_change(u,p['requester']):raise HTTPException(403,'This timetable request must be approved by its authorised independent Admin')
         if p['revision']!=STATE['revision']:raise HTTPException(409,'The schedule or requests changed. Generate a fresh proposal before approval.')
         p['schedule']['report']=validated(p['data'],p['schedule']);STATE['data']=p['data'];STATE['schedule']=p['schedule'];p.update(status='approved',approved_by=u['id']);save('approve-change',u)
-        write_generated_export('schedule_after.json',active());return dict(ok=True)
+        write_generated_export('schedule_after.json',active());return dict(ok=True,revision=STATE['revision'],schedule=copy.deepcopy(active()))
 
 @app.post('/api/assistant/parse')
 def assistant(body:Parse,u=Depends(user)):
