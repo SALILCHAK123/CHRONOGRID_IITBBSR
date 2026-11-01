@@ -18,6 +18,13 @@ from .errors import booking_findings
 from .portals import PORTALS
 from . import sessions
 
+try:
+    # The synchronous client is used because FastAPI runs these route handlers in
+    # a worker thread.  It is only enabled on deployments that have a Blob store.
+    from vercel.blob import sync as vercel_blob
+except ImportError:  # Local development can run without a Vercel Blob token.
+    vercel_blob=None
+
 ROOT=Path(__file__).resolve().parents[1]
 # Vercel functions mount application files read-only; use their writable temporary
 # storage while retaining the persistent local runtime directory during development.
@@ -25,6 +32,7 @@ RUNTIME=Path('/tmp/chronogrid') if os.getenv('VERCEL') else ROOT/'runtime'
 RUNTIME.mkdir(parents=True, exist_ok=True)
 DATA=ROOT/'data'/'cit_synthetic.json'; LOCK=threading.RLock(); TOKENS={}; JOBS={}
 IMPORT_PREVIEWS={}
+STATE_BLOB_PATH='chronogrid/shared-state.json'
 ACCOUNTS={
     'admin':dict(id='admin',role='admin',name='Dean · Admin',department='CSE'),
     'admin2':dict(id='admin2',role='admin',name='Deputy Dean · Admin',department='CSE'),
@@ -45,7 +53,38 @@ def clean_demo_schedule(data):
     validated(data,schedule)
     return schedule
 
-STATE=json.loads((RUNTIME/'state.json').read_text(encoding='utf-8')) if (RUNTIME/'state.json').exists() else initial()
+def uses_shared_blob():
+    return bool(os.getenv('BLOB_READ_WRITE_TOKEN'))
+
+def read_state():
+    """Read the shared deployed state, or the local state used during development."""
+    if uses_shared_blob():
+        if vercel_blob is None:
+            raise RuntimeError('Vercel Blob support is unavailable in this deployment')
+        try:
+            record=vercel_blob.get_blob(STATE_BLOB_PATH,access='private')
+            return json.loads(record.body.decode('utf-8'))
+        except Exception as error:
+            # The first request after provisioning has no state object yet.
+            if error.__class__.__name__ in {'BlobNotFoundError','NotFoundError'} or getattr(error,'status_code',None)==404:
+                return initial()
+            raise RuntimeError('Shared campus state could not be read') from error
+    return json.loads((RUNTIME/'state.json').read_text(encoding='utf-8')) if (RUNTIME/'state.json').exists() else initial()
+
+def write_state():
+    """Persist changes before responding, so all role portals see the same revision."""
+    if uses_shared_blob():
+        if vercel_blob is None:
+            raise RuntimeError('Vercel Blob support is unavailable in this deployment')
+        payload=json.dumps(STATE,separators=(',',':')).encode('utf-8')
+        try:
+            vercel_blob.put_blob(STATE_BLOB_PATH,payload,access='private',content_type='application/json',allow_overwrite=True,cache_control_max_age=0)
+        except Exception as error:
+            raise RuntimeError('Shared campus state could not be saved') from error
+        return
+    atomic_json(RUNTIME/'state.json',STATE)
+
+STATE=read_state()
 # Upgrade an earlier empty baseline state without overwriting an imported campus dataset.
 if not STATE.get('schedule') and STATE.get('data')==json.loads(DATA.read_text(encoding='utf-8')):
     STATE['schedule']=baseline_demo_schedule()
@@ -53,6 +92,14 @@ app=FastAPI(title='CIT ChronoGrid',version='0.1.0')
 
 @app.middleware('http')
 async def frontend_cache_policy(request,call_next):
+    # Vercel may execute Club and Admin requests in different function instances.
+    # Hydrating per API request keeps approvals and accepted timetable changes shared.
+    if request.url.path.startswith('/api/'):
+        try:
+            with LOCK:
+                STATE.clear(); STATE.update(read_state())
+        except RuntimeError as error:
+            return JSONResponse(status_code=503,content=dict(detail=str(error)))
     response=await call_next(request)
     if request.url.path=='/' or request.url.path=='/workspace' or request.url.path.startswith(('/static/','/login')):
         response.headers['Cache-Control']='no-store'
@@ -66,7 +113,7 @@ async def application_error(request,exc):
 def save(action,user):
     STATE['revision']+=1
     STATE['audit'].append(dict(action=action,user=user['id'],time=datetime.now(timezone.utc).isoformat()))
-    atomic_json(RUNTIME/'state.json',STATE)
+    write_state()
 
 @contextmanager
 def transaction():
